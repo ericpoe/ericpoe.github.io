@@ -60,7 +60,7 @@ content... why?</p>
 
 <p>If only Wordpress were as performant and easy to theme as the first blog I cobbled
 together using static PHP files back in the early aughts. Ah, that first blog
-was easy to use funky HTML syntax and add features; but each new page required
+was easy to add funky HTML syntax and add features; but each new page required
 editing 3 PHP files so the menu, archive, and each individual page would use the
 new content. At one point, I figured out that if I used a common naming structure,
 that I could tell the menu to dynamically build by looking at the file structure
@@ -73,7 +73,7 @@ of updates and patches for Wordpress and associated plugins?). Then I discovered
 <p>The immediate benefits to Sculpin that I could see were:</p>
 
 <ul>
-<li>Static file generator (just like my original blog!)</li>
+<li>Static file generator</li>
 <li>Files are created using <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, which means I can add funky HTML tags when necessary.</li>
 <li>The base project is written in open-source PHP, which means that I can bugfix and extend the source as I see fit.</li>
 <li>Theming is done via <a href="http://twig.sensiolabs.org/">twig</a> &amp; CSS (currently using <a href="http://getbootstrap.com/">bootstrap</a>)</li>
@@ -235,6 +235,7 @@ git push origin --all
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-56604616-1', 'auto');
+            ga('require', 'displayfeatures');
             ga('send', 'pageview');
         </script>
                 <script src="/components/highlightjs/highlight.pack.js"></script>
