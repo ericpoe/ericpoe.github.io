@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Eric Poe]]></title>
+    <link href="/blog/categories/Bite of PHP" rel="self"/>
+    <link href="/"/>
+    <updated>2015-03-04T22:55:16-06:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
+            <link href="/blog/2015/04/04/double-vs-single-quote-echo"/>
+            <updated>2015-04-04T00:00:00-05:00</updated>
+            <id>/blog/2015/04/04/double-vs-single-quote-echo</id>
+            <content type="html"><![CDATA[<h3>Bite of PHP: Double vs Single Quote Echo</h3>
+
+<p>In PHP, we have two ways of formatting an echo statement: we can choose to 
+use single-quotes or double-quotes. The choice is less dependant upon which 
+side of the Atlantic we learned to read and more dependant upon what we hope 
+to accomplish with echoing that string.</p>
+
+<p>If you want to echo the string without parsing it, use single-quotes. If you 
+want to parse the string while echoing it, use double-quotes. Observe:</p>
+
+<p><strong>Single-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo '$greeting, $audience';
+</code></pre>
+
+<p><em>Output:</em> <code>$greeting, $audience</code></p>
+
+<p><br></p>
+
+<p><strong>Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, $audience";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World</code></p>
+
+<p>What if you want to add a character to the output of one of those variables? 
+Just enclose the variable in a curly bracket!
+<strong>Special Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, {$audience}!";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World!</code></p>
+
+<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
+]]></content>
+        </entry>
+    </feed>
