@@ -3,22 +3,95 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2015-03-05T00:03:28-06:00</updated>
+    <updated>2015-04-24T10:13:29-05:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
+            <title type="html"><![CDATA[Bite of PHP: Heredoc vs. Nowdoc]]></title>
+            <link href="/blog/2015/04/23/heredoc-vs-nowdoc"/>
+            <updated>2015-04-23T00:00:00-05:00</updated>
+            <id>/blog/2015/04/23/heredoc-vs-nowdoc</id>
+            <content type="html"><![CDATA[<h3>Bite of PHP: Heredoc vs Nowdoc</h3>
+
+<h4>Heredoc</h4>
+
+<p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
+of format. So, if you want to echo out structured text, like so:</p>
+
+<pre><code class="html">I think that I
+    Shall never pay
+As much as I
+    Have for 2015-04-23
+</code></pre>
+
+<p>You would put it in a heredoc like this:</p>
+
+<pre><code class="php">$today = date('Y-m-d');
+$poem = &lt;&lt;&lt;HTML
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+HTML;
+
+echo $poem;
+</code></pre>
+
+<p><strong>output:</strong></p>
+
+<pre>
+I think that I
+    Shall never pay
+As much as I
+    Have for 2015-04-23
+</pre>
+
+<p>Notice that heredoc can behave like a template and parse any PHP contained within.</p>
+
+<p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
+
+<h4>Nowdoc</h4>
+
+<p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
+
+<pre><code class="php">$today = date('Y-m-d');
+$poem = &lt;&lt;&lt;'HTML'
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+HTML;
+
+echo $poem;
+</code></pre>
+
+<p><strong>output:</strong></p>
+
+<pre>
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+</pre>
+
+<p>Test it out on <a href="http://3v4l.org/H1YjU">3v4l.org</a>.</p>
+
+<p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
+]]></content>
+        </entry>
+            <entry>
             <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
-            <link href="/blog/2015/04/04/double-vs-single-quote-echo"/>
-            <updated>2015-04-04T00:00:00-05:00</updated>
-            <id>/blog/2015/04/04/double-vs-single-quote-echo</id>
+            <link href="/blog/2015/03/04/double-vs-single-quote-echo"/>
+            <updated>2015-03-04T00:00:00-06:00</updated>
+            <id>/blog/2015/03/04/double-vs-single-quote-echo</id>
             <content type="html"><![CDATA[<h3>Bite of PHP: Double vs Single Quote Echo</h3>
 
-<p>In PHP, we have two ways of formatting an echo statement: we can choose to 
-use single-quotes or double-quotes. The choice is less dependant upon which 
-side of the Atlantic we learned to read and more dependant upon what we hope 
+<p>In PHP, we have two ways of formatting an echo statement: we can choose to
+use single-quotes or double-quotes. The choice is less dependant upon which
+side of the Atlantic we learned to read and more dependant upon what we hope
 to accomplish with echoing that string.</p>
 
-<p>If you want to echo the string without parsing it, use single-quotes. If you 
+<p>If you want to echo the string without parsing it, use single-quotes. If you
 want to parse the string while echoing it, use double-quotes. Observe:</p>
 
 <p><strong>Single-Quote Example</strong></p>
@@ -43,7 +116,7 @@ echo "$greeting, $audience";
 
 <p><br></p>
 
-<p>What if you want to add a character to the output of one of those variables? 
+<p>What if you want to add a character to the output of one of those variables?
 Just enclose the variable in a curly bracket!</p>
 
 <p><strong>Special Double-Quote Example</strong></p>
@@ -389,20 +462,6 @@ I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, p
 <p>I started out with instruction from <a href="http://mindfsck.net/installing-nginx-php-5-5-opcache-mysql-centos-6-lemp/">mindfsck.net</a> and went from there.</p>
 
 <p>I must say that building my first LEMP server was much simpler than building my first LAMP server.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[A Fresh Look At Javascript]]></title>
-            <link href="/blog/2014/04/07/a-fresh-look-at-javascript"/>
-            <updated>2014-04-07T00:00:00-05:00</updated>
-            <id>/blog/2014/04/07/a-fresh-look-at-javascript</id>
-            <content type="html"><![CDATA[<p>After studying <a href="https://www.dartlang.org/">Dart</a> for a month, I wondered which problems Dart was attempting to resolve. I then realized that my knowledge of JavaScript was not good enough to know why Google had created Dart as a JavaScript alternative. As much as I enjoyed Dart, I decided to dive back in to JavaScript with a fresh look.</p>
-
-<p>A programmer I respect, the inimitable <a href="http://johnkary.net/">John Kary</a>, recommended that I read <a href="http://shop.oreilly.com/product/9780596517748.do">JavaScript: the Good Parts</a> by Douglas Crockford for a different project. Although the book was published nearly 4 years ago, it seems very relevant today. It has me thinking about JavaScript in new ways.</p>
-
-<p>I appreciate that the author does not mince words in regards to the downsides of JavaScript. It is not a perfect language, but which language has achieved perfection? Crockford makes a few suggestions on how to get around or side-step some of the drawbacks of JavaScript.</p>
-
-<p>After reading this book, I realize that JavaScript still deserves a deeper dive. I look forward to the swim.</p>
 ]]></content>
         </entry>
     </feed>

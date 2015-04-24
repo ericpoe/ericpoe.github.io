@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
+        <title>Bite of PHP: Heredoc vs. Nowdoc &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta name="robots" content="noindex, follow">
-                <link href="/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+            <meta name="robots" content="index, follow">
+        <link href="/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
         <link href="/css/style.css" rel="stylesheet" type="text/css" />
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -71,8 +71,8 @@
                 <div class="span8">
                         <article>
         <header>
-            <h2><a href="/blog/2015/04/23/heredoc-vs-nowdoc">Bite of PHP: Heredoc vs. Nowdoc</a></h2>
-            <strong>2015-04-23</strong>
+            <h2>Bite of PHP: Heredoc vs. Nowdoc</h2>
+            <p><strong>2015-04-23</strong></p>
         </header>
         <div>
             <h3>Bite of PHP: Heredoc vs Nowdoc</h3>
@@ -143,211 +143,44 @@ As much as I
 <p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
 
         </div>
-                    <p class="tags">
+                    <p class="categories">
+            Categories:
+                        <a href="/blog/categories/programming">programming</a>,                         <a href="/blog/categories/Bite%20of%20PHP">Bite of PHP</a>                        </p>
+                            <p class="tags">
             Tags:
                         <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/learning">learning</a>                        </p>
+        
+                    <nav class="article">
+                <ul>
+                                                                <li>Previous: <a class="previous" href="/blog/2015/03/04/double-vs-single-quote-echo" title="Bite of PHP: Double vs Single Quote Echo"><span class="title">Bite of PHP: Double vs Single Quote Echo</span></a></li>
+                                    </ul>
+            </nav>
             </article>
-    <article>
-        <header>
-            <h2><a href="/blog/2015/03/04/double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</a></h2>
-            <strong>2015-03-04</strong>
-        </header>
-        <div>
-            <h3>Bite of PHP: Double vs Single Quote Echo</h3>
 
-<p>In PHP, we have two ways of formatting an echo statement: we can choose to
-use single-quotes or double-quotes. The choice is less dependant upon which
-side of the Atlantic we learned to read and more dependant upon what we hope
-to accomplish with echoing that string.</p>
 
-<p>If you want to echo the string without parsing it, use single-quotes. If you
-want to parse the string while echoing it, use double-quotes. Observe:</p>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ericpoe'; // required: replace example with your forum shortname
 
-<p><strong>Single-Quote Example</strong></p>
 
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo '$greeting, $audience';
-</code></pre>
+    
+    
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered byDisqus.</a>
+</noscript>
 
-<p><em>Output:</em> <code>$greeting, $audience</code></p>
-
-<p><br></p>
-
-<p><strong>Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, $audience";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World</code></p>
-
-<p><br></p>
-
-<p>What if you want to add a character to the output of one of those variables?
-Just enclose the variable in a curly bracket!</p>
-
-<p><strong>Special Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, {$audience}!";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World!</code></p>
-
-<p><br></p>
-
-<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/learning">learning</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="/blog/2014/12/28/now-with-sculpin">Now with Sculpin</a></h2>
-            <strong>2014-12-28</strong>
-        </header>
-        <div>
-            <p>I have moved my site from one domain to another. I was using Wordpress on my old
-site and was happy. Adding pages was a thing of beauty. Configuring was a dream.
-Then I wanted to modify my theme. Then I wanted to use some fun HTML5 tags. Then
-I wanted to minimize hacking vectors. Then I realized that I was sacrificing
-performance to use a database that I was merely using to dynamically create static
-content... why?</p>
-
-<p>If only Wordpress were as performant and easy to theme as the first blog I cobbled
-together using static PHP files back in the early aughts. Ah, that first blog
-was easy to add funky HTML syntax and add features; but each new page required
-editing 3 PHP files so the menu, archive, and each individual page would use the
-new content. At one point, I figured out that if I used a common naming structure,
-that I could tell the menu to dynamically build by looking at the file structure
- &mdash; thereby reducing the need to edit the menu.php file. Success!</p>
-
-<p>I muddled through with Wordpress (did I mention the constant need to stay on top
-of updates and patches for Wordpress and associated plugins?). Then I discovered
-<a href="https://sculpin.io">Sculpin</a>.</p>
-
-<p>The immediate benefits to Sculpin that I could see were:</p>
-
-<ul>
-<li>Static file generator</li>
-<li>Files are created using <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, which means I can add funky HTML tags when necessary.</li>
-<li>The base project is written in open-source PHP, which means that I can bugfix and extend the source as I see fit.</li>
-<li>Theming is done via <a href="http://twig.sensiolabs.org/">twig</a> &amp; CSS (currently using <a href="http://getbootstrap.com/">bootstrap</a>)</li>
-<li>No performance loss due to dynamically generating a view via database lookups.</li>
-<li>Nice community (a huge bonus!)</li>
-</ul>
-
-<p>In other words, the benefits are that I can utilize it now and benefit, I learn
-its components now and I can utilize that knowledge later (CSS, Bootstrap, twig,
-HTML5, etc).</p>
-
-<p>As I started to play with Sculpin, I kept thinking back to my original blog and
-how close I was back then to what I am now doing. What I was missing then was the
-generation of the static HTML files that Sculpin allows.</p>
-
-<h3>Making it work</h3>
-
-<p>I spent too much time this weekend trying to figure out how to edit my Sculpin
-site locally and yet keep that version-controlled via git as well as keeping my
-production code version-controlled via git. Happily, I believe that I have found
-a way to do both.</p>
-
-<p>I keep my in-progress code, which includes minor modifications to the <a href="https://github.com/sculpin/sculpin-blog-skeleton">blog
-skeleton</a>, in a Bitbucket repo.
-I keep my production site, which is generated by Sculpin, in a Github repo, which
-is actually what you are reading right now. To keep the two segments segregated,
-I am doing the following:</p>
-
-<p>On my dev machine, I have the following directory structure:</p>
-
-<pre>
-+-ericpoe\
-|
-+-+- ericpoe.sculpin\
-  |
-  +-- ericpoe.github.io\
-</pre>
-
-<p>Within my <code>ericpoe.sculpin</code> directory, I keep my sculpin blog skeleton and my Markdown source files. I have two remotes: <code>origin</code>, which points to my draft on <a href="https://bitbucket.org/ericpoe/">bitbucket</a>, and <code>sync</code>, which points to the source of the <a href="https://github.com/sculpin/sculpin-blog-skeleton">Sculpin blog skeleton</a>.</p>
-
-<p>Within my <code>ericpoe.github.io</code> directory, I keep the html files generated by the <code>sculpin generate --env=prod</code> command.</p>
-
-<p>Tying it all together, I keep three bash files in my root <code>ericpoe</code> directory:</p>
-
-<p><code>sync.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-cd ericpoe.sculpin
-git checkout master
-git pull sync master
-</code></pre>
-
-<p><code>draft.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-if [ $# -ne 1 ]; then
-    echo "usage: ./draft.sh \"commit message\""
-    exit 1;
-fi
-
-cd ericpoe.sculpin
-git checkout master
-git add .
-git commit -m "$1"
-git push -u origin master
-</code></pre>
-
-<p><code>publish.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-
-if [ $# -ne 1 ]; then
-    echo "usage: ./publish.sh \"commit message\""
-    exit 1;
-fi
-
-cd ericpoe.sculpin
-sculpin generate --env=prod
-
-cd ../ericpoe.github.io
-git checkout master
-
-cp -R ../ericpoe.sculpin/output_prod/* .
-
-git add .
-git commit -m "$1"
-git push origin --all
-</code></pre>
-
-<p>My workflow now is to:</p>
-
-<ol>
-<li>create a new Markdown file with the yaml tuple <code>draft: true</code></li>
-<li>create my text</li>
-<li>test my text via <code>sculpin generate --watch --server</code></li>
-<li>make any changes needed</li>
-<li>backup the draft by running <code>draft.sh</code></li>
-<li>if I feel ready, remove the yaml tuple <code>draft: true</code></li>
-<li>publish to my site, which is hosted by github, by running <code>publish.sh</code></li>
-<li>every now and then, when the need strikes, update the core code by running <code>sync.sh</code></li>
-</ol>
-
-<p>This simple workflow will allow me to explore other technologies and to concentrate on the topic-at hand while posting about it here.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="/blog/tags/git">git</a>,                         <a href="/blog/tags/sculpin">sculpin</a>                        </p>
-            </article>
-    <nav>
-        <br />
-        <a href="/page/2">Older Posts</a><br />
-    </nav>
                 </div>
                 <div class="span4 sidebar">
                     <div class="well">
