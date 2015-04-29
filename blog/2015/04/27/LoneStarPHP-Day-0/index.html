@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lone Star PHP Conference 2014 &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
+        <title>Lone Star PHP 2015: Day 0 &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,28 +71,61 @@
                 <div class="span8">
                         <article>
         <header>
-            <h2>Lone Star PHP Conference 2014</h2>
-            <p><strong>2014-05-06</strong></p>
+            <h2>Lone Star PHP 2015: Day 0</h2>
+            <p><strong>2015-04-27</strong></p>
         </header>
         <div>
-            <p>I was fortunate to receive a scholarship to attend the 2014 <a href="http://lonestarphp.com/">Lone Star PHP Conference</a> in Addison, TX (Dallas metro area) over the April last weekend in April. I just had to get myself there. Thank you, Lone Star PHP and <a href="http://nomadphp.com/">NomadPHP</a>!</p>
+            <h3>Lone Star PHP 2015: Day 0 - Training Day</h3>
 
-<p>I enjoyed meeting some of the luminaries of the PHP Renaissance, meeting some of the local PHP aficionados, and attending talks. I walked into the conference feeling very much like a n00b and left realizing that I know more than I give myself credit for — I am the very model of a modern major impostor-syndromite.</p>
+<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took could be best described as unit testing.</p>
 
-<p>Some items of particular note:
-I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, provided by <a href="http://phpwomen.org/">PHPWomen</a>, and ended up helping a few PHP-ers getting their dev environments set up with Vagrant and VirtualBox. I met Elizabeth Smith (<a href="https://twitter.com/auroraeosrose">@auroraeosrose</a>), Michelle Sanver (<a href="https:/twitter.com/michellesanver">@michellesanver</a>), Matthew Frost (<a href="https://twitter.com/shrtwhitebldguy">@shrtwhitebldguy</a>), and Davey Shafik (<a href="https://twitter.com/dshafik">@dshafik</a>)— all of whom were leading the all-day course. In the process of taking the course, I forked the lesson in Github and submitted a few pull requests. I also met a few Texas PHP folks whom I continued talking with after class and after the conference. As I mentioned to several of the course coordinators and students, I plan to take PHPBridge to my local PHP User Group.</p>
+<h4>Getting Started with PHPUnit</h4>
 
-<p>The first-afternoon’s keynote was by Alison Gianotto (<a href="https://twitter.com/snipeyhead">@snipeyhead</a>) on why web security is important and how to mitigate against security failures. Mind === blown. Snipe is an entertaining speaker and I would have loved to learn more from her.</p>
+<ul>
+<li><a href="http://shortwhitebaldguy.com/">Matt Frost</a></li>
+<li>Twitter: <a href="https://twitter.com/shrtwhitebldguy">@shrtwhitebldguy</a></li>
+<li><a href="http://www.slideshare.net/mfrost503/getting-startedphp-unit">Slides</a></li>
+</ul>
 
-<p>The after-party was notable in that I met a few PHP luminaries and attended the live-recording of the 3rd “<a href="http://looselycoupled.info/blog/2014/04/30/episode-3-conference-conversations/">Loosely Coupled</a>” podcast. I talked with Adam Culp (<a href="https://twitter.com/adamculp">@adamculp</a>) about extreme marathon running, a topic of which I know nothing, and learned a new respect for the sport. I talked for a while with Cal (<a href="https://twitter.com/CalEvans">@CalEvans</a>) and Kathy Evans (<a href="https://twitter.com/Kateva">@Kateva</a>). I also drank some tasty beers brewed by speaker Omni Adams (<a href="https://twitter.com/omnicolor">@omnicolor</a>. A murder of nerds then headed over to a sushi joint for a late dinner where I sat at a table with Omni, Ben Ramsey(<a href="https://twitter.com/ramsey">@ramsey</a>), the folks behind <a href="http://www.phpdevhired.com/">PHP Dev Hired</a> (Mike (I didn’t catch his last name) and Lonnie Brown(<a href="https://twitter.com/lbrown972">@lbrown972</a>) and someone else whose name I didn’t catch (sorry!); the conversations spanned the gamut from the deep to the sublime. My miso was meh and I was glad that my sushi order never arrived.</p>
+<p>One reason I took this workshop was so that I could become more familiar with mocks. I had a mental block when it comes to mocks and had a hard time seeing their value. After taking this workshop and talking about mocks with Matt, I can see and appreciate their value. Mock the things we don't directly test (ex. database connections, sql queries, filesystem i/o, etc) to speed up the individual unit tests. Mock the things we don't directly control (ex. 3rd-party API, access to another server on our network, etc) since we don't want to fail a test due to a temporary connection error.</p>
 
-<p>The following day, I attended six talks: Dustin Whittle's (<a href="https://twitter.com/dustinwhittle">@dustinwhittle</a>) “<a href="http://symfony.com/video/26/silex-from-micro-to-full-stack/English">Silex: From micro to full-stack</a>,” Ralph Schindler’s (<a href="https://twitter.com/ralphschindler">@ralphschindler</a>) “<a href="http://lanyrd.com/2014/lonestarphp/scxrty/">Single Page Apps with AngularJS</a>,” Emma Jane Westby’s (<a href="https://twitter.com/emmajanehw">@emmajanehw</a>) “<a href="http://drupalizeme.github.io/workflow-git-workshop/presentations/slides/session-lonestarphp.html#/">Git for Teams of One or More</a>,” Eli White’s (<a href="https://twitter.com/EliW">@EliW</a>) “<a href="https://www.youtube.com/watch?v=ROlhsYQH3qY">Web Security and You</a>,” Justin Carmony’s (<a href="https://twitter.com/JustinCarmony">@JustinCarmony</a>)“<a href="https://speakerdeck.com/justincarmony/top-to-bottom-php-profiling">Top to Bottom PHP Profiling</a>,” and Patrick Mizer’s “<a href="http://www.austintechvideos.com/austinphp/2014/09/21/austinphp-continuous-integration-stop-procrastinating-and-build-often/">Continuous Integration: Stop procrastinating and build often!</a>”</p>
+<p>What I loved about this workshop was the easy-going manner in which Matt got us to embrace unit testing and mocking. Matt even provided a <a href="https://github.com/mfrost503/phpunit-tutorial">git repo</a> for us to clone in order to get started on the fun part of the workshop. Mocking was definitely covered in the interactive part of the workshop.</p>
 
-<p>Larry Garfield’s (<a href="https://twitter.com/Crell">@Crell</a>) keynote, “<a href="http://slidedeck.io/Crell/slides-turning-big-ships">Turning Big Ships</a>,” was interesting. He spoke about what one can and should refactor in converting legacy code to something more modern. His example was migrating Drupal from its procedural D7 codebase to the more object-oriented D8. He talked about why one should refactor or re-engineer the small stuff before doing so to the heavy stuff — don’t abandon your userbase; let them get used to the new way before hitting them with the whammy.</p>
+<p>Unfortunately, our getting started on the interactive portion of the workshop was delayed due to poor wifi signal. By the time most of us were able to get the git repo cloned and run <code>composer install</code>, we only had time to do one of the two mocking exercises. Yet, since I still have the repo cloned on my machine, there's no reason I shouldn't be able to finish the workshop at my leisure.</p>
 
-<p>The after-party seemed much more relaxed. I talked with Cal and Kathy Evans and Adam Culp some more, had some more of Omni’s homebrew, met a few other folks, and discovered that I stink at playing cornhole.</p>
+<h4>Wax On, Wax Off: Coder Dojo</h4>
 
-<p>In all, I had a great time, met some great folks, and was introduced to some new ideas and technologies. I can’t wait to go back!</p>
+<ul>
+<li><a href="https://coderabbi.github.io/">Yitzchok Willroth</a></li>
+<li>Twitter: <a href="https://twitter.com/coderabbi">@coderabbi</a></li>
+<li>Slides unavailable</li>
+</ul>
+
+<p>I have <a href="/blog/2014/12/22/a-tdd-fizz-buzz-kata">done kata</a> before and am a proponent of using them to strengthen knowledge and skills, so this was a workshop I had mentally signed up for as soon as I heard it was being offered.</p>
+
+<p>Rabbi Yitzchok Willroth (aka "CodeRabbi") leads his audience with gentle enthusiasm through an intellectual exercise replete with philosophy and references to psychological studies. During this workshop, Coderabbi had a few friends (luminaries of the PHP community, really) float around to offer guidance to the perplexed during each kata exercise. Their assistance was much appreciated.</p>
+
+<p>The kata we worked on was <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>. We did not have the remainder of the workshop to work on this kata. Instead, we had 30 minutes (you read that right) to work on it. Since this is not something one can learn the rules to and code in a sitting, this seemed unfair -- like being told that the <a href="http://www.coolrunning.com/engine/2/2_3/181.shtml">Couch-to-5K</a> program we were going to follow is to get off the couch and then run 5 kilometers in 30 minutes. As you can imagine, the beginning runner will not complete 5K in 30 minutes, but eventually will with repeated practice. So, too, can one eventually completely code the Game of Life in 30 minutes with repeated practice. What seemed unfair initially, was really a challenge to us to improve, continuously.</p>
+
+<p>One aspect of this workshop that I enjoyed was that at the end of every 30 minute sprint, we were to discard our previous work and start fresh, but with a new constraint to keep our minds sharp. So the second sprint's constraint was to pair up with someone else and see what we could do together. After 30 minutes, the constraint was to make the Cell or Organism (whatever we called it) class not maintain state.</p>
+
+<p>There were times in these kata exercises in which I felt frustrated or angry. Good! For an intellectual exercise, this is the equivalent to feeling muscle strain and soreness in a weight-resistance exercise.</p>
+
+<p>My first pair-up was with a guy who wanted to do the kata in object-oriented javascript and use HTM5 Canvas. At a PHP conference. Yet, once I embraced that he had a better plan of attack than I did, I enjoyed the learning process of watching someone code in a manner that I do not. In that instance, I was not a good pair-partner since I had nothing to contribute regarding Canvas nor from-scratch OOJS. Yet it was a good exercise.</p>
+
+<p>I enjoyed the intellectual exercise of making the Cell Class stateless in that it gave my pair-partner and me the opportunity to discuss what that meant and how to deal with that constraint. We didn't end up with more than an incomplete sketch (in the form of code), but it got our brain juices flowing.</p>
+
+<p>I plan to play with this kata some more on my own and will add additional rules to perhaps mimic competing organisms in the same space. Or, what if one of these organisms has a completely foreign set of rules (like, perhaps cancer cells)?</p>
+
+<p>We started with a Composer-based <a href="https://github.com/coderabbi/coder-dojo">PHPUnit skeleton</a> and a <a href="http://www.codingdojo.org/cgi-bin/index.pl?action=browse&amp;diff=1&amp;id=KataGameOfLife">complicated kata</a>. We ended up with a newfound respect for the squishy gray stuff between our ears.</p>
+
+<h4>Conclusion</h4>
+
+<p>This was the first year that Lone Star PHP had a day devoted to training. The problems we all shared with wifi were frustrating, but overcome personally by my attendee-coworker with a call to our IT department to turn on the ability to hotspot our phones (thanks, Darren!). A glance at all the <a href="https://twitter.com/sdawncasey/status/589097774852935680">Wifi access points</a> at the conference center showed that we were not the only ones to do this. But really, for the workshops, wifi wasn't important except for at the beginning of each workshop so we could clone git repos and run <code>composer install</code>.</p>
+
+<p>The night before the workshop, I had built a vagrant box exclusively for use at the conference. <a href="https://twitter.com/juantreminio">Juan Treminio</a>'s (a speaker at Lone Star PHP 2014!) <a href="https://puphpet.com/">Puphpet</a> tool proved to be invaluable for this purpose. Had I been aware of the need to clone git repos and get the required components installed via composer, I would have done so ahead of time.</p>
+
+<p>In short, the workshops were great, yet too much time was wasted by all in doing something that takes maybe a minute on the office or hotel wifi but takes for-frikkin-ever on a shared conference wifi. I would like to see more notice next time for required environments so we can hit the ground running.</p>
 
         </div>
                     <p class="categories">
@@ -100,12 +133,11 @@ I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, p
                         <a href="/blog/categories/programming">programming</a>                        </p>
                             <p class="tags">
             Tags:
-                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/conferences">conferences</a>                        </p>
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/learning">learning</a>,                         <a href="/blog/tags/conferences">conferences</a>                        </p>
         
                     <nav class="article">
                 <ul>
-                                            <li>Next: <a class="next" href="/blog/2014/05/28/new-job" title="New Job"><span class="title">New Job</span></a></li>
-                                                                <li>Previous: <a class="previous" href="/blog/2014/04/08/atom" title="atom.io: A PHP-Oriented Review"><span class="title">atom.io: A PHP-Oriented Review</span></a></li>
+                                                                <li>Previous: <a class="previous" href="/blog/2015/04/23/heredoc-vs-nowdoc" title="Bite of PHP: Heredoc vs. Nowdoc"><span class="title">Bite of PHP: Heredoc vs. Nowdoc</span></a></li>
                                     </ul>
             </nav>
             </article>

@@ -71,6 +71,92 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="/blog/2014/03/10/Data-Types">Data Types</a></h2>
+            <strong>2014-03-10</strong>
+        </header>
+        <div>
+            <p>I took a programming languages class as part of my degree program in college. In that class, we covered the strongly and weakly classifications of languages as well as the static and dynamic classifications of languages. This was a topic that was barely covered by the textbook, so I did not give it much thought at the time.</p>
+
+<p>Since then, I have given the topic of data types much thought.</p>
+
+<h3>Static vs Dynamic</h3>
+
+<p>Understanding the difference between static and dynamic languages is easy. Static variables are explicitly defined. Dynamic variables are implicitly defined.</p>
+
+<h4>C++ – Static</h4>
+
+<pre><code class="cpp">    String bookTitle; // will only allow strings and will treat its contents
+                      // as strings.
+    bookTitle = "Great Expectations"; // only allows strings
+    bookTitle = 47; // error
+</code></pre>
+
+<h4>Dart – Dynamic</h4>
+
+<pre><code class="dart">    /** Technically, Dart is "optionally typed" in that variables can be
+    either static, if defined with a specific type, or dynamic, if defined
+    without a specific type, as below. */
+
+    var bookTitle; // no idea what this is yet.
+    bookTitle = "Great Expectations" // ah, it’s a String!
+</code></pre>
+
+<h4>Strong vs Weak</h4>
+
+<p>Definitions are hard to come by for strong and weak typing. Some definitions say that these are defined at run-time or compile-time; but I have not been able to find consensus about which is which. In my research, this appears to change from language to language. In other words, there does not appear to be a formal definition of strong or weak typing. Yet, weakly typed languages appear to be those that allow the mixing of data types that make implicit assumptions regarding the intention of the developer. Strongly typed languages only allow the mixing of data types when they are explicitly cast to the same data type.</p>
+
+<h4>PHP – Weak</h4>
+
+<pre><code class="php">    $num = "4"; // this is an implicitly defined String
+                // (dynamic typing in action)
+    print( $num + 2 ); // Allowed: 6
+</code></pre>
+
+<h4>Java – Strong</h4>
+
+<pre><code class="java">    String num1 = "4";
+    int num2 = 2;
+
+    // Not allowed. Throws "Breaking on exception: object of type TypeError"
+    print( num1 + num2 );
+
+    // Allowed since num1 is a String and num2 is cast to a String: "42"
+    print( num1 + num2.toString());
+</code></pre>
+
+<h4>Strong vs. Weak vs. Static vs. Dynamic</h4>
+
+<p>I tend to think of these four types of typing not as discrete definitions but as inclusive adjectives to help describe a language.</p>
+
+<table class="table table-bordered">
+  <tr>
+    <th>&nbsp;</th>
+    <th>STRONG</th>
+    <th>WEAK</th>
+  </tr>
+  <tr>
+    <th>DYNAMIC</th>
+    <td>Dart</td>
+    <td>PHP</td>
+  </tr>
+  <tr>
+    <th>STATIC</th>
+    <td>C++, Dart, Java</td>
+    <td>C</td>
+  </tr>
+</table>
+
+<p>“Strong” and “weak” are loaded terms that can be used as a political cudgel by speakers against what they think of as lesser languages. Yes, PHP is a weakly typed language, but it also has <a href="http://www.php.net/manual/en/language.oop5.typehinting.php">type-hinting</a> within OOP, which adds some strength to its weak typing system.</p>
+
+<p>Use “strong” and “weak” with a grain of salt. “Dynamic” and “static” are much more useful terms.</p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="/blog/tags/php">php</a>,                         <a href="/blog/tags/dart">dart</a>,                         <a href="/blog/tags/java">java</a>,                         <a href="/blog/tags/javascript">javascript</a>,                         <a href="/blog/tags/cpp">cpp</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="/blog/2014/03/03/Decisions-Decisions">Decisions, Decisions</a></h2>
             <strong>2014-03-03</strong>
         </header>
@@ -108,43 +194,6 @@
                     <p class="tags">
             Tags:
                         <a href="/blog/tags/dartlang">dartlang</a>,                         <a href="/blog/tags/javascript">javascript</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="/blog/2014/02/14/code-like-you-need-protection">Code Like You Need Protection</a></h2>
-            <strong>2014-02-14</strong>
-        </header>
-        <div>
-            <h2>Background</h2>
-
-<p>I was recently tasked with  programming a connecty-bit between a Google Drive Form and our instance of SolarWinds Web Help Desk. Both are great products. Both offer fabulous APIs.</p>
-
-<p>My overall plan was to periodically grab all information from the default worksheet of the Google Drive Form, translate it to JSON, and submit it to Web Help Desk to generate a ticket for each Google Drive Form record. I realized that I was faced with a dilemma: how do I retain client records in the Google Drive Form and only read from the newest records to generate these tickets?</p>
-
-<p>I first  thought to add a "read" flag to each record that I had read and created a ticket. The problem that I saw with this algorithm was that I would have to read through N records each time I wanted to check for new tickets. If the tickets were in the lower-end of the number spectrum, I would hardly notice the time it took to iterate through all of these tickets; but once the amount of records reaches a "critical mass,"" the read-delay might exceed the period-length between the times the underlying-script checks for new records.</p>
-
-<p>I decided that my best bet would be to create a new worksheet, an "archive" worksheet, and move each record, once processed, from from the default worksheet to this new "archive" worksheet.</p>
-
-<h2>How it’s done</h2>
-
-<p>My first love, in regards to programming, is PHP, so I thought I might program the  intermediate script in PHP; however, the server I was to run this on did not include PHP. On the other hand, it did run Python 2.</p>
-
-<p>It has been a while since I have coded anything in Python, and even longer since I have written anything in Python 2. So, I fired up my browser and a handy VIM instance and checked out the very worthy <a href="http://learnpythonthehardway.org/book/">Python The Hard Way</a>.</p>
-
-<p>After spending a day on that site, I felt that I was ready to tackle the Python 2 aspects of the Google Drive API ("gdata"). The trick was in figuring out which aspects of the gdata API would grab the data that I needed.</p>
-
-<p>Meanwhile, one of my coworkers found the json API documentation from <a href="http://www.webhelpdesk.com/api/">Stormwinds Web Helpdesk API</a> and provided a proof-of-concept via CURL and some code from the documentation. Once I knew that json would work, I knew that I had to generate json code from the gdata API and submit it to our instance of the Solar Winds Web Helpdesk application via their API and my personal API key.</p>
-
-<p>The rest of the script required that I determine how to generate the originating JSON and how to submit that JSON text via Python2.</p>
-
-<p>The title of this document is something like "code like you need protection." This is in reference to something that I recently (aka "last 6 months") heard that goes something like: code like the next person to read your code is a serial killer who knows where you live. In other words, make sure that the code you write is well structured, well documented, and makes logical sense. To that end, I probably spent more time documenting and refactoring my code so that the 6-months-from-now-me who has to tweak the code doesn’t have to spend an inordinate amount of time trying to figure out what my present-me was attempting to do.</p>
-
-<p>The final script can be seen in my <a href="https://github.com/ericpoe/ask-a-tech">GitHub repository</a>.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="/blog/tags/python">python</a>,                         <a href="/blog/tags/api">api</a>                        </p>
             </article>
     <nav>
         <a href="/page/4">Newer Posts</a><br />
