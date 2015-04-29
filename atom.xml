@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2015-04-28T22:50:37-05:00</updated>
+    <updated>2015-04-28T22:53:04-05:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -13,7 +13,7 @@
             <id>/blog/2015/04/27/LoneStarPHP-Day-0</id>
             <content type="html"><![CDATA[<h3>Lone Star PHP 2015: Day 0 - Training Day</h3>
 
-<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took could be best described as unit testing.</p>
+<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
 
 <h4>Getting Started with PHPUnit</h4>
 
