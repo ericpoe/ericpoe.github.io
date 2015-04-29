@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2015-04-28T22:53:04-05:00</updated>
+    <updated>2015-04-28T22:59:09-05:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -61,7 +61,7 @@
 
 <p>The night before the workshop, I had built a vagrant box exclusively for use at the conference. <a href="https://twitter.com/juantreminio">Juan Treminio</a>'s (a speaker at Lone Star PHP 2014!) <a href="https://puphpet.com/">Puphpet</a> tool proved to be invaluable for this purpose. Had I been aware of the need to clone git repos and get the required components installed via composer, I would have done so ahead of time.</p>
 
-<p>In short, the workshops were great, yet too much time was wasted by all in doing something that takes maybe a minute on the office or hotel wifi but takes for-frikkin-ever on a shared conference wifi. I would like to see more notice next time for required environments so we can hit the ground running.</p>
+<p>In short, the workshops were great, yet too much time was wasted by all in doing something that takes maybe a minute on the office or hotel wifi but takes for-frikkin-ever on a shared conference wifi. I would like to see more notice next time for required environments so we can hit the ground running. The topics were great, and I would have loved to have been able to attend them all!</p>
 ]]></content>
         </entry>
             <entry>
