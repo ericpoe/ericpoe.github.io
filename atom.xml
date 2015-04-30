@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/atom.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-04-29T14:36:16-05:00</updated>
+    <updated>2015-04-29T21:50:27-05:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -11,7 +11,7 @@
             <link href="http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015"/>
             <updated>2015-04-28T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015</id>
-            <content type="html"><![CDATA[<h3>Lone Star PHP 2015</h3>
+            <content type="html"><![CDATA[<h3 id="lone-star-php-2015">Lone Star PHP 2015</h3>
 
 <p>I attended Lone Star PHP <a href="/blog/2014/05/06/Lonestar-PHP-Conference-2014">last year</a> with much hope and even more trepidation as to my abilities to hold my own with other members of the PHP community. I was the recipient of the Lone Star PHP scholarship, so my attendance and stay were taken care of by the conference sponsors (thank you! thank you! thank you!). I spent a day at an intro-to-PHP workshop, where I realized that I knew more about modern PHP and its practices than I cared to admit. I spent another day attending great talks. I met many wonderful folks, some of whom I have maintained contact and some PHP luminaries I follow on Twitter, blog posts, and podcasts. Since I had accepted a job offer while doing the TSA dance at DFW airport, I spent my evenings leaving the after-parties early to work on my resignation letter.</p>
 
@@ -31,7 +31,7 @@
 
 <p>Following the after-parties, groups of us got together to have dinner, hit a karaoke bar, and in the midst of Dallas thundersqualls, have drinks at the hotel the speakers were staying at and engage in great conversations. (Thank you, OKC <a href="https://twitter.com/jakeasmith">Jake Smith</a> &amp; crew for providing transportation!)</p>
 
-<h4>Talks Attended</h4>
+<h4 id="talks-attended">Talks Attended</h4>
 
 <p>These are the talks I attended. My (and others') reviews are included in the links. These first two talks (ok, workshops) are reviewed at <a href="/blog/2015/04/27/LoneStarPHP-Day-0">Lone Star PHP 2015: Day 0 - Training Day</a></p>
 
@@ -56,7 +56,7 @@
 
 <p>I had submitted a couple of talks that weren't accepted; yet I did not attend any talks that made me think "they turned my talk down for this?" Even the duds were golden!</p>
 
-<h4>Conclusion</h4>
+<h4 id="conclusion">Conclusion</h4>
 
 <p>This was a great conference. The Dallas PHP community and the Lone Star organizers are to be commended on providing such a great conference. The cost of admission is perfect for those entering PHP development (or attending locally) and the caliber of talks are perfect for those who are presently engaged in PHP development (or attending from afar). The after-parties are great for adults away from their families, yet fun for locals to bring their families.</p>
 
@@ -70,11 +70,11 @@
             <link href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0"/>
             <updated>2015-04-27T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0</id>
-            <content type="html"><![CDATA[<h3>Lone Star PHP 2015: Day 0 - Training Day</h3>
+            <content type="html"><![CDATA[<h3 id="lone-star-php-2015%3A-day-0---training-day">Lone Star PHP 2015: Day 0 - Training Day</h3>
 
 <p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
 
-<h4>Getting Started with PHPUnit</h4>
+<h4 id="getting-started-with-phpunit">Getting Started with PHPUnit</h4>
 
 <ul>
 <li><a href="http://shortwhitebaldguy.com/">Matt Frost</a></li>
@@ -88,7 +88,7 @@
 
 <p>Unfortunately, our getting started on the interactive portion of the workshop was delayed due to poor wifi signal. By the time most of us were able to get the git repo cloned and run <code>composer install</code>, we only had time to do one of the two mocking exercises. Yet, since I still have the repo cloned on my machine, there's no reason I shouldn't be able to finish the workshop at my leisure.</p>
 
-<h4>Wax On, Wax Off: Coder Dojo</h4>
+<h4 id="wax-on%2C-wax-off%3A-coder-dojo">Wax On, Wax Off: Coder Dojo</h4>
 
 <ul>
 <li><a href="https://coderabbi.github.io/">Yitzchok Willroth</a></li>
@@ -114,7 +114,7 @@
 
 <p>We started with a Composer-based <a href="https://github.com/coderabbi/coder-dojo">PHPUnit skeleton</a> and a <a href="http://www.codingdojo.org/cgi-bin/index.pl?action=browse&amp;diff=1&amp;id=KataGameOfLife">complicated kata</a>. We ended up with a newfound respect for the squishy gray stuff between our ears.</p>
 
-<h4>Conclusion</h4>
+<h4 id="conclusion">Conclusion</h4>
 
 <p>This was the first year that Lone Star PHP had a day devoted to training. The problems we all shared with wifi were frustrating, but overcome personally by my attendee-coworker with a call to our IT department to turn on the ability to hotspot our phones (thanks, Darren!). A glance at all the <a href="https://twitter.com/sdawncasey/status/589097774852935680">Wifi access points</a> at the conference center showed that we were not the only ones to do this. But really, for the workshops, wifi wasn't important except for at the beginning of each workshop so we could clone git repos and run <code>composer install</code>.</p>
 
@@ -128,9 +128,9 @@
             <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
             <updated>2015-04-23T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
-            <content type="html"><![CDATA[<h3>Bite of PHP: Heredoc vs Nowdoc</h3>
+            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-heredoc-vs-nowdoc">Bite of PHP: Heredoc vs Nowdoc</h3>
 
-<h4>Heredoc</h4>
+<h4 id="heredoc">Heredoc</h4>
 
 <p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
 of format. So, if you want to echo out structured text, like so:</p>
@@ -167,7 +167,7 @@ As much as I
 
 <p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
 
-<h4>Nowdoc</h4>
+<h4 id="nowdoc">Nowdoc</h4>
 
 <p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
 
@@ -201,7 +201,7 @@ As much as I
             <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
             <updated>2015-03-04T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
-            <content type="html"><![CDATA[<h3>Bite of PHP: Double vs Single Quote Echo</h3>
+            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</h3>
 
 <p>In PHP, we have two ways of formatting an echo statement: we can choose to
 use single-quotes or double-quotes. The choice is less dependant upon which
@@ -293,7 +293,7 @@ HTML5, etc).</p>
 how close I was back then to what I am now doing. What I was missing then was the
 generation of the static HTML files that Sculpin allows.</p>
 
-<h3>Making it work</h3>
+<h3 id="making-it-work">Making it work</h3>
 
 <p>I spent too much time this weekend trying to figure out how to edit my Sculpin
 site locally and yet keep that version-controlled via git as well as keeping my
@@ -388,7 +388,7 @@ git push origin --all
             <link href="http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata"/>
             <updated>2014-12-22T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata</id>
-            <content type="html"><![CDATA[<h3>Kata</h3>
+            <content type="html"><![CDATA[<h3 id="kata">Kata</h3>
 
 <p>Kata are a series of movements which, when repeated, migrate mindful action into
 muscle memory. An example kata is performed by <a href="http://youtu.be/iiiznDpoapQ?t=50s">Rika Usami</a>
@@ -403,7 +403,7 @@ in the right place to pull off something difficult and awesome.</p>
 
 <p>Programming also requires practice; kata are a great way to formalize that practice.</p>
 
-<h3>TDD</h3>
+<h3 id="tdd">TDD</h3>
 
 <p>Test-Driven Development (aka "TDD") is the practice of writing a test before any
 other code is written. Write a test that fails, then write the minimum of code to
@@ -436,7 +436,7 @@ This helps us feel better that changes we make to the core code will not break t
 code (or at least not as much) as compared to anxiety we would fee if we did not
 have tests in place.</p>
 
-<h3>TDD Kata</h3>
+<h3 id="tdd-kata">TDD Kata</h3>
 
 <p>Given that Kata help drive difficult movement into muscle memory and that TDD is
 beneficial to learning good programming practices, I try to incorporate TDD Kata

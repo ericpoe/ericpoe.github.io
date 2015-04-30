@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Eric Poe]]></title>
+    <link href="http://ericpoe.com/blog/categories/programming.xml" rel="self"/>
+    <link href="http://ericpoe.com/"/>
+    <updated>2015-04-29T21:50:27-05:00</updated>
+    <id>http://ericpoe.com/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Lone Star PHP 2015]]></title>
+            <link href="http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015"/>
+            <updated>2015-04-28T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015</id>
+            <content type="html"><![CDATA[<h3 id="lone-star-php-2015">Lone Star PHP 2015</h3>
+
+<p>I attended Lone Star PHP <a href="/blog/2014/05/06/Lonestar-PHP-Conference-2014">last year</a> with much hope and even more trepidation as to my abilities to hold my own with other members of the PHP community. I was the recipient of the Lone Star PHP scholarship, so my attendance and stay were taken care of by the conference sponsors (thank you! thank you! thank you!). I spent a day at an intro-to-PHP workshop, where I realized that I knew more about modern PHP and its practices than I cared to admit. I spent another day attending great talks. I met many wonderful folks, some of whom I have maintained contact and some PHP luminaries I follow on Twitter, blog posts, and podcasts. Since I had accepted a job offer while doing the TSA dance at DFW airport, I spent my evenings leaving the after-parties early to work on my resignation letter.</p>
+
+<p>This year was my sophomore attendance, so I attended with a less timid attitude, a lifetime more of experience, an established and beloved career, and looking forward to the talks I would attend, the friends I would see again, and the new friends I would make. This time, my employer, <a href="http://stowers.org">Stowers Institute for Medical Research</a> sent me (thank you!). This time around, I found that I was able to offer more to the conference than I had before. I connected at least one attendee to his <a href="http://devict.org/">local user group</a>, talked up <a href="http://nomadphp.com/">NomadPHP</a> and <a href="https://coderdojo.com/">CoderDojo</a>, and was able to explain some of the awesomeness of <a href="https://getcomposer.org/">Composer</a>. I also attended great talks and workshops and met some amazing folks.</p>
+
+<p>Lone Star is a regional conference, has world-class talks, and feels like a community. Many of the speakers know each other and hang out together for the several days of the conference (and sometimes even a day or so later). Yet, even though many of the speakers are friends with each other, they are open and welcoming to outsiders like me.</p>
+
+<p>The business value for attending the conference is in the talks themselves. I was able to take concepts from at least two talks and apply them to code I was working on for work the following week. The long-term value will be seen by my employer later as I apply lessons learned from the various intellectual paths opened to me by all of the talks.</p>
+
+<p>The reason I will attend Lone Star again is for what happens outside of the talks. The "hallway track" is a part of this. I attended two talks I didn't expect to attend due to having good conversations with attendees after a talk that <del>were interrupted</del> were followed by a great talk in the same room.</p>
+
+<p>The lunches provided by the conference sponsors were great. Day 0's lunch was off, schedule-wise, in that the line went pretty far back; yet, I had several great conversations with great people while waiting in line, talked with Adam Culp about his long-distance running and learned of his new <a href="https://rungeekradio.com/">podcast</a>, and had Ben Ramsey sign my copy of the 3rd edition of the <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend Certification Guide</a> (Davey Shafik signed it Saturday night). Friday's lunch was fajitas and Saturday's was Texas BBQ. Yum. Funny aside: on one of the lunches, forks were more popular than were available; so I grabbed two plastic knives and used them like chopsticks to eat my lunch -- I felt like I was epitomizing the <a href="http://blog.codinghorror.com/the-php-singularity/">double-clawed hammer</a> of PHP. Thank you, <a href="http://www.phpdevhired.com/">PHPDevHired</a> and <a href="http://www.robofirm.com/">Robofirm</a> for sponsoring the lunches!</p>
+
+<p>The hallway track at Lone Star was pretty awesome. I met an Austin-based dev team from Whole Foods, user group leaders from around the United States, many Texas-based developers, speakers and other luminaries of the PHP community, and people I had met last year. At one point, I saw various speakers in the hallway and asked if they were "the hallway track or the rogue's gallery;" one responded that they were in detention.</p>
+
+<p>The after-parties were low key and were largely an extension of the hallway track. <a href="http://omni-spot.blogspot.com/">Omni Adams</a> provided his awesome homebrew beers -- incredibly, they have improved from last year's perfection. I missed the <a href="http://looselycoupled.info/">Loosely Coupled</a> podcast Friday night due to being caught up with great conversations with members of the community. Saturday night, I was able to take part in the fun "<a href="https://github.com/jeremeamia/JeoPHPardy">PHP Jeopardy</a>" game, where I forgot everything I knew. I was honored to take part in the "It's the booze talking" edition of the <a href="https://voicesoftheelephpant.com/">Voices of the Elephant</a> podcast. Thank you, <a href="https://www.sparefoot.com/">SpareFoot</a> and <a href="http://www.softlayer.com/">SoftLayer</a> for sponsoring the after-parties!</p>
+
+<p>Following the after-parties, groups of us got together to have dinner, hit a karaoke bar, and in the midst of Dallas thundersqualls, have drinks at the hotel the speakers were staying at and engage in great conversations. (Thank you, OKC <a href="https://twitter.com/jakeasmith">Jake Smith</a> &amp; crew for providing transportation!)</p>
+
+<h4 id="talks-attended">Talks Attended</h4>
+
+<p>These are the talks I attended. My (and others') reviews are included in the links. These first two talks (ok, workshops) are reviewed at <a href="/blog/2015/04/27/LoneStarPHP-Day-0">Lone Star PHP 2015: Day 0 - Training Day</a></p>
+
+<ul>
+<li><a href="https://joind.in/talk/view/13536">Getting Started with PHP Unit</a> - Matt Frost</li>
+<li><a href="https://joind.in/talk/view/13539">Wax On, Wax Off: Coder Dojo</a> - Rabbi Yitzchok Willroth</li>
+<li><a href="https://joind.in/talk/view/13543">Architecting with Queues for Scale, Speed, and Separation</a> - Sandy Smith</li>
+<li><a href="https://joind.in/talk/view/13544">Caching Strategies</a> - Ben Ramsey</li>
+<li><a href="https://joind.in/talk/view/13546">Dependency Injection, Dependency Inversion, and You</a> - Jeff Carouth</li>
+<li><a href="https://joind.in/talk/view/13549">Talmudic Maxims to Maximize Your Growth as a Developer</a> - Rabbi Yitzchok Willroth</li>
+<li><a href="https://joind.in/talk/view/13553">Object-Oriented JavaScript (yes, it really exists)</a> - Jordan Kasper</li>
+<li><a href="https://joind.in/talk/view/13555">It Feels Great to Iterate</a> - Jeremy Lindblom</li>
+<li><strong>Keynote:</strong> <a href="https://joind.in/talk/view/13558">Teaching Kids to Fail</a> - Maurya Couvares</li>
+<li><a href="https://joind.in/talk/view/13560">Refactoring Legacy Code</a> - Adam Culp</li>
+<li><a href="https://joind.in/talk/view/13563">Debuggin Zen</a> - Ben Ramsey</li>
+<li><a href="https://joind.in/talk/view/13566">Functional PHP</a> - Larry Garfield</li>
+<li><a href="https://joind.in/talk/view/13562">Building Extraordinary Packages</a> - Phil Sturgeon</li>
+<li><a href="https://joind.in/talk/view/14411">Building Rock Solid Software in the Real World</a> - Omni Adams</li>
+<li><a href="https://joind.in/talk/view/13575">Don't Fear the Regex</a> - Sandy Smith</li>
+<li><strong>Keynote:</strong> <a href="https://joind.in/talk/view/13576">Turning Your Code Into a Company: The Parts They Don't Tell You</a> - Luke Stokes</li>
+</ul>
+
+<p>I had submitted a couple of talks that weren't accepted; yet I did not attend any talks that made me think "they turned my talk down for this?" Even the duds were golden!</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>This was a great conference. The Dallas PHP community and the Lone Star organizers are to be commended on providing such a great conference. The cost of admission is perfect for those entering PHP development (or attending locally) and the caliber of talks are perfect for those who are presently engaged in PHP development (or attending from afar). The after-parties are great for adults away from their families, yet fun for locals to bring their families.</p>
+
+<p>I met many wonderful people and learned much that will benefit both my employer and myself.</p>
+
+<p>I will be back. Next time, I hope, with a talk in my pocket.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lone Star PHP 2015: Day 0]]></title>
+            <link href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0"/>
+            <updated>2015-04-27T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0</id>
+            <content type="html"><![CDATA[<h3 id="lone-star-php-2015%3A-day-0---training-day">Lone Star PHP 2015: Day 0 - Training Day</h3>
+
+<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
+
+<h4 id="getting-started-with-phpunit">Getting Started with PHPUnit</h4>
+
+<ul>
+<li><a href="http://shortwhitebaldguy.com/">Matt Frost</a></li>
+<li>Twitter: <a href="https://twitter.com/shrtwhitebldguy">@shrtwhitebldguy</a></li>
+<li><a href="http://www.slideshare.net/mfrost503/getting-startedphp-unit">Slides</a></li>
+</ul>
+
+<p>One reason I took this workshop was so that I could become more familiar with mocks. I had a mental block when it comes to mocks and had a hard time seeing their value. After taking this workshop and talking about mocks with Matt, I can see and appreciate their value. Mock the things we don't directly test (ex. database connections, sql queries, filesystem i/o, etc) to speed up the individual unit tests. Mock the things we don't directly control (ex. 3rd-party API, access to another server on our network, etc) since we don't want to fail a test due to a temporary connection error.</p>
+
+<p>What I loved about this workshop was the easy-going manner in which Matt got us to embrace unit testing and mocking. Matt even provided a <a href="https://github.com/mfrost503/phpunit-tutorial">git repo</a> for us to clone in order to get started on the fun part of the workshop. Mocking was definitely covered in the interactive part of the workshop.</p>
+
+<p>Unfortunately, our getting started on the interactive portion of the workshop was delayed due to poor wifi signal. By the time most of us were able to get the git repo cloned and run <code>composer install</code>, we only had time to do one of the two mocking exercises. Yet, since I still have the repo cloned on my machine, there's no reason I shouldn't be able to finish the workshop at my leisure.</p>
+
+<h4 id="wax-on%2C-wax-off%3A-coder-dojo">Wax On, Wax Off: Coder Dojo</h4>
+
+<ul>
+<li><a href="https://coderabbi.github.io/">Yitzchok Willroth</a></li>
+<li>Twitter: <a href="https://twitter.com/coderabbi">@coderabbi</a></li>
+<li>Slides unavailable</li>
+</ul>
+
+<p>I have <a href="/blog/2014/12/22/a-tdd-fizz-buzz-kata">done kata</a> before and am a proponent of using them to strengthen knowledge and skills, so this was a workshop I had mentally signed up for as soon as I heard it was being offered.</p>
+
+<p>Rabbi Yitzchok Willroth (aka "CodeRabbi") leads his audience with gentle enthusiasm through an intellectual exercise replete with philosophy and references to psychological studies. During this workshop, Coderabbi had a few friends (luminaries of the PHP community, really) float around to offer guidance to the perplexed during each kata exercise. Their assistance was much appreciated.</p>
+
+<p>The kata we worked on was <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>. We did not have the remainder of the workshop to work on this kata. Instead, we had 30 minutes (you read that right) to work on it. Since this is not something one can learn the rules to and code in a sitting, this seemed unfair -- like being told that the <a href="http://www.coolrunning.com/engine/2/2_3/181.shtml">Couch-to-5K</a> program we were going to follow is to get off the couch and then run 5 kilometers in 30 minutes. As you can imagine, the beginning runner will not complete 5K in 30 minutes, but eventually will with repeated practice. So, too, can one eventually completely code the Game of Life in 30 minutes with repeated practice. What seemed unfair initially, was really a challenge to us to improve, continuously.</p>
+
+<p>One aspect of this workshop that I enjoyed was that at the end of every 30 minute sprint, we were to discard our previous work and start fresh, but with a new constraint to keep our minds sharp. So the second sprint's constraint was to pair up with someone else and see what we could do together. After 30 minutes, the constraint was to make the Cell or Organism (whatever we called it) class not maintain state.</p>
+
+<p>There were times in these kata exercises in which I felt frustrated or angry. Good! For an intellectual exercise, this is the equivalent to feeling muscle strain and soreness in a weight-resistance exercise.</p>
+
+<p>My first pair-up was with a guy who wanted to do the kata in object-oriented javascript and use HTM5 Canvas. At a PHP conference. Yet, once I embraced that he had a better plan of attack than I did, I enjoyed the learning process of watching someone code in a manner that I do not. In that instance, I was not a good pair-partner since I had nothing to contribute regarding Canvas nor from-scratch OOJS. Yet it was a good exercise.</p>
+
+<p>I enjoyed the intellectual exercise of making the Cell Class stateless in that it gave my pair-partner and me the opportunity to discuss what that meant and how to deal with that constraint. We didn't end up with more than an incomplete sketch (in the form of code), but it got our brain juices flowing.</p>
+
+<p>I plan to play with this kata some more on my own and will add additional rules to perhaps mimic competing organisms in the same space. Or, what if one of these organisms has a completely foreign set of rules (like, perhaps cancer cells)?</p>
+
+<p>We started with a Composer-based <a href="https://github.com/coderabbi/coder-dojo">PHPUnit skeleton</a> and a <a href="http://www.codingdojo.org/cgi-bin/index.pl?action=browse&amp;diff=1&amp;id=KataGameOfLife">complicated kata</a>. We ended up with a newfound respect for the squishy gray stuff between our ears.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>This was the first year that Lone Star PHP had a day devoted to training. The problems we all shared with wifi were frustrating, but overcome personally by my attendee-coworker with a call to our IT department to turn on the ability to hotspot our phones (thanks, Darren!). A glance at all the <a href="https://twitter.com/sdawncasey/status/589097774852935680">Wifi access points</a> at the conference center showed that we were not the only ones to do this. But really, for the workshops, wifi wasn't important except for at the beginning of each workshop so we could clone git repos and run <code>composer install</code>.</p>
+
+<p>The night before the workshop, I had built a vagrant box exclusively for use at the conference. <a href="https://twitter.com/juantreminio">Juan Treminio</a>'s (a speaker at Lone Star PHP 2014!) <a href="https://puphpet.com/">Puphpet</a> tool proved to be invaluable for this purpose. Had I been aware of the need to clone git repos and get the required components installed via composer, I would have done so ahead of time.</p>
+
+<p>In short, the workshops were great, yet too much time was wasted by all in doing something that takes maybe a minute on the office or hotel wifi but takes for-frikkin-ever on a shared conference wifi. I would like to see more notice next time for required environments so we can hit the ground running. The topics were great, and I would have loved to have been able to attend them all!</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Bite of PHP: Heredoc vs. Nowdoc]]></title>
+            <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
+            <updated>2015-04-23T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
+            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-heredoc-vs-nowdoc">Bite of PHP: Heredoc vs Nowdoc</h3>
+
+<h4 id="heredoc">Heredoc</h4>
+
+<p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
+of format. So, if you want to echo out structured text, like so:</p>
+
+<pre><code class="html">I think that I
+    Shall never pay
+As much as I
+    Have for 2015-04-23
+</code></pre>
+
+<p>You would put it in a heredoc like this:</p>
+
+<pre><code class="php">$today = date('Y-m-d');
+$poem = &lt;&lt;&lt;HTML
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+HTML;
+
+echo $poem;
+</code></pre>
+
+<p><strong>output:</strong></p>
+
+<pre>
+I think that I
+    Shall never pay
+As much as I
+    Have for 2015-04-23
+</pre>
+
+<p>Notice that heredoc can behave like a template and parse any PHP contained within.</p>
+
+<p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
+
+<h4 id="nowdoc">Nowdoc</h4>
+
+<p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
+
+<pre><code class="php">$today = date('Y-m-d');
+$poem = &lt;&lt;&lt;'HTML'
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+HTML;
+
+echo $poem;
+</code></pre>
+
+<p><strong>output:</strong></p>
+
+<pre>
+I think that I
+    Shall never pay
+As much as I
+    Have for $today
+</pre>
+
+<p>Test it out on <a href="http://3v4l.org/H1YjU">3v4l.org</a>.</p>
+
+<p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
+            <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
+            <updated>2015-03-04T00:00:00-06:00</updated>
+            <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
+            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</h3>
+
+<p>In PHP, we have two ways of formatting an echo statement: we can choose to
+use single-quotes or double-quotes. The choice is less dependant upon which
+side of the Atlantic we learned to read and more dependant upon what we hope
+to accomplish with echoing that string.</p>
+
+<p>If you want to echo the string without parsing it, use single-quotes. If you
+want to parse the string while echoing it, use double-quotes. Observe:</p>
+
+<p><strong>Single-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo '$greeting, $audience';
+</code></pre>
+
+<p><em>Output:</em> <code>$greeting, $audience</code></p>
+
+<p><br></p>
+
+<p><strong>Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, $audience";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World</code></p>
+
+<p><br></p>
+
+<p>What if you want to add a character to the output of one of those variables?
+Just enclose the variable in a curly bracket!</p>
+
+<p><strong>Special Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, {$audience}!";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World!</code></p>
+
+<p><br></p>
+
+<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TDD Kata]]></title>
+            <link href="http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata"/>
+            <updated>2014-12-22T00:00:00-06:00</updated>
+            <id>http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata</id>
+            <content type="html"><![CDATA[<h3 id="kata">Kata</h3>
+
+<p>Kata are a series of movements which, when repeated, migrate mindful action into
+muscle memory. An example kata is performed by <a href="http://youtu.be/iiiznDpoapQ?t=50s">Rika Usami</a>
+of Japan during the 2012 World Karate Championship in Paris.</p>
+
+<p>Kata can be thought of in terms of playing an instrument or a craft. During the
+warmup before a concert, listen to the musicians. They are playing their scales
+and odd passages, they are practicing their kata to get their brains and fingers
+in the right place to pull off something difficult and awesome.</p>
+
+<p><em>Kata, like scales, are temporary in nature. They are to be practiced, then discarded, then practiced again.</em></p>
+
+<p>Programming also requires practice; kata are a great way to formalize that practice.</p>
+
+<h3 id="tdd">TDD</h3>
+
+<p>Test-Driven Development (aka "TDD") is the practice of writing a test before any
+other code is written. Write a test that fails, then write the minimum of code to
+pass that test, then write another test that fails, etc. When there are no more
+tests to write, then the program is complete. In theory.</p>
+
+<p>The blessing of TDD is that each test is like a public contract: when X is applied, Y shall happen, but
+not Z. If a change is made sometime later and the tests still pass, then relief
+can be sighed; otherwise, the failed tests right away point out that the recent
+change was not appropriate.</p>
+
+<p>The curse of TDD is that it's hard, it takes too much time, quite a few of the
+tests are rendered useless over time, and if you start out a project in TDD,
+changing direction is rather difficult. <abbr title=" David Heinemeier Hansson">DHH</abbr>
+lobbed an anti-TDD bomb in April 2014 with "<a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">TDD is dead. Long live testing.</a>"</p>
+
+<p>These are all valid points, but as Martin Fowler and Kent Beck also said in
+<a href="http://youtu.be/gWD6REVeKW4">Is TDD Dead? [Part V &amp; VI]</a>, TDD forces one to approach
+a hard problem one small step at a time; once the hugely difficult problem is
+reduced to smaller, easier to understand problems, the difficult bits are easier
+to approach and figure out. In the same video above, even DHH says that TDD is
+the gateway drug to better practices. Similarly, I have read elsewhere and have
+heard from several mentors that TDD is also an important step to take in learning
+good programming skills. For instance, learning TDD also forces one to learn and
+practice <a href="http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29"><abbr title="Single responsibility, Open-closed, Liskov substitution, Interface segregation, and Dependency inversion">SOLID</abbr> principals</a>.</p>
+
+<p>I will admit that at work, our codebase is not test-driven. Yet, we do utilize
+unit tests for core features and try to ensure 100% code coverage for those tests.
+This helps us feel better that changes we make to the core code will not break the
+code (or at least not as much) as compared to anxiety we would fee if we did not
+have tests in place.</p>
+
+<h3 id="tdd-kata">TDD Kata</h3>
+
+<p>Given that Kata help drive difficult movement into muscle memory and that TDD is
+beneficial to learning good programming practices, I try to incorporate TDD Kata
+into my weekly routine.</p>
+
+<p>I use TDD Kata to help me internalize new skills. My latest TDD kata have helped
+me learn to use <a href="https://getcomposer.org/">Composer</a>, <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a>, <a href="https://phpunit.de/">PHPUnit</a>, and basic <accr title="Object Oriented Programming">OOP</accr>.</p>
+
+<p>Some interesting TDD Kata to attempt can be found at the <a href="http://cyber-dojo.org/">Cyber Dojo</a>.
+In a near-future post, I will attempt to walk through the TDD Fizz Buzz Kata.</p>
+
+<p>Cheers,<br/>
+Eric</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Programming As Story-Telling]]></title>
+            <link href="http://ericpoe.com/blog/2014/08/15/programming-as-story-telling"/>
+            <updated>2014-08-15T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2014/08/15/programming-as-story-telling</id>
+            <content type="html"><![CDATA[<p>I was recently talking with a non-programmer friend of mine about teaching our kids how to code. I told him about my long and winding road to loving programming. He told me that he just doesn’t get how anything so tedious as programming can hold anyone’s interest for more than 5 minutes. Visual design, on the other hand, he finds utterly fascinating.</p>
+
+<p>I agreed that design is easier to convey as exciting, that graphic arts is designed to convey a message to people; while programming, by comparison, looks like a bunch of arcane spell casting designed to convey a message to computers.</p>
+
+<p>Then I told him that programs, at their heart, are for people to read and not for computers. Computers understand basic instructions written in ones and zeros to make them happy; while my eyes glaze over when I see a bunch of ones and zeros (as long as they aren’t preceded by a dollar sign).</p>
+
+<p>We write programs for people to read. At some point, a compiler will look at that code and shake its silicon head as it takes the carefully crafted code and interprets it into some kind of gobbledygook that only certain CPUs will understand. But for now, I write programs to do something that the client wants. The client doesn’t care which paradigms I follow, which architecture I use, or even which programming languages I use. As long as the computer does what the client wants, the client is happy. Yet, code does not come out of my brain in one take. Code, like story-telling, comes in multiple attempts and revisions, depending on the mood of my audience and myself.</p>
+
+<p>Ah, who is my audience? At times, my audience is my client; at other times, my audience is myself or my fellow programmer. The difference between a program and code is that a program is written for a client to enjoy while code is written for the human programmer to enjoy and the compiler to interpret into a program.</p>
+
+<p>The code itself is typically made up of words in English and symbols which are translated into English. So,</p>
+
+<pre><code class="javascript">var Elvis = new singer();
+Elvis-&gt;style("RockNRoll");
+</code></pre>
+
+<p>is interpreted as “Elvis is a singer of the RockNRoll style.” I, as the fellow programmer thinks, “Ah, this is interesting, what happens to Elvis?” I find out within this coded function that the Elvis variable goes through several transformations and influences several different variables. Wait, what’s this, the Elvis variable, when combined with the Priscilla variable, generates a LisaMarie variable? What’s the story behind this Priscilla variable? What happens to this LisaMarie variable? Yet, the client is completely unaware of the existence of the variables Elvis, Priscilla, and LisaMarie. The only thing the client is aware of from this internal interaction, is that the movie “<a href="http://en.wikipedia.org/wiki/The_Naked_Gun:_From_the_Files_of_Police_Squad!">Naked Gun</a>” had some rock music in it.</p>
+
+<p>So, coding is telling a story and programming is interpreting that story into another story. Just as Shakespeare wrote his plays for actors to read and interpret and those actors then compiled his stories into dramatizations for the audience to enjoy.</p>
+
+<p>I once saw  “Macbeth” in the late 80s presented as as Sandinistas vs. Contras in Nicaragua. Was this Shakespeare’s intent? No, yet his intent was interpreted by the actors and presented in a manner unlike how it would have been interpreted and presented nearly 400 years prior.</p>
+
+<p>Dostoevsky winnowed all of literature down to one of two stories: a stranger comes to town or someone goes on a journey. In programming, all functions can be boiled down to information comes in or information goes out. In both literature and programming, sometimes it’s a combination of the two truths.</p>
+
+<p>Sometimes, my object goes on a great journey. Sometimes, interesting things happen to it. It’s all in the way we tell the story.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Power of RDD]]></title>
+            <link href="http://ericpoe.com/blog/2014/07/28/power-of-rdd"/>
+            <updated>2014-07-28T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2014/07/28/power-of-rdd</id>
+            <content type="html"><![CDATA[<p>We hired a new guy at work. I was officially the new guy for 2 months, now we have someone new.</p>
+
+<p>I was given the task to get him up and running since the experience was still fresh for me. Once he got his dev environment going, he would look over my shoulder to watch what I was doing.</p>
+
+<p>At first, this frustrated me, because I spend a lot of time just reading the code and trying to figure out what it does. But, I embraced the challenge and started explaining my understanding of the code and how the PHP and the JavaScript frameworks tie together. When I was unsure of what magic was happening, we would either investigate the code for an answer or we would ask a more-senior member of the team for their understanding. By the end of the sprint, both of us felt much more knowledge about how the code works and that the code we wrote was better because of it.</p>
+
+<p>I explained this phenomenon to a friend over lunch one day and he laughed and asked if the new guy was my “rubber duck.” I gave him my best I’ve-only-been-doing-this-professionally-for-a-few-months-so-talk-slowly look and he explained what the <a href="http://en.wikipedia.org/wiki/The_Pragmatic_Programmer">Pragmatic Programmer</a> calls “<a href="http://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging</a>.” Basically, by having to explain a problem out loud, one is able to more clearly see the answer.</p>
+
+<p>I think this is also a form of learning by teaching. Just to explain the problem in a logical way, I had to learn enough of the domain for it make sense. I could answer some questions based on what I learned, but when asked a question that I could not answer right away, I had to learn more in order to answer that question satisfactorily.</p>
+
+<p>I think for an informal pair-programming exercise such as this, we were experiencing Rubber Duck Development. We would both alternate between explaining and learning. Having to articulate the problem and looking into the bowels of the code, we were able to reduce the magic and increase our understanding.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[New Job]]></title>
+            <link href="http://ericpoe.com/blog/2014/05/28/new-job"/>
+            <updated>2014-05-28T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2014/05/28/new-job</id>
+            <content type="html"><![CDATA[<p>I recently had the opportunity to take my love of programming from being a hobby
+to being a career. I jumped at the chance.</p>
+
+<p>I am now in my 3rd week of the new job and have yet to go to work. Instead, I
+meet up with fellow nerds and geek out on programming. I have survived my first
+agile sprint and resolved two introductory issues with the codebase; one in PHP
+(<a href="http://symfony.com/">Symfony 2</a> with <a href="http://www.doctrine-project.org/">Doctrine</a>)
+and the other in JavaScript (<a href="http://www.sencha.com/products/extjs/">ExtJS</a>).</p>
+
+<p>I have much to learn in my new career and I look forward to every second of it.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lone Star PHP Conference 2014]]></title>
+            <link href="http://ericpoe.com/blog/2014/05/06/Lonestar-PHP-Conference-2014"/>
+            <updated>2014-05-06T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2014/05/06/Lonestar-PHP-Conference-2014</id>
+            <content type="html"><![CDATA[<p>I was fortunate to receive a scholarship to attend the 2014 <a href="http://lonestarphp.com/">Lone Star PHP Conference</a> in Addison, TX (Dallas metro area) over the April last weekend in April. I just had to get myself there. Thank you, Lone Star PHP and <a href="http://nomadphp.com/">NomadPHP</a>!</p>
+
+<p>I enjoyed meeting some of the luminaries of the PHP Renaissance, meeting some of the local PHP aficionados, and attending talks. I walked into the conference feeling very much like a n00b and left realizing that I know more than I give myself credit for — I am the very model of a modern major impostor-syndromite.</p>
+
+<p>Some items of particular note:
+I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, provided by <a href="http://phpwomen.org/">PHPWomen</a>, and ended up helping a few PHP-ers getting their dev environments set up with Vagrant and VirtualBox. I met Elizabeth Smith (<a href="https://twitter.com/auroraeosrose">@auroraeosrose</a>), Michelle Sanver (<a href="https:/twitter.com/michellesanver">@michellesanver</a>), Matthew Frost (<a href="https://twitter.com/shrtwhitebldguy">@shrtwhitebldguy</a>), and Davey Shafik (<a href="https://twitter.com/dshafik">@dshafik</a>)— all of whom were leading the all-day course. In the process of taking the course, I forked the lesson in Github and submitted a few pull requests. I also met a few Texas PHP folks whom I continued talking with after class and after the conference. As I mentioned to several of the course coordinators and students, I plan to take PHPBridge to my local PHP User Group.</p>
+
+<p>The first-afternoon’s keynote was by Alison Gianotto (<a href="https://twitter.com/snipeyhead">@snipeyhead</a>) on why web security is important and how to mitigate against security failures. Mind === blown. Snipe is an entertaining speaker and I would have loved to learn more from her.</p>
+
+<p>The after-party was notable in that I met a few PHP luminaries and attended the live-recording of the 3rd “<a href="http://looselycoupled.info/blog/2014/04/30/episode-3-conference-conversations/">Loosely Coupled</a>” podcast. I talked with Adam Culp (<a href="https://twitter.com/adamculp">@adamculp</a>) about extreme marathon running, a topic of which I know nothing, and learned a new respect for the sport. I talked for a while with Cal (<a href="https://twitter.com/CalEvans">@CalEvans</a>) and Kathy Evans (<a href="https://twitter.com/Kateva">@Kateva</a>). I also drank some tasty beers brewed by speaker Omni Adams (<a href="https://twitter.com/omnicolor">@omnicolor</a>. A murder of nerds then headed over to a sushi joint for a late dinner where I sat at a table with Omni, Ben Ramsey(<a href="https://twitter.com/ramsey">@ramsey</a>), the folks behind <a href="http://www.phpdevhired.com/">PHP Dev Hired</a> (Mike (I didn’t catch his last name) and Lonnie Brown(<a href="https://twitter.com/lbrown972">@lbrown972</a>) and someone else whose name I didn’t catch (sorry!); the conversations spanned the gamut from the deep to the sublime. My miso was meh and I was glad that my sushi order never arrived.</p>
+
+<p>The following day, I attended six talks: Dustin Whittle's (<a href="https://twitter.com/dustinwhittle">@dustinwhittle</a>) “<a href="http://symfony.com/video/26/silex-from-micro-to-full-stack/English">Silex: From micro to full-stack</a>,” Ralph Schindler’s (<a href="https://twitter.com/ralphschindler">@ralphschindler</a>) “<a href="http://lanyrd.com/2014/lonestarphp/scxrty/">Single Page Apps with AngularJS</a>,” Emma Jane Westby’s (<a href="https://twitter.com/emmajanehw">@emmajanehw</a>) “<a href="http://drupalizeme.github.io/workflow-git-workshop/presentations/slides/session-lonestarphp.html#/">Git for Teams of One or More</a>,” Eli White’s (<a href="https://twitter.com/EliW">@EliW</a>) “<a href="https://www.youtube.com/watch?v=ROlhsYQH3qY">Web Security and You</a>,” Justin Carmony’s (<a href="https://twitter.com/JustinCarmony">@JustinCarmony</a>)“<a href="https://speakerdeck.com/justincarmony/top-to-bottom-php-profiling">Top to Bottom PHP Profiling</a>,” and Patrick Mizer’s “<a href="http://www.austintechvideos.com/austinphp/2014/09/21/austinphp-continuous-integration-stop-procrastinating-and-build-often/">Continuous Integration: Stop procrastinating and build often!</a>”</p>
+
+<p>Larry Garfield’s (<a href="https://twitter.com/Crell">@Crell</a>) keynote, “<a href="http://slidedeck.io/Crell/slides-turning-big-ships">Turning Big Ships</a>,” was interesting. He spoke about what one can and should refactor in converting legacy code to something more modern. His example was migrating Drupal from its procedural D7 codebase to the more object-oriented D8. He talked about why one should refactor or re-engineer the small stuff before doing so to the heavy stuff — don’t abandon your userbase; let them get used to the new way before hitting them with the whammy.</p>
+
+<p>The after-party seemed much more relaxed. I talked with Cal and Kathy Evans and Adam Culp some more, had some more of Omni’s homebrew, met a few other folks, and discovered that I stink at playing cornhole.</p>
+
+<p>In all, I had a great time, met some great folks, and was introduced to some new ideas and technologies. I can’t wait to go back!</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[atom.io: A PHP-Oriented Review]]></title>
+            <link href="http://ericpoe.com/blog/2014/04/08/atom"/>
+            <updated>2014-04-08T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2014/04/08/atom</id>
+            <content type="html"><![CDATA[<figure>
+<img src="/images/vim-emacs-atomio.png" alt="vim vs emacs is a good fight; those vs atom.io is no contest">
+<figcaption>credit: <a href="https://twitter.com/tpope/status/439060962448912384">@tpope</a></figcaption>
+</figure>
+
+<p>Last week, I gave a short demo of the <a href="Atom.io">Atom.io</a> text editor to the <a href="http://kcpug.org/">Kansas City PHP User’s Group</a>. I realized after-the-fact that I had presented the early-release as an IDE, when I should have presented it as a fancy text-editor.</p>
+
+<p>Coming from using <a href="http://www.jetbrains.com/phpstorm/">PHPStorm</a> as my primary PHP IDE, Atom seems like a cute, yet unintelligent cousin.</p>
+
+<p>I tried to find things to like about it from a PHP point-of-view. After enabling autocomplete and PHP snippets, I could appreciate the Atom.io text editor as just a text editor. Code completion is currently maddening in that it shows absolutely everything ever typed; therefore, it shows nothing of value. The code snippets were more interesting. Creating a foreach loop stub in PHP was as simple as typing <code>foreach &lt;tab&gt;</code>. If I were in a <code>&lt;?php ... ?&gt;</code> segment, I would get a nice foreach loop stub within which to fill in the blanks; yet, if I were in an <code>&lt;html&gt;...&lt;/html&gt;</code> segment, I would get a nice <code>&lt;?php foreach ... ?&gt;</code> stub within which to fill in the blanks. I appreciate that the PHP, JavaScript, and HTML stubbing is container-aware.</p>
+
+<p>From a PHP point-of-view, that was the only positive which I could find for the Atom.io text editor. I made certain to explain that the editor is not yet ready for Prime Time nor are its PHP flavorings fully fleshed out. The editor holds great promise for PHP and code-in-general, but until it can fulfill that promise, I will prefer <a href="http://www.vim.org/">VIM</a> for editing text and PHPStorm for a PHP IDE.</p>
+
+<p>After my largely negative review, I was still able to hand out at least 2 invites.</p>
+
+<p>I look forward to what comes next for Atom.io.</p>
+]]></content>
+        </entry>
+    </feed>

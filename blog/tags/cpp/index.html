@@ -1,226 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title><![CDATA[Eric Poe]]></title>
-    <link href="http://ericpoe.com/blog/tags/cpp" rel="self"/>
-    <link href="http://ericpoe.com/"/>
-    <updated>2015-04-29T14:36:16-05:00</updated>
-    <id>http://ericpoe.com/</id>
-        <generator uri="http://sculpin.io/">Sculpin</generator>
-            <entry>
-            <title type="html"><![CDATA[Data Types]]></title>
-            <link href="http://ericpoe.com/blog/2014/03/10/Data-Types"/>
-            <updated>2014-03-10T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2014/03/10/Data-Types</id>
-            <content type="html"><![CDATA[<p>I took a programming languages class as part of my degree program in college. In that class, we covered the strongly and weakly classifications of languages as well as the static and dynamic classifications of languages. This was a topic that was barely covered by the textbook, so I did not give it much thought at the time.</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tag Archive "cpp" &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="alternate" type="application/atom+xml" href="http://ericpoe.com/blog/tags/cpp.xml" title="Eric Poe 'cpp' tag feed" />
+    <meta name="robots" content="noindex, follow">
+        <link href="http://ericpoe.com/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://ericpoe.com/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://ericpoe.com/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="http://ericpoe.com/components/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://ericpoe.com/components/highlightjs/styles/solarized_dark.css" />
 
-<p>Since then, I have given the topic of data types much thought.</p>
+        <link rel="apple-touch-startup-image" href="http://ericpoe.com/images/jackson/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="http://ericpoe.com/images/jackson/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="http://ericpoe.com/images/jackson/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="http://ericpoe.com/images/jackson/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="http://ericpoe.com/images/jackson/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="http://ericpoe.com/images/jackson/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="http://ericpoe.com/images/jackson/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="http://ericpoe.com/images/jackson/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="http://ericpoe.com/images/jackson/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://ericpoe.com/images/jackson/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://ericpoe.com/images/jackson/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="http://ericpoe.com/images/jackson/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://ericpoe.com/images/jackson/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="http://ericpoe.com/images/jackson/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="http://ericpoe.com/images/jackson/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="http://ericpoe.com/images/jackson/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="http://ericpoe.com/images/jackson/2048x2048.png">
 
-<h3>Static vs Dynamic</h3>
+        <link rel="stylesheet" href="http://ericpoe.com/components/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="http://ericpoe.com/atom.xml" title="Eric Poe activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                                    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="http://ericpoe.com/">Eric Poe</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="http://ericpoe.com/blog">Posts Archive</a></li>
+                                <li><a href="http://ericpoe.com/blog/categories">Categories</a></li>
+                                <li><a href="http://ericpoe.com/blog/tags">Tags</a></li>
+                                <li><a href="http://ericpoe.com/about">About</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mainContent container">
+            <div class="row-fluid">
+                <div class="span8">
+                    <h2>"cpp"</h2>
+        <h3>March 2014</h3>
+<article>
+  <div><a href="http://ericpoe.com/blog/2014/03/10/Data-Types">Data Types</a></div>
+</article>
+        <h3>October 2011</h3>
+<article>
+  <div><a href="http://ericpoe.com/blog/2011/10/01/python-timing-comparison">Python Timing Comparison</a></div>
+</article>
 
-<p>Understanding the difference between static and dynamic languages is easy. Static variables are explicitly defined. Dynamic variables are implicitly defined.</p>
+<div>
+</div>
+                </div>
+                <div class="span4 sidebar">
+                    <div class="well">
+                        <h4>Eric Poe <small>A Gentle Coder, Dad, and Sometime Wit</small></h4>
+                        <div class="social">
+                            <ul>
+                                <li><a href="http://twitter.com/eric_poe"><i class="fa fa-twitter fa-fw fa-2x"></i></a></li>
+                                <li><a href="mailto:info@ericpoe.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a></li>
+                                <li><a href="https://github.com/ericpoe/"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container">
+            <span class="pull-left">
+                &copy; 2015 Eric Poe
+            </span>
+            <span class="pull-right">
+                Powered by <a target="_blank" href="https://sculpin.io">Sculpin</a>
+            </span>
+            <div class="social">
+                <ul>
+                    <li><a href="http://twitter.com/eric_poe"><i class="fa fa-twitter fa-fw fa-2x"></i></a></li>
+                    <li><a href="mailto:info@ericpoe.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a></li>
+                    <li><a href="https://github.com/ericpoe/"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </footer>
 
-<h4>C++ – Static</h4>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="http://ericpoe.com/components/jquery/jquery.min.js"><\/script>')</script>
+        <script src="http://ericpoe.com/components/bootstrap/js/bootstrap.min.js"></script>
+                
+        
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<pre><code class="cpp">    String bookTitle; // will only allow strings and will treat its contents
-                      // as strings.
-    bookTitle = "Great Expectations"; // only allows strings
-    bookTitle = 47; // error
-</code></pre>
+            ga('create', 'UA-56604616-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+                <script src="http://ericpoe.com/components/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<h4>Dart – Dynamic</h4>
-
-<pre><code class="dart">    /** Technically, Dart is "optionally typed" in that variables can be
-    either static, if defined with a specific type, or dynamic, if defined
-    without a specific type, as below. */
-
-    var bookTitle; // no idea what this is yet.
-    bookTitle = "Great Expectations" // ah, it’s a String!
-</code></pre>
-
-<h4>Strong vs Weak</h4>
-
-<p>Definitions are hard to come by for strong and weak typing. Some definitions say that these are defined at run-time or compile-time; but I have not been able to find consensus about which is which. In my research, this appears to change from language to language. In other words, there does not appear to be a formal definition of strong or weak typing. Yet, weakly typed languages appear to be those that allow the mixing of data types that make implicit assumptions regarding the intention of the developer. Strongly typed languages only allow the mixing of data types when they are explicitly cast to the same data type.</p>
-
-<h4>PHP – Weak</h4>
-
-<pre><code class="php">    $num = "4"; // this is an implicitly defined String
-                // (dynamic typing in action)
-    print( $num + 2 ); // Allowed: 6
-</code></pre>
-
-<h4>Java – Strong</h4>
-
-<pre><code class="java">    String num1 = "4";
-    int num2 = 2;
-
-    // Not allowed. Throws "Breaking on exception: object of type TypeError"
-    print( num1 + num2 );
-
-    // Allowed since num1 is a String and num2 is cast to a String: "42"
-    print( num1 + num2.toString());
-</code></pre>
-
-<h4>Strong vs. Weak vs. Static vs. Dynamic</h4>
-
-<p>I tend to think of these four types of typing not as discrete definitions but as inclusive adjectives to help describe a language.</p>
-
-<table class="table table-bordered">
-  <tr>
-    <th>&nbsp;</th>
-    <th>STRONG</th>
-    <th>WEAK</th>
-  </tr>
-  <tr>
-    <th>DYNAMIC</th>
-    <td>Dart</td>
-    <td>PHP</td>
-  </tr>
-  <tr>
-    <th>STATIC</th>
-    <td>C++, Dart, Java</td>
-    <td>C</td>
-  </tr>
-</table>
-
-<p>“Strong” and “weak” are loaded terms that can be used as a political cudgel by speakers against what they think of as lesser languages. Yes, PHP is a weakly typed language, but it also has <a href="http://www.php.net/manual/en/language.oop5.typehinting.php">type-hinting</a> within OOP, which adds some strength to its weak typing system.</p>
-
-<p>Use “strong” and “weak” with a grain of salt. “Dynamic” and “static” are much more useful terms.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Python Timing Comparison]]></title>
-            <link href="http://ericpoe.com/blog/2011/10/01/python-timing-comparison"/>
-            <updated>2011-10-01T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2011/10/01/python-timing-comparison</id>
-            <content type="html"><![CDATA[<p>On page 7 of <a href="http://www.amazon.com/Learning-Python-Powerful-Object-Oriented-Programming/dp/0596158068/">Learning Python (4th ed)</a>, Mark Lutz briefly discusses the speed differences between Python and compiled languages like C++. I was curious as to how much slower an interpreted language is than a compiled language. To illustrate this, I whipped up a quick and simple program that exercises the CPU so I can see the difference — calculating 2^a-big-number, chosen at runtime, should do the trick. PHP is used in this example as another interpreted language to be compared against.</p>
-
-<p>C++:</p>
-
-<pre><code class="cpp">#include &lt;stdio.h&gt;
-#include &lt;cmath&gt;
-#include &lt;cstdlib&gt;
-using namespace std;
-int main(int argc, char* argv[]){
-    printf("%lf\n", pow(2,atoi(argv[1])));
-    return 0;
-}
-</code></pre>
-
-<p>Python 3:</p>
-
-<pre><code class="python">import sys
-print(2 ** int(sys.argv[1]))
-</code></pre>
-
-<p>PHP 5.3:</p>
-
-<pre><code class="php">&lt;?php printf('%f', pow(2,$argv[1])); ?&gt;
-</code></pre>
-
-<p>The Bash script to rule them all:</p>
-
-<pre><code class="bash">echo 'C++ Compile and Run:'
-time { g++ 2powX.cpp -o 2powX; ./2powX $1; }
-echo ''
-echo 'C++ Run-only:'
-time { ./2powX $1; }
-echo ''
-echo 'Python3:'
-time { python3 2powX.py $1; }
-echo ''
-echo 'PHP 5.3:'
-time { php 2powX.php $1; }
-</code></pre>
-
-<p>To start the test, I just need to think of a large number (under 1024 to be fair to C++ and PHP):</p>
-
-<pre><code class="bash">./2powX.sh 1023
-</code></pre>
-
-<p>(this will calculate 2^1023)</p>
-
-<p>My output:</p>
-
-<pre><code class="bash">C++ Compile and Run:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.393s
-user 0m0.051s
-sys 0m0.029s
-
-C++ Run-only:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.023s
-user 0m0.007s
-sys 0m0.001s
-
-Python3:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608
-
-real 0m0.297s
-user 0m0.000s
-sys 0m0.048s
-
-PHP 5.3:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.158s
-user 0m0.032s
-sys 0m0.001s
-</code></pre>
-
-<p>I am tossing out the “real” time since that can be affected by other processes. “User” and “sys” show time the CPU devoted to running those individual scripts. As such, the times for this one run can now be rewritten as:</p>
-
-<pre><code class="bash">C++ Compile and Run:
-User + Sys: 0m0.080s
-
-C++ Run-only:
-User + Sys: 0m0.008s
-
-Python:
-User + Sys: 0m0.048s
-
-PHP 5.3:
-User + Sys: 0m0.033s
-</code></pre>
-
-<p>So, as can be seen the limited test above, Python is fairly whippy, but it is much slower than compiled C++ and only slightly slower than PHP. As should be expected, the clear loser is C++ when compiling and running the script.</p>
-
-<p>Where Python shows its strength in this test is when I chose an exponent greater than 1023: 10230.</p>
-
-<pre><code class="bash">C++ Compile and Run:
-inf
-
-real 0m0.300s
-user 0m0.031s
-sys 0m0.042s
-
-C++ Run-only:
-inf
-
-real 0m0.019s
-user 0m0.005s
-sys 0m0.000s
-
-Python3:
-34423548946370924386082176169924624476944747406217256894913459575909248317240966176805010055150062365680632964253221068333260790503850696894422205735464974283998737178481710847320513326190047236314022188737959298573273377572102814344914668123463409967698383046161842652734328087101543308616495804172173597443760150966561459556280381912226987600617860174561959409464229840988042610132190363959760816712340515107068363601259170162827462749834580914908129798594557386500003189308316950521690080348968238044726348143575742014074642846764730778606889774971100300380861398149094858913606975798199206609480173415963658004309039109726633755485225610220942041094784246272498178240736545885924645893162128769055657812870347841989821131743242903671864350280282225992429416035216789609308009640974003621570883792643521416611064873802839265130877016958833083099922397168644877343915843878494520657868082768244387134338616108424630943468980650164972598079418045598033655900759794230060922412992199496352809692058059391587557946774981437102060743632584473513113119693964019838269636314202681922917530324642652029487641966175702706370322376584585460708138993776570269329692750871949158552414912970025077446798138046851003712814450717667455166863392057966586288850960049888395606257059008819557399399606801132231135782721302679342447460405175159849415867946025083825979715054798665873771917391817852002180237432048544555977338839524157946665999976093796621072426879791910994074180568757224454625642236698005871493317583925305747386994569619246981512730972100283554651516588464599541520391279615376012683210012657907013238689991177931467599470681660217321117202829707966037830142127765807712314315920575387293970665233836678708372844700382542319872824604373900440287629673752417795738675580065061712084004815851934978942405039465510035530263041835571731680947077254161040170151053838823112861764994677500170596686600125442133816401312356669414594250360186893321405939078827468395808732729594844266313167495294959297094803384095616925536488530880160580375923278529891998055313008761747568315855046967664859083467206455946441917940607590639085228653276785225189773810221726842550754743851011255667524128744695091823443959124433576572372326104197569346540893424649163917453962544268485517137113038168451880755595073682103292050768360408537130764390007449122045773797009608394919316306798295728487217512556838653596654235979343724005701829082708397499442717395509370262664142587906309592105705900749680411391997494680768844358944926184889015762235955245288526033090092870443963596417673750181232848810929099290333172031916520155483111881817837853253295711864386467153079094803053093470817384183799736573767707463104819406906344594906925100612457971132594779011022054638441460108683414455611779738983530075370214072493728121365161763702953293237181723205188906292380268741274876582731547119810586813067313184416595624192660004425264601763282103986623523949088939973542755141592641945160825006847859413191687074741068848131241737183655870582681269756147276824562339232492246611538972567686798648566349824
-
-real 0m0.291s
-user 0m0.045s
-sys 0m0.023s
-
-PHP 5.3:
-INF
-
-real 0m0.173s
-user 0m0.006s
-sys 0m0.019s
-</code></pre>
-
-<p>C++ and PHP return “inf” or “INF”, which means the output was too great for the number type to handle. I could have fixed that by using additional or third-party libraries (ex. “gmp” in <a href="http://gmplib.org/">C++</a> and <a href="http://php.net/manual/en/book.gmp.php">PHP</a>), but that wouldn’t have been fair for this test. Without having to import any special libraries, Python was itching to output any number-size calculation I wanted to throw at it. If it calculated 2^10230 in 0.068s, how long would it take to calculate 2^10230000? 2m21.530s, but I won’t print the output here since it takes 3,079,537 characters to show.</p>
-
-<p>So what did I learn from this limited test? Python is slower to run than compiled C++ and just a little slower than PHP 5; however, it is also much easier to get the information I need with Python out of the gate without having to include or import additional libraries, third-party or not. Python is definitely a language I will continue to explore.</p>
-]]></content>
-        </entry>
-    </feed>
+                    </body>
+</html>

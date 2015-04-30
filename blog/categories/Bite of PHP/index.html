@@ -1,136 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title><![CDATA[Eric Poe]]></title>
-    <link href="http://ericpoe.com/blog/categories/Bite of PHP" rel="self"/>
-    <link href="http://ericpoe.com/"/>
-    <updated>2015-04-29T14:36:16-05:00</updated>
-    <id>http://ericpoe.com/</id>
-        <generator uri="http://sculpin.io/">Sculpin</generator>
-            <entry>
-            <title type="html"><![CDATA[Bite of PHP: Heredoc vs. Nowdoc]]></title>
-            <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
-            <updated>2015-04-23T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
-            <content type="html"><![CDATA[<h3>Bite of PHP: Heredoc vs Nowdoc</h3>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Category Archive "Bite of PHP" &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="alternate" type="application/atom+xml" href="http://ericpoe.com/blog/categories/Bite%20of%20PHP.xml" title="Eric Poe 'Bite of PHP' category feed" />
+    <meta name="robots" content="noindex, follow">
+        <link href="http://ericpoe.com/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://ericpoe.com/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://ericpoe.com/css/style.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="http://ericpoe.com/components/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://ericpoe.com/components/highlightjs/styles/solarized_dark.css" />
 
-<h4>Heredoc</h4>
+        <link rel="apple-touch-startup-image" href="http://ericpoe.com/images/jackson/2048x2048.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" sizes="76x76" href="http://ericpoe.com/images/jackson/76x76.png">
+        <link rel="shortcut icon" sizes="120x120" href="http://ericpoe.com/images/jackson/120x120.png">
+        <link rel="shortcut icon" sizes="128x128" href="http://ericpoe.com/images/jackson/128x128.png">
+        <link rel="shortcut icon" sizes="152x152" href="http://ericpoe.com/images/jackson/152x152.png">
+        <link rel="shortcut icon" sizes="196x196" href="http://ericpoe.com/images/jackson/196x196.png">
+        <link rel="shortcut icon" sizes="512x512" href="http://ericpoe.com/images/jackson/512x512.png">
+        <link rel="shortcut icon" sizes="1024x1024" href="http://ericpoe.com/images/jackson/1024x1024.png">
+        <link rel="shortcut icon" sizes="2048x2048" href="http://ericpoe.com/images/jackson/2048x2048.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="http://ericpoe.com/images/jackson/76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="http://ericpoe.com/images/jackson/120x120.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="http://ericpoe.com/images/jackson/128x128.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="http://ericpoe.com/images/jackson/152x152.png">
+        <link rel="apple-touch-icon" sizes="196x196" href="http://ericpoe.com/images/jackson/196x196.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="http://ericpoe.com/images/jackson/512x512.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="http://ericpoe.com/images/jackson/1024x1024.png">
+        <link rel="apple-touch-icon" sizes="2048x2048" href="http://ericpoe.com/images/jackson/2048x2048.png">
 
-<p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
-of format. So, if you want to echo out structured text, like so:</p>
+        <link rel="stylesheet" href="http://ericpoe.com/components/highlightjs/styles/github.css" />
+        <link rel="alternate" type="application/atom+xml" href="http://ericpoe.com/atom.xml" title="Eric Poe activity feed" />
+        <style>
+        /** quick fix because bootstrap <pre> has a background-color. */
+        pre code { background-color: inherit; }
+        </style>
+                                    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="http://ericpoe.com/">Eric Poe</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="http://ericpoe.com/blog">Posts Archive</a></li>
+                                <li><a href="http://ericpoe.com/blog/categories">Categories</a></li>
+                                <li><a href="http://ericpoe.com/blog/tags">Tags</a></li>
+                                <li><a href="http://ericpoe.com/about">About</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mainContent container">
+            <div class="row-fluid">
+                <div class="span8">
+                    <h2>"Bite of PHP"</h2>
+        <h3>April 2015</h3>
+<article>
+  <div><a href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc">Bite of PHP: Heredoc vs. Nowdoc</a></div>
+</article>
+    <h3>March 2015</h3>
+<article>
+  <div><a href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</a></div>
+</article>
 
-<pre><code class="html">I think that I
-    Shall never pay
-As much as I
-    Have for 2015-04-23
-</code></pre>
+<div>
+</div>
+                </div>
+                <div class="span4 sidebar">
+                    <div class="well">
+                        <h4>Eric Poe <small>A Gentle Coder, Dad, and Sometime Wit</small></h4>
+                        <div class="social">
+                            <ul>
+                                <li><a href="http://twitter.com/eric_poe"><i class="fa fa-twitter fa-fw fa-2x"></i></a></li>
+                                <li><a href="mailto:info@ericpoe.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a></li>
+                                <li><a href="https://github.com/ericpoe/"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container">
+            <span class="pull-left">
+                &copy; 2015 Eric Poe
+            </span>
+            <span class="pull-right">
+                Powered by <a target="_blank" href="https://sculpin.io">Sculpin</a>
+            </span>
+            <div class="social">
+                <ul>
+                    <li><a href="http://twitter.com/eric_poe"><i class="fa fa-twitter fa-fw fa-2x"></i></a></li>
+                    <li><a href="mailto:info@ericpoe.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a></li>
+                    <li><a href="https://github.com/ericpoe/"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </footer>
 
-<p>You would put it in a heredoc like this:</p>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="http://ericpoe.com/components/jquery/jquery.min.js"><\/script>')</script>
+        <script src="http://ericpoe.com/components/bootstrap/js/bootstrap.min.js"></script>
+                
+        
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<pre><code class="php">$today = date('Y-m-d');
-$poem = &lt;&lt;&lt;HTML
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-HTML;
+            ga('create', 'UA-56604616-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+                <script src="http://ericpoe.com/components/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-echo $poem;
-</code></pre>
-
-<p><strong>output:</strong></p>
-
-<pre>
-I think that I
-    Shall never pay
-As much as I
-    Have for 2015-04-23
-</pre>
-
-<p>Notice that heredoc can behave like a template and parse any PHP contained within.</p>
-
-<p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
-
-<h4>Nowdoc</h4>
-
-<p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
-
-<pre><code class="php">$today = date('Y-m-d');
-$poem = &lt;&lt;&lt;'HTML'
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-HTML;
-
-echo $poem;
-</code></pre>
-
-<p><strong>output:</strong></p>
-
-<pre>
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-</pre>
-
-<p>Test it out on <a href="http://3v4l.org/H1YjU">3v4l.org</a>.</p>
-
-<p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
-            <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
-            <updated>2015-03-04T00:00:00-06:00</updated>
-            <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
-            <content type="html"><![CDATA[<h3>Bite of PHP: Double vs Single Quote Echo</h3>
-
-<p>In PHP, we have two ways of formatting an echo statement: we can choose to
-use single-quotes or double-quotes. The choice is less dependant upon which
-side of the Atlantic we learned to read and more dependant upon what we hope
-to accomplish with echoing that string.</p>
-
-<p>If you want to echo the string without parsing it, use single-quotes. If you
-want to parse the string while echoing it, use double-quotes. Observe:</p>
-
-<p><strong>Single-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo '$greeting, $audience';
-</code></pre>
-
-<p><em>Output:</em> <code>$greeting, $audience</code></p>
-
-<p><br></p>
-
-<p><strong>Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, $audience";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World</code></p>
-
-<p><br></p>
-
-<p>What if you want to add a character to the output of one of those variables?
-Just enclose the variable in a curly bracket!</p>
-
-<p><strong>Special Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, {$audience}!";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World!</code></p>
-
-<p><br></p>
-
-<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
-]]></content>
-        </entry>
-    </feed>
+                    </body>
+</html>
