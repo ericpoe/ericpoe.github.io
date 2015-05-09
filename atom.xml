@@ -3,9 +3,46 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/atom.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-05-05T14:43:36-05:00</updated>
+    <updated>2015-05-09T09:21:15-05:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Leveled Up: PHP Certified]]></title>
+            <link href="http://ericpoe.com/blog/2015/05/08/php-certified"/>
+            <updated>2015-05-08T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2015/05/08/php-certified</id>
+            <content type="html"><![CDATA[<h3 id="leveled-up%3A-php-certified">Leveled Up: PHP Certified</h3>
+
+<p>On Wednesday, I took an extended lunch break in order to take the Zend PHP Certification test at a local Pearson VUE Testing Center.</p>
+
+<p>After a few years of using PHP and studying for a few months, I am a <a href="http://www.zend.com/en/yellow-pages/ZEND027285">Zend Certified PHP Engineer</a>!</p>
+
+<p>Books that have helped me:
+* <a href="http://shop.oreilly.com/product/0636920012443.do">Programming PHP, 3rd Ed</a> by Kevin Tatroe, Peter MacIntyre, &amp; Rasmus Lerdorf
+* <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey
+* Reviewing the  <a href="https://www.zend.com/en/services/certification/php-certification-study-guide">Zend PHP Certification Study Guide</a> and doing the problems contained within.</p>
+
+<p>People who have helped me along the way:
+* My wife.
+* My kids.
+* My mentor and fellow KCPUG co-organizer, <a href="http://johnkary.net">John Kary</a>
+* KCPUG leader <a href="https://twitter.com/dan_holmes/">Dan Holmes</a> and the great members of the <a href="http://www.meetup.com/kcphpug/">KCPUG</a>.
+* <a href="http://blog.calevans.com/">Cal Evans</a> and the great speakers at <a href="http://nomadphp.com/">NomadPHP</a>.
+* <a href="http://www.geekyboy.com/">Adam Culp</a> for giving me the push at Lone Star PHP 2014.</p>
+
+<p>Practices that have help me:
+* ABC: Alway be coding!
+* Added an hour appointment to my calendar every day, after the kids were in bed, to study.
+* Watched NomadPHP talks (live, recorded, or <a href="https://www.youtube.com/channel/UCYHDBrzJ5o5d97KlCAUhICA">on Youtube</a>)
+* Listen to various podcasts about programming, not all about PHP
+* Practiced
+* Kata
+* Present at KCPUG (forced me to really think about the how and why)
+* Followed my curiosity in code</p>
+
+<p>These practices and personal connections will continue long after my certification studies ended. I'm looking forward to the next leg of the journey.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Revenge of the Fifth]]></title>
             <link href="http://ericpoe.com/blog/2015/05/05/Revenge-Of-The-Fifth"/>
@@ -514,23 +551,6 @@ Elvis-&gt;style("RockNRoll");
 <p>I think this is also a form of learning by teaching. Just to explain the problem in a logical way, I had to learn enough of the domain for it make sense. I could answer some questions based on what I learned, but when asked a question that I could not answer right away, I had to learn more in order to answer that question satisfactorily.</p>
 
 <p>I think for an informal pair-programming exercise such as this, we were experiencing Rubber Duck Development. We would both alternate between explaining and learning. Having to articulate the problem and looking into the bowels of the code, we were able to reduce the magic and increase our understanding.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[New Job]]></title>
-            <link href="http://ericpoe.com/blog/2014/05/28/new-job"/>
-            <updated>2014-05-28T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2014/05/28/new-job</id>
-            <content type="html"><![CDATA[<p>I recently had the opportunity to take my love of programming from being a hobby
-to being a career. I jumped at the chance.</p>
-
-<p>I am now in my 3rd week of the new job and have yet to go to work. Instead, I
-meet up with fellow nerds and geek out on programming. I have survived my first
-agile sprint and resolved two introductory issues with the codebase; one in PHP
-(<a href="http://symfony.com/">Symfony 2</a> with <a href="http://www.doctrine-project.org/">Doctrine</a>)
-and the other in JavaScript (<a href="http://www.sencha.com/products/extjs/">ExtJS</a>).</p>
-
-<p>I have much to learn in my new career and I look forward to every second of it.</p>
 ]]></content>
         </entry>
     </feed>
