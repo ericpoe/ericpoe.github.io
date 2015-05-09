@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/atom.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-05-09T09:21:15-05:00</updated>
+    <updated>2015-05-09T12:56:57-05:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -17,28 +17,37 @@
 
 <p>After a few years of using PHP and studying for a few months, I am a <a href="http://www.zend.com/en/yellow-pages/ZEND027285">Zend Certified PHP Engineer</a>!</p>
 
-<p>Books that have helped me:
-* <a href="http://shop.oreilly.com/product/0636920012443.do">Programming PHP, 3rd Ed</a> by Kevin Tatroe, Peter MacIntyre, &amp; Rasmus Lerdorf
-* <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey
-* Reviewing the  <a href="https://www.zend.com/en/services/certification/php-certification-study-guide">Zend PHP Certification Study Guide</a> and doing the problems contained within.</p>
+<p>Books that have helped me:</p>
 
-<p>People who have helped me along the way:
-* My wife.
-* My kids.
-* My mentor and fellow KCPUG co-organizer, <a href="http://johnkary.net">John Kary</a>
-* KCPUG leader <a href="https://twitter.com/dan_holmes/">Dan Holmes</a> and the great members of the <a href="http://www.meetup.com/kcphpug/">KCPUG</a>.
-* <a href="http://blog.calevans.com/">Cal Evans</a> and the great speakers at <a href="http://nomadphp.com/">NomadPHP</a>.
-* <a href="http://www.geekyboy.com/">Adam Culp</a> for giving me the push at Lone Star PHP 2014.</p>
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920012443.do">Programming PHP, 3rd Ed</a> by Kevin Tatroe, Peter MacIntyre, &amp; Rasmus Lerdorf</li>
+<li><a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey</li>
+<li>Reviewing the  <a href="https://www.zend.com/en/services/certification/php-certification-study-guide">Zend PHP Certification Study Guide</a> and doing the problems contained within.</li>
+</ul>
 
-<p>Practices that have help me:
-* ABC: Alway be coding!
-* Added an hour appointment to my calendar every day, after the kids were in bed, to study.
-* Watched NomadPHP talks (live, recorded, or <a href="https://www.youtube.com/channel/UCYHDBrzJ5o5d97KlCAUhICA">on Youtube</a>)
-* Listen to various podcasts about programming, not all about PHP
-* Practiced
-* Kata
-* Present at KCPUG (forced me to really think about the how and why)
-* Followed my curiosity in code</p>
+<p>People who have helped me along the way:</p>
+
+<ul>
+<li>My wife.</li>
+<li>My kids.</li>
+<li>My mentor and fellow KCPUG co-organizer, <a href="http://johnkary.net">John Kary</a></li>
+<li>KCPUG leader <a href="https://twitter.com/dan_holmes/">Dan Holmes</a> and the great members of the <a href="http://www.meetup.com/kcphpug/">KCPUG</a>.</li>
+<li><a href="http://blog.calevans.com/">Cal Evans</a> and the great speakers at <a href="http://nomadphp.com/">NomadPHP</a>.</li>
+<li><a href="http://www.geekyboy.com/">Adam Culp</a> for giving me the push at Lone Star PHP 2014.</li>
+</ul>
+
+<p>Practices that have help me:</p>
+
+<ul>
+<li>ABC: Alway be coding!</li>
+<li>Added an hour appointment to my calendar every day, after the kids were in bed, to study.</li>
+<li>Watched NomadPHP talks (live, recorded, or <a href="https://www.youtube.com/channel/UCYHDBrzJ5o5d97KlCAUhICA">on Youtube</a>)</li>
+<li>Listen to various podcasts about programming, not all about PHP</li>
+<li>Practiced</li>
+<li>Kata</li>
+<li>Present at KCPUG (forced me to really think about the how and why)</li>
+<li>Followed my curiosity in code</li>
+</ul>
 
 <p>These practices and personal connections will continue long after my certification studies ended. I'm looking forward to the next leg of the journey.</p>
 ]]></content>
