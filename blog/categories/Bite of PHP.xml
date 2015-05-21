@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/categories/Bite of PHP.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-05-20T12:05:12+00:00</updated>
+    <updated>2015-05-21T13:25:23+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -87,8 +87,8 @@ As much as I
             <content type="html"><![CDATA[<h3 id="bite-of-php%3A-double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</h3>
 
 <p>In PHP, we have two ways of formatting an echo statement: we can choose to
-use single-quotes or double-quotes. The choice is less dependant upon which
-side of the Atlantic we learned to read and more dependant upon what we hope
+use single-quotes or double-quotes. The choice is less dependent upon which
+side of the Atlantic we learned to read and more dependent upon what we hope
 to accomplish with echoing that string.</p>
 
 <p>If you want to echo the string without parsing it, use single-quotes. If you
