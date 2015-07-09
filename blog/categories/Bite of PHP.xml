@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/categories/Bite of PHP.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-07-09T04:19:48+00:00</updated>
+    <updated>2015-07-09T08:26:49+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -11,9 +11,7 @@
             <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
             <updated>2015-04-23T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
-            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-heredoc-vs-nowdoc">Bite of PHP: Heredoc vs Nowdoc</h3>
-
-<h4 id="heredoc">Heredoc</h4>
+            <content type="html"><![CDATA[<h3 id="heredoc">Heredoc</h3>
 
 <p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
 of format. So, if you want to echo out structured text, like so:</p>
@@ -50,7 +48,7 @@ As much as I
 
 <p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
 
-<h4 id="nowdoc">Nowdoc</h4>
+<h3 id="nowdoc">Nowdoc</h3>
 
 <p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
 
@@ -84,9 +82,8 @@ As much as I
             <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
             <updated>2015-03-04T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
-            <content type="html"><![CDATA[<h3 id="bite-of-php%3A-double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</h3>
-
-<p>In PHP, we have two ways of formatting an echo statement: we can choose to
+            <content type="html"><![CDATA[<p><!-- ### Bite of PHP: Double vs Single Quote Echo ### -->
+In PHP, we have two ways of formatting an echo statement: we can choose to
 use single-quotes or double-quotes. The choice is less dependent upon which
 side of the Atlantic we learned to read and more dependent upon what we hope
 to accomplish with echoing that string.</p>
