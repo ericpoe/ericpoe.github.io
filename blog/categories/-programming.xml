@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/categories/-programming.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-07-09T08:26:49+00:00</updated>
+    <updated>2015-07-09T08:30:45+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -98,7 +98,7 @@
 
 <p>I struggled to figure out a good reason for <code>value</code> to come before <code>key</code> when using the <code>ARRAY_FILTER_USE_BOTH</code> flag. In desperation, I reached out to the PHP Internals dev who implemented this feature, Tjerk Meesters (aka '<a href="https://twitter.com/datibbaW">datibbaw</a>'). As an exemplar of where the amazing PHP community shines, Tjerk responded within minutes with helpful background information on this feature. First, this feature was designed to not break existing implementations of <code>array_filter</code>. Adding <code>key</code> as the second parameter seemed to be the most polite way to do this. Secondly, this is the same order as used in JavaScript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a>. Boom.</p>
 
-<p>The way I justify the order to myself is by looking at the original intent of <code>array_filter</code> -- it was designed to filter an array based on the values contained within that array. So, value is first and foremost the primary thing this function checks against; the key is merely secondary. Therefore, when using the <code>ARRAY_FILTER_USE_BOTH</code> flag, the order of parameters for the callback will be <code>value</code> and then <code>key</code>.</p>
+<p>The way I justify the order is by looking at the original intent of <code>array_filter</code> -- it was designed to filter an array based on the values contained within that array. So, value is first and foremost the primary thing this function checks against; the key is merely secondary. Therefore, when using the <code>ARRAY_FILTER_USE_BOTH</code> flag, the order of parameters for the callback will be <code>value</code> and then <code>key</code>.</p>
 
 <p>If I were to treat this function as a consumer that turns food into another product, the main food this function eats is the value platter. For dessert, it might choose to eat a key lime pie. Or it might decide to order the full course and ask for both the value platter with dessert.</p>
 
