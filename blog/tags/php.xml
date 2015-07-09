@@ -3,9 +3,110 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/php.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-05-21T13:25:24+00:00</updated>
+    <updated>2015-07-09T04:18:01+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP&#039;s Array_Filter Oddity]]></title>
+            <link href="http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity"/>
+            <updated>2015-07-08T00:00:00+00:00</updated>
+            <id>http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity</id>
+            <content type="html"><![CDATA[<h1 id="php%27s-array_filter-foolishness">PHP's Array_Filter Foolishness</h1>
+
+<p>I was studying the <a href="http://php.net/manual/en/function.array-filter.php"><code>array_filter</code></a> in PHP and was enjoying coming up with a test that could help me learn better <code>array_filter</code> magic. For instance, to filter all words whose first letter is a vowel, I created this PHPUnit test:</p>
+
+<pre><code class="php">public function testFilterVowelWords()
+{
+    $vowel = function ($word) {
+        $vowels = ["a", "e", "i", "o", "u"];
+        return in_array($word[0], $vowels);
+    };
+
+    $words = ["apple", "baby", "cookie", "danger", "element", "fountain", "grape"];
+
+    $vowelWords = array_filter($words, $vowel);
+
+    $this-&gt;assertEquals(["apple", "element"], array_values($vowelWords));
+}
+</code></pre>
+
+<p>So, yay <code>array_filter</code>! But wait, what's this? There's an optional flag for <code>array_filter</code> that was introduced in PHP 5.6? It allows one to filter by array key, or if one is completely nuts, by both array value and array key. Woah.
+<img src="https://s3.amazonaws.com/giphymedia/media/yUIktdHUIamcg/giphy.gif"></p>
+
+<p>So, if one were to filter by key, easy-peasy. The flag is <code>ARRAY_FILTER_USE_KEY</code>:</p>
+
+<pre><code class="php">public function testFilterVowelWordsByKey()
+{
+    $vowel = function ($key) {
+        $vowels = ["a", "e", "i", "o", "u"];
+        return in_array($key, $vowels);
+    };
+
+    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
+
+    $vowelWords = array_filter($words, $vowel, ARRAY_FILTER_USE_KEY);
+
+    $this-&gt;assertEquals(["a"=&gt;"apple", "e"=&gt;"element"], $vowelWords);
+}
+</code></pre>
+
+<p>So, if one wanted to filter by key AND value, the flag would be <code>ARRAY_FILTER_USE_BOTH</code>, right?</p>
+
+<pre><code class="php">public function testFilterVowelWordsByKeyAndValue()
+{
+    $strange = function ($key, $value) {
+        $vowels = ["a", "e", "i", "o", "u"];
+        if (in_array($key, $vowels)) {
+            return true;
+        } else {
+            return (in_array($value[1], $vowels));
+        }
+    };
+
+    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
+
+    $vowelWords = array_filter($words, $strange, ARRAY_FILTER_USE_BOTH);
+
+    $this-&gt;assertEquals(["a"=&gt;"apple", "b"=&gt;"baby", "c" =&gt; "cookie", "d" =&gt; "danger", "e" =&gt; "element", "f" =&gt; "fountain"], $vowelWords);
+}
+</code></pre>
+
+<p>Yet, epic fail!</p>
+
+<p>The <code>ARRAY_FILTER_USE_BOTH</code> flag requires the order: <code>value</code> then <code>key</code> NOT <code>key</code> then <code>value</code></p>
+
+<pre><code class="php">public function testFilterVowelWordsByKeyAndValue()
+{
+    $strange = function ($value, $key) {
+        $vowels = ["a", "e", "i", "o", "u"];
+        if (in_array($value[1], $vowels)) {
+            return true;
+        } else {
+            return (in_array($key, $vowels));
+        }
+    };
+
+    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
+
+    $vowelWords = array_filter($words, $strange, ARRAY_FILTER_USE_BOTH);
+
+    $this-&gt;assertEquals(["a"=&gt;"apple", "b"=&gt;"baby", "c" =&gt; "cookie", "d" =&gt; "danger", "e" =&gt; "element", "f" =&gt; "fountain"], $vowelWords);
+}
+</code></pre>
+
+<p>Yay! This test passes! But, what the heck? Why <code>value</code> then <code>key</code>? Every time we read about <code>key =&gt; value</code> pairs, it's in the order of <code>key</code> then <code>value</code>. Yet, this is <code>value</code> then <code>key</code>. What gives?</p>
+
+<p>I looked into this. I couldn't find any <a href="https://wiki.php.net/rfc">RFCs</a> recommending this order. I even checked PHP internals discussions and saw the question raised of <a href="http://marc.info/?l=php-internals&amp;m=137159339704961&amp;w=2">which should come first, key or value</a>, but the question doesn't get answered. Eventually, we get a statement of (paraphrased)<a href="http://marc.info/?l=php-internals&amp;m=138023845322301&amp;w=2">"Hey, having flags for using key or using both key &amp; value is great, I'll add it."</a>. The <a href="https://github.com/php/php-src/pull/287">pull request</a>, though it contains discussion on adding this flag, doesn't contain any discussion on parameter order. The <a href="https://github.com/php/php-src/blob/master/ext/standard/array.c#L4803">source code</a> does not contain enough documentation to give an inkling as to why this is.</p>
+
+<p>I struggled to figure out a good reason for <code>value</code> to come before <code>key</code> when using the <code>ARRAY_FILTER_USE_BOTH</code> flag. In desperation, I reached out to the PHP Internals dev who implemented this feature, Tjerk Meesters (aka '<a href="https://twitter.com/datibbaW">datibbaw</a>'). As an exemplar of where the amazing PHP community shines, Tjerk responded within minutes with helpful background information on this feature. First, this feature was designed to not break existing implementations of <code>array_filter</code>. Adding <code>key</code> as the second parameter seemed to be the most polite way to do this. Secondly, this is the same order as used in JavaScript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a>. Boom.</p>
+
+<p>The way I justify the order to myself is by looking at the original intent of <code>array_filter</code> -- it was designed to filter an array based on the values contained within that array. So, value is first and foremost the primary thing this function checks against; the key is merely secondary. Therefore, when using the <code>ARRAY_FILTER_USE_BOTH</code> flag, the order of parameters for the callback will be <code>value</code> and then <code>key</code>.</p>
+
+<p>If I were to treat this function as a consumer that turns food into another product, the main food this function eats is the value platter. For dessert, it might choose to eat a key lime pie. Or it might decide to order the full course and ask for both the value platter with dessert.</p>
+
+<p>What had seemed like an oddity at first now makes sense in the right frame of mind. If you use <code>array_filter</code>, remember that it is all about the array <code>value</code>. If you want to include the <code>key</code> in the filter, know that <code>key</code> is always secondary to the original intent.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Leveled Up: PHP Certified]]></title>
             <link href="http://ericpoe.com/blog/2015/05/08/php-certified"/>
@@ -492,142 +593,6 @@ I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, p
 <p>“Strong” and “weak” are loaded terms that can be used as a political cudgel by speakers against what they think of as lesser languages. Yes, PHP is a weakly typed language, but it also has <a href="http://www.php.net/manual/en/language.oop5.typehinting.php">type-hinting</a> within OOP, which adds some strength to its weak typing system.</p>
 
 <p>Use “strong” and “weak” with a grain of salt. “Dynamic” and “static” are much more useful terms.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Python Timing Comparison]]></title>
-            <link href="http://ericpoe.com/blog/2011/10/01/python-timing-comparison"/>
-            <updated>2011-10-01T00:00:00+00:00</updated>
-            <id>http://ericpoe.com/blog/2011/10/01/python-timing-comparison</id>
-            <content type="html"><![CDATA[<p>On page 7 of <a href="http://www.amazon.com/Learning-Python-Powerful-Object-Oriented-Programming/dp/0596158068/">Learning Python (4th ed)</a>, Mark Lutz briefly discusses the speed differences between Python and compiled languages like C++. I was curious as to how much slower an interpreted language is than a compiled language. To illustrate this, I whipped up a quick and simple program that exercises the CPU so I can see the difference — calculating 2^a-big-number, chosen at runtime, should do the trick. PHP is used in this example as another interpreted language to be compared against.</p>
-
-<p>C++:</p>
-
-<pre><code class="cpp">#include &lt;stdio.h&gt;
-#include &lt;cmath&gt;
-#include &lt;cstdlib&gt;
-using namespace std;
-int main(int argc, char* argv[]){
-    printf("%lf\n", pow(2,atoi(argv[1])));
-    return 0;
-}
-</code></pre>
-
-<p>Python 3:</p>
-
-<pre><code class="python">import sys
-print(2 ** int(sys.argv[1]))
-</code></pre>
-
-<p>PHP 5.3:</p>
-
-<pre><code class="php">&lt;?php printf('%f', pow(2,$argv[1])); ?&gt;
-</code></pre>
-
-<p>The Bash script to rule them all:</p>
-
-<pre><code class="bash">echo 'C++ Compile and Run:'
-time { g++ 2powX.cpp -o 2powX; ./2powX $1; }
-echo ''
-echo 'C++ Run-only:'
-time { ./2powX $1; }
-echo ''
-echo 'Python3:'
-time { python3 2powX.py $1; }
-echo ''
-echo 'PHP 5.3:'
-time { php 2powX.php $1; }
-</code></pre>
-
-<p>To start the test, I just need to think of a large number (under 1024 to be fair to C++ and PHP):</p>
-
-<pre><code class="bash">./2powX.sh 1023
-</code></pre>
-
-<p>(this will calculate 2^1023)</p>
-
-<p>My output:</p>
-
-<pre><code class="bash">C++ Compile and Run:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.393s
-user 0m0.051s
-sys 0m0.029s
-
-C++ Run-only:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.023s
-user 0m0.007s
-sys 0m0.001s
-
-Python3:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608
-
-real 0m0.297s
-user 0m0.000s
-sys 0m0.048s
-
-PHP 5.3:
-89884656743115795386465259539451236680898848947115328636715040578866337902750481566354238661203768010560056939935696678829394884407208311246423715319737062188883946712432742638151109800623047059726541476042502884419075341171231440736956555270413618581675255342293149119973622969239858152417678164812112068608.000000
-
-real 0m0.158s
-user 0m0.032s
-sys 0m0.001s
-</code></pre>
-
-<p>I am tossing out the “real” time since that can be affected by other processes. “User” and “sys” show time the CPU devoted to running those individual scripts. As such, the times for this one run can now be rewritten as:</p>
-
-<pre><code class="bash">C++ Compile and Run:
-User + Sys: 0m0.080s
-
-C++ Run-only:
-User + Sys: 0m0.008s
-
-Python:
-User + Sys: 0m0.048s
-
-PHP 5.3:
-User + Sys: 0m0.033s
-</code></pre>
-
-<p>So, as can be seen the limited test above, Python is fairly whippy, but it is much slower than compiled C++ and only slightly slower than PHP. As should be expected, the clear loser is C++ when compiling and running the script.</p>
-
-<p>Where Python shows its strength in this test is when I chose an exponent greater than 1023: 10230.</p>
-
-<pre><code class="bash">C++ Compile and Run:
-inf
-
-real 0m0.300s
-user 0m0.031s
-sys 0m0.042s
-
-C++ Run-only:
-inf
-
-real 0m0.019s
-user 0m0.005s
-sys 0m0.000s
-
-Python3:
-34423548946370924386082176169924624476944747406217256894913459575909248317240966176805010055150062365680632964253221068333260790503850696894422205735464974283998737178481710847320513326190047236314022188737959298573273377572102814344914668123463409967698383046161842652734328087101543308616495804172173597443760150966561459556280381912226987600617860174561959409464229840988042610132190363959760816712340515107068363601259170162827462749834580914908129798594557386500003189308316950521690080348968238044726348143575742014074642846764730778606889774971100300380861398149094858913606975798199206609480173415963658004309039109726633755485225610220942041094784246272498178240736545885924645893162128769055657812870347841989821131743242903671864350280282225992429416035216789609308009640974003621570883792643521416611064873802839265130877016958833083099922397168644877343915843878494520657868082768244387134338616108424630943468980650164972598079418045598033655900759794230060922412992199496352809692058059391587557946774981437102060743632584473513113119693964019838269636314202681922917530324642652029487641966175702706370322376584585460708138993776570269329692750871949158552414912970025077446798138046851003712814450717667455166863392057966586288850960049888395606257059008819557399399606801132231135782721302679342447460405175159849415867946025083825979715054798665873771917391817852002180237432048544555977338839524157946665999976093796621072426879791910994074180568757224454625642236698005871493317583925305747386994569619246981512730972100283554651516588464599541520391279615376012683210012657907013238689991177931467599470681660217321117202829707966037830142127765807712314315920575387293970665233836678708372844700382542319872824604373900440287629673752417795738675580065061712084004815851934978942405039465510035530263041835571731680947077254161040170151053838823112861764994677500170596686600125442133816401312356669414594250360186893321405939078827468395808732729594844266313167495294959297094803384095616925536488530880160580375923278529891998055313008761747568315855046967664859083467206455946441917940607590639085228653276785225189773810221726842550754743851011255667524128744695091823443959124433576572372326104197569346540893424649163917453962544268485517137113038168451880755595073682103292050768360408537130764390007449122045773797009608394919316306798295728487217512556838653596654235979343724005701829082708397499442717395509370262664142587906309592105705900749680411391997494680768844358944926184889015762235955245288526033090092870443963596417673750181232848810929099290333172031916520155483111881817837853253295711864386467153079094803053093470817384183799736573767707463104819406906344594906925100612457971132594779011022054638441460108683414455611779738983530075370214072493728121365161763702953293237181723205188906292380268741274876582731547119810586813067313184416595624192660004425264601763282103986623523949088939973542755141592641945160825006847859413191687074741068848131241737183655870582681269756147276824562339232492246611538972567686798648566349824
-
-real 0m0.291s
-user 0m0.045s
-sys 0m0.023s
-
-PHP 5.3:
-INF
-
-real 0m0.173s
-user 0m0.006s
-sys 0m0.019s
-</code></pre>
-
-<p>C++ and PHP return “inf” or “INF”, which means the output was too great for the number type to handle. I could have fixed that by using additional or third-party libraries (ex. “gmp” in <a href="http://gmplib.org/">C++</a> and <a href="http://php.net/manual/en/book.gmp.php">PHP</a>), but that wouldn’t have been fair for this test. Without having to import any special libraries, Python was itching to output any number-size calculation I wanted to throw at it. If it calculated 2^10230 in 0.068s, how long would it take to calculate 2^10230000? 2m21.530s, but I won’t print the output here since it takes 3,079,537 characters to show.</p>
-
-<p>So what did I learn from this limited test? Python is slower to run than compiled C++ and just a little slower than PHP 5; however, it is also much easier to get the information I need with Python out of the gate without having to include or import additional libraries, third-party or not. Python is definitely a language I will continue to explore.</p>
 ]]></content>
         </entry>
     </feed>
