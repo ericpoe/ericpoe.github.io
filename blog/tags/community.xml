@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/community.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-07-09T04:18:01+00:00</updated>
+    <updated>2015-07-09T04:19:48+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -11,7 +11,7 @@
             <link href="http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity"/>
             <updated>2015-07-08T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity</id>
-            <content type="html"><![CDATA[<h1 id="php%27s-array_filter-foolishness">PHP's Array_Filter Foolishness</h1>
+            <content type="html"><![CDATA[<h1 id="php%27s-array_filter-oddity">PHP's Array_Filter Oddity</h1>
 
 <p>I was studying the <a href="http://php.net/manual/en/function.array-filter.php"><code>array_filter</code></a> in PHP and was enjoying coming up with a test that could help me learn better <code>array_filter</code> magic. For instance, to filter all words whose first letter is a vowel, I created this PHPUnit test:</p>
 
