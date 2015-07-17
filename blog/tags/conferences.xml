@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/conferences.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-07-09T08:31:49+00:00</updated>
+    <updated>2015-07-17T05:02:26+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -68,9 +68,7 @@
             <link href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0"/>
             <updated>2015-04-27T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0</id>
-            <content type="html"><![CDATA[<!-- ### Lone Star PHP 2015: Day 0 - Training Day -->
-
-<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
+            <content type="html"><![CDATA[<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
 
 <h3 id="getting-started-with-phpunit">Getting Started with PHPUnit</h3>
 
