@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Eric Poe]]></title>
+    <link href="http://ericpoe.com/blog/categories/writing.xml" rel="self"/>
+    <link href="http://ericpoe.com/"/>
+    <updated>2015-08-12T23:58:14+00:00</updated>
+    <id>http://ericpoe.com/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[so much depends upon a fresh doughnut]]></title>
+            <link href="http://ericpoe.com/blog/2015/08/12/fresh-doughnut"/>
+            <updated>2015-08-12T18:43:00+00:00</updated>
+            <id>http://ericpoe.com/blog/2015/08/12/fresh-doughnut</id>
+            <content type="html"><![CDATA[<figure>
+<pre>
+so much depends
+upon
+
+a fresh dough
+nut
+
+glazed with maple
+icing
+
+beside the black
+coffee.
+</pre>
+<figcaption>
+&mdash; Based on <a href="http://www.poets.org/poetsorg/poem/red-wheelbarrow" target="_blank">The Red Wheelbarrow</a> by William Carlos Williams
+</figcaption>
+</figure>
+]]></content>
+        </entry>
+    </feed>
