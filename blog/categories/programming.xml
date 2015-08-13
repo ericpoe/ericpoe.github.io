@@ -3,13 +3,13 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/categories/programming.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-08-12T23:58:14+00:00</updated>
+    <updated>2015-08-13T07:11:38-05:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[PHP&#039;s Array_Filter Oddity]]></title>
             <link href="http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity"/>
-            <updated>2015-07-08T00:00:00+00:00</updated>
+            <updated>2015-07-08T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity</id>
             <content type="html"><![CDATA[<p>I was studying the <a href="http://php.net/manual/en/function.array-filter.php"><code>array_filter</code></a> in PHP and was enjoying coming up with a test that could help me learn better <code>array_filter</code> magic. For instance, to filter all words whose first letter is a vowel, I created this PHPUnit test:</p>
 
@@ -108,7 +108,7 @@
             <entry>
             <title type="html"><![CDATA[Leveled Up: PHP Certified]]></title>
             <link href="http://ericpoe.com/blog/2015/05/08/php-certified"/>
-            <updated>2015-05-08T00:00:00+00:00</updated>
+            <updated>2015-05-08T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/05/08/php-certified</id>
             <content type="html"><![CDATA[<p>On Wednesday, I took an extended lunch break in order to take the Zend PHP Certification test at a local Pearson VUE Testing Center.</p>
 
@@ -152,7 +152,7 @@
             <entry>
             <title type="html"><![CDATA[Lone Star PHP 2015]]></title>
             <link href="http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015"/>
-            <updated>2015-04-28T00:00:00+00:00</updated>
+            <updated>2015-04-28T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015</id>
             <content type="html"><![CDATA[<p>I attended Lone Star PHP <a href="/blog/2014/05/06/Lonestar-PHP-Conference-2014">last year</a> with much hope and even more trepidation as to my abilities to hold my own with other members of the PHP community. I was the recipient of the Lone Star PHP scholarship, so my attendance and stay were taken care of by the conference sponsors (thank you! thank you! thank you!). I spent a day at an intro-to-PHP workshop, where I realized that I knew more about modern PHP and its practices than I cared to admit. I spent another day attending great talks. I met many wonderful folks, some of whom I have maintained contact and some PHP luminaries I follow on Twitter, blog posts, and podcasts. Since I had accepted a job offer while doing the TSA dance at DFW airport, I spent my evenings leaving the after-parties early to work on my resignation letter.</p>
 
@@ -209,7 +209,7 @@
             <entry>
             <title type="html"><![CDATA[Lone Star PHP 2015: Day 0]]></title>
             <link href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0"/>
-            <updated>2015-04-27T00:00:00+00:00</updated>
+            <updated>2015-04-27T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0</id>
             <content type="html"><![CDATA[<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
 
@@ -265,7 +265,7 @@
             <entry>
             <title type="html"><![CDATA[Bite of PHP: Heredoc vs. Nowdoc]]></title>
             <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
-            <updated>2015-04-23T00:00:00+00:00</updated>
+            <updated>2015-04-23T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
             <content type="html"><![CDATA[<h3 id="heredoc">Heredoc</h3>
 
@@ -336,7 +336,7 @@ As much as I
             <entry>
             <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
             <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
-            <updated>2015-03-04T00:00:00+00:00</updated>
+            <updated>2015-03-04T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
             <content type="html"><![CDATA[<p>In PHP, we have two ways of formatting an echo statement: we can choose to
 use single-quotes or double-quotes. The choice is less dependent upon which
@@ -388,7 +388,7 @@ echo "$greeting, {$audience}!";
             <entry>
             <title type="html"><![CDATA[TDD Kata]]></title>
             <link href="http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata"/>
-            <updated>2014-12-22T00:00:00+00:00</updated>
+            <updated>2014-12-22T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2014/12/22/a-tdd-fizz-buzz-kata</id>
             <content type="html"><![CDATA[<h3 id="kata">Kata</h3>
 
@@ -457,7 +457,7 @@ Eric</p>
             <entry>
             <title type="html"><![CDATA[Programming As Story-Telling]]></title>
             <link href="http://ericpoe.com/blog/2014/08/15/programming-as-story-telling"/>
-            <updated>2014-08-15T00:00:00+00:00</updated>
+            <updated>2014-08-15T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2014/08/15/programming-as-story-telling</id>
             <content type="html"><![CDATA[<p>I was recently talking with a non-programmer friend of mine about teaching our kids how to code. I told him about my long and winding road to loving programming. He told me that he just doesn’t get how anything so tedious as programming can hold anyone’s interest for more than 5 minutes. Visual design, on the other hand, he finds utterly fascinating.</p>
 
@@ -489,7 +489,7 @@ Elvis-&gt;style("RockNRoll");
             <entry>
             <title type="html"><![CDATA[Power of RDD]]></title>
             <link href="http://ericpoe.com/blog/2014/07/28/power-of-rdd"/>
-            <updated>2014-07-28T00:00:00+00:00</updated>
+            <updated>2014-07-28T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2014/07/28/power-of-rdd</id>
             <content type="html"><![CDATA[<p>We hired a new guy at work. I was officially the new guy for 2 months, now we have someone new.</p>
 
@@ -507,7 +507,7 @@ Elvis-&gt;style("RockNRoll");
             <entry>
             <title type="html"><![CDATA[New Job]]></title>
             <link href="http://ericpoe.com/blog/2014/05/28/new-job"/>
-            <updated>2014-05-28T00:00:00+00:00</updated>
+            <updated>2014-05-28T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2014/05/28/new-job</id>
             <content type="html"><![CDATA[<p>I recently had the opportunity to take my love of programming from being a hobby
 to being a career. I jumped at the chance.</p>
