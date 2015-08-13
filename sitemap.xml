@@ -7,6 +7,12 @@
     <priority>0.8</priority>
   </url>
     <url>
+    <loc>http://ericpoe.com/blog/2015/08/13/switch-statement</loc>
+    <lastmod>2015-08-13T00:00:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+    <url>
     <loc>http://ericpoe.com/blog/2015/08/12/fresh-doughnut</loc>
     <lastmod>2015-08-12T18:43:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
