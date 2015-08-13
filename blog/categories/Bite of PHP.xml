@@ -3,148 +3,13 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/categories/Bite of PHP.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-08-13T07:24:57-05:00</updated>
+    <updated>2015-08-13T13:43:44+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
-            <title type="html"><![CDATA[Bite of PHP: Switch Statement]]></title>
-            <link href="http://ericpoe.com/blog/2015/08/13/switch-statement"/>
-            <updated>2015-08-13T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2015/08/13/switch-statement</id>
-            <content type="html"><![CDATA[<p>The "switch" statement within various languages, contains a similar structure. This makes the <a href="http://php.net/manual/en/control-structures.switch.php">PHP switch</a> statement familiar.</p>
-
-<p>A failing example of PHP's switch statement was brought up yesterday at work. Someone asked why the expected responses to this were not received.</p>
-
-<pre><code class="php">&lt;?php
-
-$convertQ = function ($str) {
-    switch ($str) {
-        case 0:
-            return 'no';
-        case 'No':
-            return 'no';
-        case 1:
-            return 'yes';
-        case 'Yes':
-            return 'yes';
-        case 'Unsure':
-            return 'maybe';
-
-        default:
-            throw new \InvalidArgumentException('Unaccounted for value for questionnaire field: ' . $str);
-    }
-};
-
-var_dump($convertQ(0)); // expect 'no', get 'no'
-var_dump($convertQ('No')); // expect 'no', get 'no'
-var_dump($convertQ(1)); // expect 'yes', get 'no'
-var_dump($convertQ('Yes')); // expect 'yes', get 'no'
-var_dump($convertQ('Unsure')); // expect 'maybe', get 'no'
-var_dump($convertQ('a')); // expect thrown error, get 'no'
-</code></pre>
-
-<p>(see: <a href="http://3v4l.org/Qdblq">3v4l.org</a>)</p>
-
-<p>There are several problems with this switch statement. The first being that a classic switch statement utilizes fall-through when the responses are the same. So, in this case, we can refactor this switch statement and get the same responses via:</p>
-
-<pre><code class="php">&lt;?php
-
-$convertQ = function ($str) {
-    switch ($str) {
-        case 0:
-        case 'No':
-            return 'no';
-
-        case 1:
-        case 'Yes':
-            return 'yes';
-
-        case 'Unsure':
-            return 'maybe';
-
-        default:
-            throw new \InvalidArgumentException('Unaccounted for value for questionnaire field: ' . $str);
-    }
-};
-
-var_dump($convertQ(0)); // expect 'no', get 'no'
-var_dump($convertQ('No')); // expect 'no', get 'no'
-var_dump($convertQ(1)); // expect 'yes', get 'no'
-var_dump($convertQ('Yes')); // expect 'yes', get 'no'
-var_dump($convertQ('Unsure')); // expect 'maybe', get 'no'
-var_dump($convertQ('a')); // expect thrown error, get 'no'
-</code></pre>
-
-<p>(see: <a href="http://3v4l.org/hSXPS">3v4l.org</a>)</p>
-
-<p>The second problem with this switch statement is that <a href="http://php.net/manual/en/control-structures.switch.php">PHP switch statements use loose comparison</a>, at least as of PHP 7.0 alpha 3. To correct for this, we should try the following:</p>
-
-<pre><code class="php">&lt;?php
-
-$convertQ = function ($str) {
-    switch ($str) {
-        case '0': // was 0, is now '0'
-        case 'No':
-            return 'no';
-
-        case '1': // was 1, is now '1'
-        case 'Yes':
-            return 'yes';
-
-        case 'Unsure':
-            return 'maybe';
-
-        default:
-            throw new \InvalidArgumentException('Unaccounted for value for questionnaire field: ' . $str);
-    }
-};
-
-var_dump($convertQ(0)); // expect 'no', get 'no'
-var_dump($convertQ('No')); // expect 'no', get 'no'
-var_dump($convertQ(1)); // expect 'yes', get 'yes'
-var_dump($convertQ('Yes')); // expect 'yes', get 'yes'
-var_dump($convertQ('Unsure')); // expect 'maybe', get 'maybe'
-var_dump($convertQ('a')); // expect thrown error, get error thrown
-</code></pre>
-
-<p>(see <a href="http://3v4l.org/Y8kdD">3v4l.org</a>)</p>
-
-<p>As can be seen, this switch statement is the same as the following. I find the switch statement in this case a slightly less clear than the if-statement.</p>
-
-<pre><code class="php">&lt;?php
-
-$convertQ = function ($str) {
-    if ('No' === $str || '0' == $str) {
-        return 'no';
-    }
-
-    if ('Yes' === $str || '1' == $str) {
-        return 'yes';
-    }
-
-    if ('Unsure' === $str) {
-        return 'maybe';
-    }
-
-    throw new \InvalidArgumentException('Unaccounted for value for questionnaire field: ' . $str);
-};
-
-var_dump($convertQ(0)); // expect 'no', get 'no'
-var_dump($convertQ('No')); // expect 'no', get 'no'
-var_dump($convertQ(1)); // expect 'yes', get 'yes'
-var_dump($convertQ('Yes')); // expect 'yes', get 'yes'
-var_dump($convertQ('Unsure')); // expect 'maybe', get 'maybe'
-</code></pre>
-
-<p>(see <a href="http://3v4l.org/p6901">3v4l.org</a>)</p>
-
-<p>I would like to see the switch statement use strict coupling to be useful in this use-case. I have not yet run into a time when the switch-statement is more useful than the if-statement.</p>
-]]></content>
-        </entry>
-            <entry>
             <title type="html"><![CDATA[Bite of PHP: Heredoc vs. Nowdoc]]></title>
             <link href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc"/>
-            <updated>2015-04-23T00:00:00-05:00</updated>
+            <updated>2015-04-23T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc</id>
             <content type="html"><![CDATA[<h3 id="heredoc">Heredoc</h3>
 
@@ -215,7 +80,7 @@ As much as I
             <entry>
             <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
             <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
-            <updated>2015-03-04T00:00:00-06:00</updated>
+            <updated>2015-03-04T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
             <content type="html"><![CDATA[<p>In PHP, we have two ways of formatting an echo statement: we can choose to
 use single-quotes or double-quotes. The choice is less dependent upon which
