@@ -73,110 +73,6 @@
                 <div class="span8">
                         <article>
         <header>
-            <h2><a href="http://ericpoe.com/blog/2015/07/08/php-array-filter-oddity">PHP&#039;s Array_Filter Oddity</a></h2>
-            <strong>2015-07-08</strong>
-        </header>
-        <div>
-            <p>I was studying the <a href="http://php.net/manual/en/function.array-filter.php"><code>array_filter</code></a> in PHP and was enjoying coming up with a test that could help me learn better <code>array_filter</code> magic. For instance, to filter all words whose first letter is a vowel, I created this PHPUnit test:</p>
-
-<pre><code class="php">public function testFilterVowelWords()
-{
-    $vowel = function ($word) {
-        $vowels = ["a", "e", "i", "o", "u"];
-        return in_array($word[0], $vowels);
-    };
-
-    $words = ["apple", "baby", "cookie", "danger", "element", "fountain", "grape"];
-
-    $vowelWords = array_filter($words, $vowel);
-
-    $this-&gt;assertEquals(["apple", "element"], array_values($vowelWords));
-}
-</code></pre>
-
-<p>So, yay <code>array_filter</code>! But wait, what's this? There's an optional flag for <code>array_filter</code> that was introduced in PHP 5.6? It allows one to filter by array key, or if one is completely nuts, by both array value and array key. Woah.
-<img src="https://s3.amazonaws.com/giphymedia/media/yUIktdHUIamcg/giphy.gif"></p>
-
-<p>So, if one were to filter by key, easy-peasy. The flag is <code>ARRAY_FILTER_USE_KEY</code>:</p>
-
-<pre><code class="php">public function testFilterVowelWordsByKey()
-{
-    $vowel = function ($key) {
-        $vowels = ["a", "e", "i", "o", "u"];
-        return in_array($key, $vowels);
-    };
-
-    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
-
-    $vowelWords = array_filter($words, $vowel, ARRAY_FILTER_USE_KEY);
-
-    $this-&gt;assertEquals(["a"=&gt;"apple", "e"=&gt;"element"], $vowelWords);
-}
-</code></pre>
-
-<p>So, if one wanted to filter by key AND value, the flag would be <code>ARRAY_FILTER_USE_BOTH</code>, right?</p>
-
-<pre><code class="php">public function testFilterVowelWordsByKeyAndValue()
-{
-    $strange = function ($key, $value) {
-        $vowels = ["a", "e", "i", "o", "u"];
-        if (in_array($key, $vowels)) {
-            return true;
-        } else {
-            return (in_array($value[1], $vowels));
-        }
-    };
-
-    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
-
-    $vowelWords = array_filter($words, $strange, ARRAY_FILTER_USE_BOTH);
-
-    $this-&gt;assertEquals(["a"=&gt;"apple", "b"=&gt;"baby", "c" =&gt; "cookie", "d" =&gt; "danger", "e" =&gt; "element", "f" =&gt; "fountain"], $vowelWords);
-}
-</code></pre>
-
-<p>Yet, epic fail!</p>
-
-<p>The <code>ARRAY_FILTER_USE_BOTH</code> flag requires the order: <code>value</code> then <code>key</code> NOT <code>key</code> then <code>value</code></p>
-
-<pre><code class="php">public function testFilterVowelWordsByKeyAndValue()
-{
-    $strange = function ($value, $key) {
-        $vowels = ["a", "e", "i", "o", "u"];
-        if (in_array($value[1], $vowels)) {
-            return true;
-        } else {
-            return (in_array($key, $vowels));
-        }
-    };
-
-    $words = ["a" =&gt; "apple", "b" =&gt; "baby", "c"=&gt;"cookie", "d"=&gt;"danger", "e"=&gt;"element", "f"=&gt;"fountain", "g"=&gt;"grape"];
-
-    $vowelWords = array_filter($words, $strange, ARRAY_FILTER_USE_BOTH);
-
-    $this-&gt;assertEquals(["a"=&gt;"apple", "b"=&gt;"baby", "c" =&gt; "cookie", "d" =&gt; "danger", "e" =&gt; "element", "f" =&gt; "fountain"], $vowelWords);
-}
-</code></pre>
-
-<p>Yay! This test passes! But, what the heck? Why <code>value</code> then <code>key</code>? Every time we read about <code>key =&gt; value</code> pairs, it's in the order of <code>key</code> then <code>value</code>. Yet, this is <code>value</code> then <code>key</code>. What gives?</p>
-
-<p>I looked into this. I couldn't find any <a href="https://wiki.php.net/rfc">RFCs</a> recommending this order. I even checked PHP internals discussions and saw the question raised of <a href="http://marc.info/?l=php-internals&amp;m=137159339704961&amp;w=2">which should come first, key or value</a>, but the question doesn't get answered. Eventually, we get a statement of (paraphrased)<a href="http://marc.info/?l=php-internals&amp;m=138023845322301&amp;w=2">"Hey, having flags for using key or using both key &amp; value is great, I'll add it."</a>. The <a href="https://github.com/php/php-src/pull/287">pull request</a>, though it contains discussion on adding this flag, doesn't contain any discussion on parameter order. The <a href="https://github.com/php/php-src/blob/master/ext/standard/array.c#L4803">source code</a> does not contain enough documentation to give an inkling as to why this is.</p>
-
-<p>I struggled to figure out a good reason for <code>value</code> to come before <code>key</code> when using the <code>ARRAY_FILTER_USE_BOTH</code> flag. In desperation, I reached out to the PHP Internals dev who implemented this feature, Tjerk Meesters (aka '<a href="https://twitter.com/datibbaW">datibbaw</a>'). As an exemplar of where the amazing PHP community shines, Tjerk responded within minutes with helpful background information on this feature. First, this feature was designed to not break existing implementations of <code>array_filter</code>. Adding <code>key</code> as the second parameter seemed to be the most polite way to do this. Secondly, this is the same order as used in JavaScript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a>. Boom.</p>
-
-<p>The way I justify the order is by looking at the original intent of <code>array_filter</code> -- it was designed to filter an array based on the values contained within that array. So, value is first and foremost the primary thing this function checks against; the key is merely secondary. Therefore, when using the <code>ARRAY_FILTER_USE_BOTH</code> flag, the order of parameters for the callback will be <code>value</code> and then <code>key</code>.</p>
-
-<p>If I were to treat this function as a consumer that turns food into another product, the main food this function eats is the value platter. For dessert, it might choose to eat a key lime pie. Or it might decide to order the full course and ask for both the value platter with dessert.</p>
-
-<p>What had seemed like an oddity at first now makes sense in the right frame of mind. If you use <code>array_filter</code>, remember that it is all about the array <code>value</code>. If you want to include the <code>key</code> in the filter, know that <code>key</code> is always secondary to the original intent.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/community">community</a>                        </p>
-            </article>
-    <article>
-        <header>
             <h2><a href="http://ericpoe.com/blog/2015/05/12/lchf-diet">Low Carb High Fat Diet</a></h2>
             <strong>2015-05-12</strong>
         </header>
@@ -238,6 +134,23 @@
                     <p class="tags">
             Tags:
                         <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/certification">certification</a>                        </p>
+            </article>
+    <article>
+        <header>
+            <h2><a href="http://ericpoe.com/blog/2015/05/05/Revenge-Of-The-Fifth">Revenge of the Fifth</a></h2>
+            <strong>2015-05-05</strong>
+        </header>
+        <div>
+            <p>Today is the unofficial Star-Wars-fan holiday known as the Revenge of the Fifth.</p>
+
+<p><a href="https://twitter.com/eric_poe/status/463399125749223424">Last year</a>, I noticed that 5/5 (numerical representation of 5 May, or is that May 5?) can be written in binary as <code>101 101</code>. Or more artistically as:</p>
+
+<p><span title="the numbers 101 and 101 next to each other look like a pair of TIE fighters flying in formation"><strong>|o| |o|</strong></span></p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/star%20wars">star wars</a>,                         <a href="http://ericpoe.com/blog/tags/binary">binary</a>                        </p>
             </article>
     <nav>
         <a href="http://ericpoe.com/">Newer Posts</a><br />

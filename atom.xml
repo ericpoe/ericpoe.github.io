@@ -751,4 +751,56 @@ As much as I
 <p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
 ]]></content>
         </entry>
+            <entry>
+            <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
+            <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
+            <updated>2015-03-04T00:00:00+00:00</updated>
+            <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
+            <content type="html"><![CDATA[<p>In PHP, we have two ways of formatting an echo statement: we can choose to
+use single-quotes or double-quotes. The choice is less dependent upon which
+side of the Atlantic we learned to read and more dependent upon what we hope
+to accomplish with echoing that string.</p>
+
+<p>If you want to echo the string without parsing it, use single-quotes. If you
+want to parse the string while echoing it, use double-quotes. Observe:</p>
+
+<p><strong>Single-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo '$greeting, $audience';
+</code></pre>
+
+<p><em>Output:</em> <code>$greeting, $audience</code></p>
+
+<p><br></p>
+
+<p><strong>Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, $audience";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World</code></p>
+
+<p><br></p>
+
+<p>What if you want to add a character to the output of one of those variables?
+Just enclose the variable in a curly bracket!</p>
+
+<p><strong>Special Double-Quote Example</strong></p>
+
+<pre><code class="php">$greeting = "Howdy";
+$audience = "World";
+echo "$greeting, {$audience}!";
+</code></pre>
+
+<p><em>Output:</em> <code>Howdy, World!</code></p>
+
+<p><br></p>
+
+<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
+]]></content>
+        </entry>
     </feed>
