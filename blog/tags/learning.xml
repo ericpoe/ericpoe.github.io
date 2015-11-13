@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/learning.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-11-13T01:42:54-06:00</updated>
+    <updated>2015-11-13T02:04:58-06:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -13,7 +13,7 @@
             <id>http://ericpoe.com/blog/2015/11/13/my-year-of-code</id>
             <content type="html"><![CDATA[<p>2015 was my year to really dive into PHP. Up until this year, PHP was  hobby language for me -- much as Python, Haskell, C++, Dart, JavaScript, and Java have been hobby languages. Granted, last year I finally took a job where PHP is where I spend half of my time.</p>
 
-<p>This year, I took up intensive study of PHP. At the beginning of the year, I poured over the <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey. I even passed the <a href="http://www.zend.com/en/services/certification/php-5-certification">Zend Certified PHP Engineer exam</a> and earned my <a href="http://www.zend.com/en/yellow-pages/ZEND027285">Zend Certification</a>. I also took up more of a leadership role in my local PHP user group, <a href="http://www.meetup.com/kcphpug/">KCPHPUG</a>, given a few talks, and have been hosting meetups both at work and at a local café. In the late Spring/early Summer, I began work on a PHP library called <a href="https://github.com/ericpoe/ophp">OPHP</a>. In April, I attended the <a href="http://lonestarphp.com/">Lone Star PHP conference</a> and got to meet and hang out with quite a few luminaries of the community.</p>
+<p>This year, I took up intensive study of PHP. At the beginning of the year, I poured over the <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey. I even passed the <a href="http://www.zend.com/en/services/certification/php-5-certification">Zend Certified PHP Engineer exam</a> and earned my <a href="http://www.zend.com/en/yellow-pages/ZEND027285">Zend Certification</a>. I also took up more of a leadership role in my local PHP user group, <a href="http://www.meetup.com/kcphpug/">KCPHPUG</a>, gave a few talks, and have been hosting meetups both at work and at a local café. In the late Spring/early Summer, I began work on a PHP library called <a href="https://github.com/ericpoe/ophp">OPHP</a>. In April, I attended the <a href="http://lonestarphp.com/">Lone Star PHP conference</a> and got to meet and hang out with quite a few luminaries of the community.</p>
 
 <p>I think I can safely say that 2015 has been a year of PHP for me.</p>
 
