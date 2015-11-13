@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://ericpoe.com</loc>
-    <lastmod>2015-08-13</lastmod>
+    <lastmod>2015-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
     <url>
-    <loc>http://ericpoe.com/blog/2015/08/13/switch-statement</loc>
-    <lastmod>2015-08-13T00:00:00-05:00</lastmod>
+    <loc>http://ericpoe.com/blog/2015/11/13/my-year-of-code</loc>
+    <lastmod>2015-11-13T00:00:00-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
