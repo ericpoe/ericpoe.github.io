@@ -73,6 +73,34 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="http://ericpoe.com/blog/2014/04/08/atom">atom.io: A PHP-Oriented Review</a></h2>
+            <strong>2014-04-08</strong>
+        </header>
+        <div>
+            <figure>
+<img src="/images/vim-emacs-atomio.png" alt="vim vs emacs is a good fight; those vs atom.io is no contest">
+<figcaption>credit: <a href="https://twitter.com/tpope/status/439060962448912384">@tpope</a></figcaption>
+</figure>
+
+<p>Last week, I gave a short demo of the <a href="Atom.io">Atom.io</a> text editor to the <a href="http://kcpug.org/">Kansas City PHP User’s Group</a>. I realized after-the-fact that I had presented the early-release as an IDE, when I should have presented it as a fancy text-editor.</p>
+
+<p>Coming from using <a href="http://www.jetbrains.com/phpstorm/">PHPStorm</a> as my primary PHP IDE, Atom seems like a cute, yet unintelligent cousin.</p>
+
+<p>I tried to find things to like about it from a PHP point-of-view. After enabling autocomplete and PHP snippets, I could appreciate the Atom.io text editor as just a text editor. Code completion is currently maddening in that it shows absolutely everything ever typed; therefore, it shows nothing of value. The code snippets were more interesting. Creating a foreach loop stub in PHP was as simple as typing <code>foreach &lt;tab&gt;</code>. If I were in a <code>&lt;?php ... ?&gt;</code> segment, I would get a nice foreach loop stub within which to fill in the blanks; yet, if I were in an <code>&lt;html&gt;...&lt;/html&gt;</code> segment, I would get a nice <code>&lt;?php foreach ... ?&gt;</code> stub within which to fill in the blanks. I appreciate that the PHP, JavaScript, and HTML stubbing is container-aware.</p>
+
+<p>From a PHP point-of-view, that was the only positive which I could find for the Atom.io text editor. I made certain to explain that the editor is not yet ready for Prime Time nor are its PHP flavorings fully fleshed out. The editor holds great promise for PHP and code-in-general, but until it can fulfill that promise, I will prefer <a href="http://www.vim.org/">VIM</a> for editing text and PHPStorm for a PHP IDE.</p>
+
+<p>After my largely negative review, I was still able to hand out at least 2 invites.</p>
+
+<p>I look forward to what comes next for Atom.io.</p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/atom.io">atom.io</a>,                         <a href="http://ericpoe.com/blog/tags/IDE">IDE</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="http://ericpoe.com/blog/2014/04/08/lemp-noob-no-more">LEMP noob, no more!</a></h2>
             <strong>2014-04-08</strong>
         </header>
@@ -108,92 +136,6 @@
                     <p class="tags">
             Tags:
                         <a href="http://ericpoe.com/blog/tags/javascript">javascript</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="http://ericpoe.com/blog/2014/03/10/Data-Types">Data Types</a></h2>
-            <strong>2014-03-10</strong>
-        </header>
-        <div>
-            <p>I took a programming languages class as part of my degree program in college. In that class, we covered the strongly and weakly classifications of languages as well as the static and dynamic classifications of languages. This was a topic that was barely covered by the textbook, so I did not give it much thought at the time.</p>
-
-<p>Since then, I have given the topic of data types much thought.</p>
-
-<h3 id="static-vs-dynamic">Static vs Dynamic</h3>
-
-<p>Understanding the difference between static and dynamic languages is easy. Static variables are explicitly defined. Dynamic variables are implicitly defined.</p>
-
-<h4 id="c%2B%2B-%E2%80%93-static">C++ – Static</h4>
-
-<pre><code class="cpp">    String bookTitle; // will only allow strings and will treat its contents
-                      // as strings.
-    bookTitle = "Great Expectations"; // only allows strings
-    bookTitle = 47; // error
-</code></pre>
-
-<h4 id="dart-%E2%80%93-dynamic">Dart – Dynamic</h4>
-
-<pre><code class="dart">    /** Technically, Dart is "optionally typed" in that variables can be
-    either static, if defined with a specific type, or dynamic, if defined
-    without a specific type, as below. */
-
-    var bookTitle; // no idea what this is yet.
-    bookTitle = "Great Expectations" // ah, it’s a String!
-</code></pre>
-
-<h4 id="strong-vs-weak">Strong vs Weak</h4>
-
-<p>Definitions are hard to come by for strong and weak typing. Some definitions say that these are defined at run-time or compile-time; but I have not been able to find consensus about which is which. In my research, this appears to change from language to language. In other words, there does not appear to be a formal definition of strong or weak typing. Yet, weakly typed languages appear to be those that allow the mixing of data types that make implicit assumptions regarding the intention of the developer. Strongly typed languages only allow the mixing of data types when they are explicitly cast to the same data type.</p>
-
-<h4 id="php-%E2%80%93-weak">PHP – Weak</h4>
-
-<pre><code class="php">    $num = "4"; // this is an implicitly defined String
-                // (dynamic typing in action)
-    print( $num + 2 ); // Allowed: 6
-</code></pre>
-
-<h4 id="java-%E2%80%93-strong">Java – Strong</h4>
-
-<pre><code class="java">    String num1 = "4";
-    int num2 = 2;
-
-    // Not allowed. Throws "Breaking on exception: object of type TypeError"
-    print( num1 + num2 );
-
-    // Allowed since num1 is a String and num2 is cast to a String: "42"
-    print( num1 + num2.toString());
-</code></pre>
-
-<h4 id="strong-vs.-weak-vs.-static-vs.-dynamic">Strong vs. Weak vs. Static vs. Dynamic</h4>
-
-<p>I tend to think of these four types of typing not as discrete definitions but as inclusive adjectives to help describe a language.</p>
-
-<table class="table table-bordered">
-  <tr>
-    <th>&nbsp;</th>
-    <th>STRONG</th>
-    <th>WEAK</th>
-  </tr>
-  <tr>
-    <th>DYNAMIC</th>
-    <td>Dart</td>
-    <td>PHP</td>
-  </tr>
-  <tr>
-    <th>STATIC</th>
-    <td>C++, Dart, Java</td>
-    <td>C</td>
-  </tr>
-</table>
-
-<p>“Strong” and “weak” are loaded terms that can be used as a political cudgel by speakers against what they think of as lesser languages. Yes, PHP is a weakly typed language, but it also has <a href="http://www.php.net/manual/en/language.oop5.typehinting.php">type-hinting</a> within OOP, which adds some strength to its weak typing system.</p>
-
-<p>Use “strong” and “weak” with a grain of salt. “Dynamic” and “static” are much more useful terms.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/dart">dart</a>,                         <a href="http://ericpoe.com/blog/tags/java">java</a>,                         <a href="http://ericpoe.com/blog/tags/javascript">javascript</a>,                         <a href="http://ericpoe.com/blog/tags/cpp">cpp</a>                        </p>
             </article>
     <nav>
         <a href="http://ericpoe.com/page/6">Newer Posts</a><br />
