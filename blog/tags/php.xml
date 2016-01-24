@@ -3,9 +3,194 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/php.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2015-11-29T22:26:50-06:00</updated>
+    <updated>2016-01-23T22:47:54-06:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Last Month in PHP: 2015 December]]></title>
+            <link href="http://ericpoe.com/blog/2016/01/06/last-month-in-php"/>
+            <updated>2016-01-06T00:00:00-06:00</updated>
+            <id>http://ericpoe.com/blog/2016/01/06/last-month-in-php</id>
+            <content type="html"><![CDATA[<p>December was a busy month in PHP. A major update to PHP was released,
+PHP-FIG approved a new PSR, major CMSes had major releases and/or were patched,
+and frameworks had major, minor, and patch releases.</p>
+
+<h3 id="php-7.0.1">PHP 7.0.1</h3>
+
+<p>PHP 7.0 was released on 3 December and was patched to 7.0.1 two weeks later.
+PHP 7 includes many new improvements, including:</p>
+
+<ul>
+<li>speed!</li>
+<li>Scalar type hinting</li>
+<li>Return type declarations (optional)</li>
+<li>New operators:
+
+<ul>
+<li>Null coalescing: <code>??</code></li>
+<li>Spaceship: <code>&lt;=&gt;</code></li>
+</ul></li>
+<li>Constant arrays</li>
+<li>Anonymous classes</li>
+</ul>
+
+<p>See <a href="http://php.net/manual/en/migration70.new-features.php">PHP 7 New Features</a> for more information.</p>
+
+<h3 id="psr-6-caching-interface">PSR-6 Caching Interface</h3>
+
+<p>PSR-6 ensures a common interface for caching support in PHP, for those libraries and frameworks that utilize it.</p>
+
+<ul>
+<li>Allows free-standing libraries to support caching of intermediary data without effort.</li>
+<li>Provides a common interface for basic and intermediate-level caching needs.</li>
+</ul>
+
+<p>On 8 December, this passed <a href="https://www.reddit.com/r/PHP/comments/3vzvxo/psr6_the_vote_for_psr6_has_passed_in_favor_of/">amidst controversy</a>.</p>
+
+<p>See <a href="http://www.php-fig.org/psr/psr-6/">PSR-6</a> for more information.</p>
+
+<h3 id="wordpress-4.4%3A-%22clifford%22">WordPress 4.4: "Clifford"</h3>
+
+<p>On 8 December, the new version of WordPress, <abbr title "also known as">aka</abbr> "Clifford", was released.</p>
+
+<p>Some of its new features:</p>
+
+<ul>
+<li>Theme: <a href="https://wordpress.org/themes/twentysixteen/">Twenty-Sixteen</a></li>
+<li>Responsive images</li>
+<li>Ability to <a href="https://codex.wordpress.org/Embeds">embed posts</a> from:
+
+<ul>
+<li>Other WordPress sites</li>
+<li>Other oEmbed providers (reddit, speaker deck, etc)</li>
+</ul></li>
+<li><a href="https://wordpress.org/plugins/rest-api/">WordPress REST API</a> in Core</li>
+<li>Other stuff under-the-hood</li>
+</ul>
+
+<p>WordPress 4.4 requires PHP 5.2.4+, although <a href="https://wordpress.org/about/requirements/">PHP 5.6+</a> is recommended.</p>
+
+<p>See: <a href="https://wordpress.org/news/2015/12/clifford/">WordPress 4.4 announcement</a> for more information.</p>
+
+<h3 id="drupal-8.0.1">Drupal 8.0.1</h3>
+
+<p>Drupal 8 was released on 19 November and the first patch was released on 2 December.</p>
+
+<p>New features of Drupal 8 include:</p>
+
+<ul>
+<li>HTML 5</li>
+<li>Out-of-the-box WYSIWYG editing</li>
+<li>Built with modern PHP practices &amp; Libraries:
+
+<ul>
+<li>Composer, Symfony2, Guzzle, Twig, etc.</li>
+</ul></li>
+<li>REST web services</li>
+</ul>
+
+<p>Drupal 8 requires PHP 5.5.9+.</p>
+
+<p>See <a href="https://www.drupal.org/8">Drupal 8</a> for more information.</p>
+
+<h3 id="slim-3.0-microframework">Slim 3.0 Microframework</h3>
+
+<p>Slim 3.0 was released on 7 December.</p>
+
+<p>New features of Slim 3.0 include:</p>
+
+<ul>
+<li><a href="http://www.slimframework.com/docs/concepts/di.html">Dependency Injection Container</a></li>
+<li><a href="http://www.slimframework.com/docs/concepts/middleware.html">PSR-7 Middleware</a> support</li>
+<li><a href="http://www.slimframework.com/docs/objects/router.html#route-callbacks">Route callback binding</a></li>
+<li>Simpler codebase</li>
+</ul>
+
+<p>Slim 3.0 requires PHP 5.5+</p>
+
+<h3 id="symfony-framework">Symfony framework</h3>
+
+<p>Symfony 3.0 was released on 30 November and was patched to 3.0.1 on 26 December.</p>
+
+<p>New features of Symfony 3 include:</p>
+
+<ul>
+<li>Locale has been supplanted by Intl</li>
+<li>Simplified security</li>
+<li>Simplified voters</li>
+<li>Monolog Bridge is now <a href="http://www.php-fig.org/psr/psr-3/">PSR-3</a> compatible</li>
+<li>Changes in the ways Property Access, Routing, Logging, Translator, Twig, Validator, Yaml, Process, &amp; Swiftmailer, Config, &amp; more are used</li>
+</ul>
+
+<p>Symfony 3 requires PHP 5.5.9+</p>
+
+<p>Patches:</p>
+
+<ul>
+<li>Symfony 3.0.1</li>
+<li>Symfony 2.8.1</li>
+<li>Symfony 2.7.8</li>
+<li>Symfony 2.3.36</li>
+</ul>
+
+<h3 id="laravel-5.2-framework">Laravel 5.2 framework</h3>
+
+<p>Laravel 5.2 was released on 21 December.</p>
+
+<p><a href="https://laravel-news.com/2015/12/laravel-5-2-is-released/">New features of Laravel 5.2</a> include:</p>
+
+<ul>
+<li>Auth Scaffolding</li>
+<li>Implicit model bindingAppending output from scheduled tasks</li>
+<li>Form array validation</li>
+<li>Collections wildcards</li>
+<li>Database Session Driver</li>
+<li>Middleware Groups</li>
+<li>Rate Limiting</li>
+<li>Eloquent Global Scope</li>
+</ul>
+
+<h3 id="virtual-machine%3A-laravel-homestead-5.2">Virtual Machine: Laravel Homestead 5.2</h3>
+
+<p>Now with:</p>
+
+<ul>
+<li>PHP7</li>
+<li>Composer</li>
+<li>git</li>
+</ul>
+
+<p>Requires PHP 5.5.9+</p>
+
+<p>See: <a href="https://laravel.com/docs/5.2/homestead">Homestead 5.2</a></p>
+
+<h3 id="upcoming-conferences">Upcoming Conferences</h3>
+
+<p><a href="http://2016.sunshinephp.com/">Sunshine PHP</a>
+Feb 4-6: Miami, FL</p>
+
+<p><a href="http://2016.midwestphp.org/">Midwest PHP</a>
+Mar 4-5: Minneapolis, MN</p>
+
+<p><a href="http://lonestarphp.com">Lonestar PHP</a>
+Apr 7-9: Dallas, TX</p>
+
+<p><a href="https://tek.phparch.com">php[tek]</a>
+May 23-27: St Louis, MO</p>
+
+<h3 id="nomadphp">NomadPHP</h3>
+
+<p><a href="http://nomadphp.com">NomadPHP</a> is an online supplement to your in-real-life user group.</p>
+
+<p>Jan 21: 01:00 PM CST
+<a href="https://nomadphp.com/2015/10/16/puli-phps-next-package-revolution/">Puli: PHP's Next Package Revolution</a>
+- Berhard Schussek - <a href="https://twitter.com/webmozart">@webmozart</a></p>
+
+<p>Jan 21: 08:00 PM CST
+<a href="https://nomadphp.com/2015/10/16/building-better-apis/">Building Better APIs</a>
+- Mike Stowe - <a href="https://twitter.com/mikegstowe">@mikegstowe</a></p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[My Year of Code]]></title>
             <link href="http://ericpoe.com/blog/2015/11/13/my-year-of-code"/>
@@ -493,29 +678,6 @@ I attended the inaugural <a href="http://phpbridge.org/">PHPBridge</a> course, p
 <p>The after-party seemed much more relaxed. I talked with Cal and Kathy Evans and Adam Culp some more, had some more of Omni’s homebrew, met a few other folks, and discovered that I stink at playing cornhole.</p>
 
 <p>In all, I had a great time, met some great folks, and was introduced to some new ideas and technologies. I can’t wait to go back!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[atom.io: A PHP-Oriented Review]]></title>
-            <link href="http://ericpoe.com/blog/2014/04/08/atom"/>
-            <updated>2014-04-08T00:00:00-05:00</updated>
-            <id>http://ericpoe.com/blog/2014/04/08/atom</id>
-            <content type="html"><![CDATA[<figure>
-<img src="/images/vim-emacs-atomio.png" alt="vim vs emacs is a good fight; those vs atom.io is no contest">
-<figcaption>credit: <a href="https://twitter.com/tpope/status/439060962448912384">@tpope</a></figcaption>
-</figure>
-
-<p>Last week, I gave a short demo of the <a href="Atom.io">Atom.io</a> text editor to the <a href="http://kcpug.org/">Kansas City PHP User’s Group</a>. I realized after-the-fact that I had presented the early-release as an IDE, when I should have presented it as a fancy text-editor.</p>
-
-<p>Coming from using <a href="http://www.jetbrains.com/phpstorm/">PHPStorm</a> as my primary PHP IDE, Atom seems like a cute, yet unintelligent cousin.</p>
-
-<p>I tried to find things to like about it from a PHP point-of-view. After enabling autocomplete and PHP snippets, I could appreciate the Atom.io text editor as just a text editor. Code completion is currently maddening in that it shows absolutely everything ever typed; therefore, it shows nothing of value. The code snippets were more interesting. Creating a foreach loop stub in PHP was as simple as typing <code>foreach &lt;tab&gt;</code>. If I were in a <code>&lt;?php ... ?&gt;</code> segment, I would get a nice foreach loop stub within which to fill in the blanks; yet, if I were in an <code>&lt;html&gt;...&lt;/html&gt;</code> segment, I would get a nice <code>&lt;?php foreach ... ?&gt;</code> stub within which to fill in the blanks. I appreciate that the PHP, JavaScript, and HTML stubbing is container-aware.</p>
-
-<p>From a PHP point-of-view, that was the only positive which I could find for the Atom.io text editor. I made certain to explain that the editor is not yet ready for Prime Time nor are its PHP flavorings fully fleshed out. The editor holds great promise for PHP and code-in-general, but until it can fulfill that promise, I will prefer <a href="http://www.vim.org/">VIM</a> for editing text and PHPStorm for a PHP IDE.</p>
-
-<p>After my largely negative review, I was still able to hand out at least 2 invites.</p>
-
-<p>I look forward to what comes next for Atom.io.</p>
 ]]></content>
         </entry>
     </feed>
