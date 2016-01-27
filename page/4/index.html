@@ -73,6 +73,23 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="http://ericpoe.com/blog/2015/05/05/Revenge-Of-The-Fifth">Revenge of the Fifth</a></h2>
+            <strong>2015-05-05</strong>
+        </header>
+        <div>
+            <p>Today is the unofficial Star-Wars-fan holiday known as the Revenge of the Fifth.</p>
+
+<p><a href="https://twitter.com/eric_poe/status/463399125749223424">Last year</a>, I noticed that 5/5 (numerical representation of 5 May, or is that May 5?) can be written in binary as <code>101 101</code>. Or more artistically as:</p>
+
+<p><span title="the numbers 101 and 101 next to each other look like a pair of TIE fighters flying in formation"><strong>|o| |o|</strong></span></p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/star%20wars">star wars</a>,                         <a href="http://ericpoe.com/blog/tags/binary">binary</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015">Lone Star PHP 2015</a></h2>
             <strong>2015-04-28</strong>
         </header>
@@ -193,82 +210,6 @@
                     <p class="tags">
             Tags:
                         <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/learning">learning</a>,                         <a href="http://ericpoe.com/blog/tags/conferences">conferences</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc">Bite of PHP: Heredoc vs. Nowdoc</a></h2>
-            <strong>2015-04-23</strong>
-        </header>
-        <div>
-            <h3 id="heredoc">Heredoc</h3>
-
-<p>Heredoc will define a string of text in a what-you-see-is-what-you-mean type
-of format. So, if you want to echo out structured text, like so:</p>
-
-<pre><code class="html">I think that I
-    Shall never pay
-As much as I
-    Have for 2015-04-23
-</code></pre>
-
-<p>You would put it in a heredoc like this:</p>
-
-<pre><code class="php">$today = date('Y-m-d');
-$poem = &lt;&lt;&lt;HTML
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-HTML;
-
-echo $poem;
-</code></pre>
-
-<p><strong>output:</strong></p>
-
-<pre>
-I think that I
-    Shall never pay
-As much as I
-    Have for 2015-04-23
-</pre>
-
-<p>Notice that heredoc can behave like a template and parse any PHP contained within.</p>
-
-<p>Test it out on <a href="http://3v4l.org/GZl9Z">3v4l.org</a>.</p>
-
-<h3 id="nowdoc">Nowdoc</h3>
-
-<p>Nowdoc will define a string of text in a what-you-see-is-what-you-get type of format. So, if you want to show the above example EXACTLY as written, put it in a nowdoc block.</p>
-
-<pre><code class="php">$today = date('Y-m-d');
-$poem = &lt;&lt;&lt;'HTML'
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-HTML;
-
-echo $poem;
-</code></pre>
-
-<p><strong>output:</strong></p>
-
-<pre>
-I think that I
-    Shall never pay
-As much as I
-    Have for $today
-</pre>
-
-<p>Test it out on <a href="http://3v4l.org/H1YjU">3v4l.org</a>.</p>
-
-<p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/learning">learning</a>                        </p>
             </article>
     <nav>
         <a href="http://ericpoe.com/page/3">Newer Posts</a><br />

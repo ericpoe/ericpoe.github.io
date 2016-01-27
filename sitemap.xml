@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://ericpoe.com</loc>
-    <lastmod>2016-01-23</lastmod>
+    <lastmod>2016-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>http://ericpoe.com/blog/2016/01/26/playing-with-docker</loc>
+    <lastmod>2016-01-26T00:00:00-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
     <url>
     <loc>http://ericpoe.com/blog/2016/01/06/last-month-in-php</loc>
