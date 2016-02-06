@@ -3,13 +3,13 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/conferences.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2016-01-26T22:21:09-06:00</updated>
+    <updated>2016-02-06T18:29:35+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Lone Star PHP 2015]]></title>
             <link href="http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015"/>
-            <updated>2015-04-28T00:00:00-05:00</updated>
+            <updated>2015-04-28T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/04/28/LoneStarPHP2015</id>
             <content type="html"><![CDATA[<p>I attended Lone Star PHP <a href="/blog/2014/05/06/Lonestar-PHP-Conference-2014">last year</a> with much hope and even more trepidation as to my abilities to hold my own with other members of the PHP community. I was the recipient of the Lone Star PHP scholarship, so my attendance and stay were taken care of by the conference sponsors (thank you! thank you! thank you!). I spent a day at an intro-to-PHP workshop, where I realized that I knew more about modern PHP and its practices than I cared to admit. I spent another day attending great talks. I met many wonderful folks, some of whom I have maintained contact and some PHP luminaries I follow on Twitter, blog posts, and podcasts. Since I had accepted a job offer while doing the TSA dance at DFW airport, I spent my evenings leaving the after-parties early to work on my resignation letter.</p>
 
@@ -66,7 +66,7 @@
             <entry>
             <title type="html"><![CDATA[Lone Star PHP 2015: Day 0]]></title>
             <link href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0"/>
-            <updated>2015-04-27T00:00:00-05:00</updated>
+            <updated>2015-04-27T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0</id>
             <content type="html"><![CDATA[<p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
 
@@ -122,7 +122,7 @@
             <entry>
             <title type="html"><![CDATA[Lone Star PHP Conference 2014]]></title>
             <link href="http://ericpoe.com/blog/2014/05/06/Lonestar-PHP-Conference-2014"/>
-            <updated>2014-05-06T00:00:00-05:00</updated>
+            <updated>2014-05-06T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2014/05/06/Lonestar-PHP-Conference-2014</id>
             <content type="html"><![CDATA[<p>I was fortunate to receive a scholarship to attend the 2014 <a href="http://lonestarphp.com/">Lone Star PHP Conference</a> in Addison, TX (Dallas metro area) over the April last weekend in April. I just had to get myself there. Thank you, Lone Star PHP and <a href="http://nomadphp.com/">NomadPHP</a>!</p>
 

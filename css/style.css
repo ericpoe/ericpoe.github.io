@@ -5,6 +5,10 @@ h4 small
     color: #888;
 }
 
+blockquote p {
+    margin-top: 1em;
+}
+
 .social ul li {
     display: inline-block;
     text-align: center;

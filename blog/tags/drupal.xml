@@ -3,13 +3,13 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/drupal.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2016-01-26T22:21:09-06:00</updated>
+    <updated>2016-02-06T18:29:35+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Playing with Docker and Linked Containers]]></title>
             <link href="http://ericpoe.com/blog/2016/01/26/playing-with-docker"/>
-            <updated>2016-01-26T00:00:00-06:00</updated>
+            <updated>2016-01-26T00:00:00+00:00</updated>
             <id>http://ericpoe.com/blog/2016/01/26/playing-with-docker</id>
             <content type="html"><![CDATA[<p>In my current job, I am starting the process to upgrade our PHP 5.4 application to a PHP 5.6 application (PHP 7 is not yet support by the majority of the 3rd party libraries we use). I have been tasked with building the staging server for use in testing our legacy application as well as our newer Symfony-based application. We are using an older version of MySQL as well.</p>
 

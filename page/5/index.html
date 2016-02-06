@@ -73,6 +73,67 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="http://ericpoe.com/blog/2015/04/27/LoneStarPHP-Day-0">Lone Star PHP 2015: Day 0</a></h2>
+            <strong>2015-04-27</strong>
+        </header>
+        <div>
+            <p>The first day of Lone Star 2015 was devoted to training. The workshop track I took was geared towards unit testing.</p>
+
+<h3 id="getting-started-with-phpunit">Getting Started with PHPUnit</h3>
+
+<ul>
+<li><a href="http://shortwhitebaldguy.com/">Matt Frost</a></li>
+<li>Twitter: <a href="https://twitter.com/shrtwhitebldguy">@shrtwhitebldguy</a></li>
+<li><a href="http://www.slideshare.net/mfrost503/getting-startedphp-unit">Slides</a></li>
+</ul>
+
+<p>One reason I took this workshop was so that I could become more familiar with mocks. I had a mental block when it comes to mocks and had a hard time seeing their value. After taking this workshop and talking about mocks with Matt, I can see and appreciate their value. Mock the things we don't directly test (ex. database connections, sql queries, filesystem i/o, etc) to speed up the individual unit tests. Mock the things we don't directly control (ex. 3rd-party API, access to another server on our network, etc) since we don't want to fail a test due to a temporary connection error.</p>
+
+<p>What I loved about this workshop was the easy-going manner in which Matt got us to embrace unit testing and mocking. Matt even provided a <a href="https://github.com/mfrost503/phpunit-tutorial">git repo</a> for us to clone in order to get started on the fun part of the workshop. Mocking was definitely covered in the interactive part of the workshop.</p>
+
+<p>Unfortunately, our getting started on the interactive portion of the workshop was delayed due to poor wifi signal. By the time most of us were able to get the git repo cloned and run <code>composer install</code>, we only had time to do one of the two mocking exercises. Yet, since I still have the repo cloned on my machine, there's no reason I shouldn't be able to finish the workshop at my leisure.</p>
+
+<h3 id="wax-on%2C-wax-off%3A-coder-dojo">Wax On, Wax Off: Coder Dojo</h3>
+
+<ul>
+<li><a href="https://coderabbi.github.io/">Yitzchok Willroth</a></li>
+<li>Twitter: <a href="https://twitter.com/coderabbi">@coderabbi</a></li>
+<li>Slides unavailable</li>
+</ul>
+
+<p>I have <a href="/blog/2014/12/22/a-tdd-fizz-buzz-kata">done kata</a> before and am a proponent of using them to strengthen knowledge and skills, so this was a workshop I had mentally signed up for as soon as I heard it was being offered.</p>
+
+<p>Rabbi Yitzchok Willroth (aka "CodeRabbi") leads his audience with gentle enthusiasm through an intellectual exercise replete with philosophy and references to psychological studies. During this workshop, Coderabbi had a few friends (luminaries of the PHP community, really) float around to offer guidance to the perplexed during each kata exercise. Their assistance was much appreciated.</p>
+
+<p>The kata we worked on was <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>. We did not have the remainder of the workshop to work on this kata. Instead, we had 30 minutes (you read that right) to work on it. Since this is not something one can learn the rules to and code in a sitting, this seemed unfair -- like being told that the <a href="http://www.coolrunning.com/engine/2/2_3/181.shtml">Couch-to-5K</a> program we were going to follow is to get off the couch and then run 5 kilometers in 30 minutes. As you can imagine, the beginning runner will not complete 5K in 30 minutes, but eventually will with repeated practice. So, too, can one eventually completely code the Game of Life in 30 minutes with repeated practice. What seemed unfair initially, was really a challenge to us to improve, continuously.</p>
+
+<p>One aspect of this workshop that I enjoyed was that at the end of every 30 minute sprint, we were to discard our previous work and start fresh, but with a new constraint to keep our minds sharp. So the second sprint's constraint was to pair up with someone else and see what we could do together. After 30 minutes, the constraint was to make the Cell or Organism (whatever we called it) class not maintain state.</p>
+
+<p>There were times in these kata exercises in which I felt frustrated or angry. Good! For an intellectual exercise, this is the equivalent to feeling muscle strain and soreness in a weight-resistance exercise.</p>
+
+<p>My first pair-up was with a guy who wanted to do the kata in object-oriented javascript and use HTM5 Canvas. At a PHP conference. Yet, once I embraced that he had a better plan of attack than I did, I enjoyed the learning process of watching someone code in a manner that I do not. In that instance, I was not a good pair-partner since I had nothing to contribute regarding Canvas nor from-scratch OOJS. Yet it was a good exercise.</p>
+
+<p>I enjoyed the intellectual exercise of making the Cell Class stateless in that it gave my pair-partner and me the opportunity to discuss what that meant and how to deal with that constraint. We didn't end up with more than an incomplete sketch (in the form of code), but it got our brain juices flowing.</p>
+
+<p>I plan to play with this kata some more on my own and will add additional rules to perhaps mimic competing organisms in the same space. Or, what if one of these organisms has a completely foreign set of rules (like, perhaps cancer cells)?</p>
+
+<p>We started with a Composer-based <a href="https://github.com/coderabbi/coder-dojo">PHPUnit skeleton</a> and a <a href="http://www.codingdojo.org/cgi-bin/index.pl?action=browse&amp;diff=1&amp;id=KataGameOfLife">complicated kata</a>. We ended up with a newfound respect for the squishy gray stuff between our ears.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>This was the first year that Lone Star PHP had a day devoted to training. The problems we all shared with wifi were frustrating, but overcome personally by my attendee-coworker with a call to our IT department to turn on the ability to hotspot our phones (thanks, Darren!). A glance at all the <a href="https://twitter.com/sdawncasey/status/589097774852935680">Wifi access points</a> at the conference center showed that we were not the only ones to do this. But really, for the workshops, wifi wasn't important except for at the beginning of each workshop so we could clone git repos and run <code>composer install</code>.</p>
+
+<p>The night before the workshop, I had built a vagrant box exclusively for use at the conference. <a href="https://twitter.com/juantreminio">Juan Treminio</a>'s (a speaker at Lone Star PHP 2014!) <a href="https://puphpet.com/">Puphpet</a> tool proved to be invaluable for this purpose. Had I been aware of the need to clone git repos and get the required components installed via composer, I would have done so ahead of time.</p>
+
+<p>In short, the workshops were great, yet too much time was wasted by all in doing something that takes maybe a minute on the office or hotel wifi but takes for-frikkin-ever on a shared conference wifi. I would like to see more notice next time for required environments so we can hit the ground running. The topics were great, and I would have loved to have been able to attend them all!</p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/learning">learning</a>,                         <a href="http://ericpoe.com/blog/tags/conferences">conferences</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc">Bite of PHP: Heredoc vs. Nowdoc</a></h2>
             <strong>2015-04-23</strong>
         </header>
@@ -203,144 +264,6 @@ echo "$greeting, {$audience}!";
                     <p class="tags">
             Tags:
                         <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/learning">learning</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="http://ericpoe.com/blog/2014/12/28/now-with-sculpin">Now with Sculpin</a></h2>
-            <strong>2014-12-28</strong>
-        </header>
-        <div>
-            <p>I have moved my site from one domain to another. I was using Wordpress on my old
-site and was happy. Adding pages was a thing of beauty. Configuring was a dream.
-Then I wanted to modify my theme. Then I wanted to use some fun HTML5 tags. Then
-I wanted to minimize hacking vectors. Then I realized that I was sacrificing
-performance to use a database that I was merely using to dynamically create static
-content... why?</p>
-
-<p>If only Wordpress were as performant and easy to theme as the first blog I cobbled
-together using static PHP files back in the early aughts. Ah, that first blog
-was easy to add funky HTML syntax and add features; but each new page required
-editing 3 PHP files so the menu, archive, and each individual page would use the
-new content. At one point, I figured out that if I used a common naming structure,
-that I could tell the menu to dynamically build by looking at the file structure
- &mdash; thereby reducing the need to edit the menu.php file. Success!</p>
-
-<p>I muddled through with Wordpress (did I mention the constant need to stay on top
-of updates and patches for Wordpress and associated plugins?). Then I discovered
-<a href="https://sculpin.io">Sculpin</a>.</p>
-
-<p>The immediate benefits to Sculpin that I could see were:</p>
-
-<ul>
-<li>Static file generator</li>
-<li>Files are created using <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, which means I can add funky HTML tags when necessary.</li>
-<li>The base project is written in open-source PHP, which means that I can bugfix and extend the source as I see fit.</li>
-<li>Theming is done via <a href="http://twig.sensiolabs.org/">twig</a> &amp; CSS (currently using <a href="http://getbootstrap.com/">bootstrap</a>)</li>
-<li>No performance loss due to dynamically generating a view via database lookups.</li>
-<li>Nice community (a huge bonus!)</li>
-</ul>
-
-<p>In other words, the benefits are that I can utilize it now and benefit, I learn
-its components now and I can utilize that knowledge later (CSS, Bootstrap, twig,
-HTML5, etc).</p>
-
-<p>As I started to play with Sculpin, I kept thinking back to my original blog and
-how close I was back then to what I am now doing. What I was missing then was the
-generation of the static HTML files that Sculpin allows.</p>
-
-<h3 id="making-it-work">Making it work</h3>
-
-<p>I spent too much time this weekend trying to figure out how to edit my Sculpin
-site locally and yet keep that version-controlled via git as well as keeping my
-production code version-controlled via git. Happily, I believe that I have found
-a way to do both.</p>
-
-<p>I keep my in-progress code, which includes minor modifications to the <a href="https://github.com/sculpin/sculpin-blog-skeleton">blog
-skeleton</a>, in a Bitbucket repo.
-I keep my production site, which is generated by Sculpin, in a Github repo, which
-is actually what you are reading right now. To keep the two segments segregated,
-I am doing the following:</p>
-
-<p>On my dev machine, I have the following directory structure:</p>
-
-<pre>
-+-ericpoe\
-|
-+-+- ericpoe.sculpin\
-  |
-  +-- ericpoe.github.io\
-</pre>
-
-<p>Within my <code>ericpoe.sculpin</code> directory, I keep my sculpin blog skeleton and my Markdown source files. I have two remotes: <code>origin</code>, which points to my draft on <a href="https://bitbucket.org/ericpoe/">bitbucket</a>, and <code>sync</code>, which points to the source of the <a href="https://github.com/sculpin/sculpin-blog-skeleton">Sculpin blog skeleton</a>.</p>
-
-<p>Within my <code>ericpoe.github.io</code> directory, I keep the html files generated by the <code>sculpin generate --env=prod</code> command.</p>
-
-<p>Tying it all together, I keep three bash files in my root <code>ericpoe</code> directory:</p>
-
-<p><code>sync.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-cd ericpoe.sculpin
-git checkout master
-git pull sync master
-</code></pre>
-
-<p><code>draft.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-if [ $# -ne 1 ]; then
-    echo "usage: ./draft.sh \"commit message\""
-    exit 1;
-fi
-
-cd ericpoe.sculpin
-git checkout master
-git add .
-git commit -m "$1"
-git push -u origin master
-</code></pre>
-
-<p><code>publish.sh</code>:</p>
-
-<pre><code class="bash">#! /bin/bash
-
-if [ $# -ne 1 ]; then
-    echo "usage: ./publish.sh \"commit message\""
-    exit 1;
-fi
-
-cd ericpoe.sculpin
-sculpin generate --env=prod
-
-cd ../ericpoe.github.io
-git checkout master
-
-cp -R ../ericpoe.sculpin/output_prod/* .
-
-git add .
-git commit -m "$1"
-git push origin --all
-</code></pre>
-
-<p>My workflow now is to:</p>
-
-<ol>
-<li>create a new Markdown file with the yaml tuple <code>draft: true</code></li>
-<li>create my text</li>
-<li>test my text via <code>sculpin generate --watch --server</code></li>
-<li>make any changes needed</li>
-<li>backup the draft by running <code>draft.sh</code></li>
-<li>if I feel ready, remove the yaml tuple <code>draft: true</code></li>
-<li>publish to my site, which is hosted by github, by running <code>publish.sh</code></li>
-<li>every now and then, when the need strikes, update the core code by running <code>sync.sh</code></li>
-</ol>
-
-<p>This simple workflow will allow me to explore other technologies and to concentrate on the topic-at hand while posting about it here.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/git">git</a>,                         <a href="http://ericpoe.com/blog/tags/sculpin">sculpin</a>                        </p>
             </article>
     <nav>
         <a href="http://ericpoe.com/page/4">Newer Posts</a><br />

@@ -73,6 +73,161 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="http://ericpoe.com/blog/2016/02/06/last-month-in-php">Last Month in PHP: 2016 January</a></h2>
+            <strong>2016-02-06</strong>
+        </header>
+        <div>
+            <p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-january-2016">03 Feb 2016</a></p>
+
+<!-- January was a light month in PHP. A major update to PHP was released,
+PHP-FIG approved a new PSR, major CMSes had major releases and/or were patched,
+and frameworks had major, minor, and patch releases. -->
+
+<h3 id="php-updates">PHP Updates</h3>
+
+<p>Security and bugfix updates to PHP were released in January. Upgrade if you have
+a version less than:</p>
+
+<ul>
+<li>7.0.2</li>
+<li>5.6.17</li>
+<li>5.5.31</li>
+</ul>
+
+<h3 id="cmses">CMSes</h3>
+
+<p>Drupal and WordPress both released point-releases.</p>
+
+<ul>
+<li>Drupal 8.0.2
+
+<ul>
+<li>bug fixes</li>
+</ul></li>
+<li>WordPress 4.4.1 (<strong>Upgrade!</strong>)
+
+<ul>
+<li>1 Security fix for XSS vulnerability</li>
+<li>52 bug fixes</li>
+</ul></li>
+</ul>
+
+<h3 id="%EE%BCframeworks">μFrameworks</h3>
+
+<h4 id="zend-expressive-1.0">Zend Expressive 1.0</h4>
+
+<p>Zend Expressive is a <a href="http://www.php-fig.org/psr/psr-7/">PSR-7</a> Middleware. It looks pretty interesting and bears further investigation.</p>
+
+<p><strong>Example:</strong> <a href="http://www.sitepoint.com/build-nasa-photo-gallery-zend-expressive/">sitepoint: How to Build a NASA Photo Gallery with Zend Expressive</a></p>
+
+<p><strong>See:</strong> <a href="https://zendframework.github.io/zend-expressive/">Zend Expressive</a></p>
+
+<h4 id="lumen-5.2.4">Lumen 5.2.4</h4>
+
+<p>5.2 introduces:</p>
+
+<ul>
+<li>stateless APIs</li>
+<li>No Sessions
+
+<ul>
+<li>This changes authentication</li>
+</ul></li>
+</ul>
+
+<p><strong>See:</strong> Lumen 5.2 <a href="https://lumen.laravel.com/docs/5.2/releases">release notes</a></p>
+
+<h4 id="silex-1.3.5">Silex 1.3.5</h4>
+
+<ul>
+<li>Fixed typo</li>
+</ul>
+
+<p><strong>See:</strong> Silex 1.3.5 <a href="https://github.com/silexphp/Silex/blob/1.3/doc/changelog.rst">changelog</a></p>
+
+<h4 id="slim-3.1.0">Slim 3.1.0</h4>
+
+<ul>
+<li>Adds <code>getParsedBodyParam()</code> and <code>getQueryParam()</code> to Slim&#92;Http&#92;Request</li>
+<li>Adds <code>App::process()</code> to allow Slim to run when a Request object and Response object already exist</li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP_451">HTTP status code 451</a></li>
+</ul>
+
+<p><strong>See:</strong> Slim 3.1.0 <a href="http://www.slimframework.com/2016/01/08/slim-3.1.0.html">release notes</a></p>
+
+<h3 id="frameworks">Frameworks</h3>
+
+<p>Various frameworks had point releases. I'm not sure what changed, so I assume that these are bugfixes.</p>
+
+<ul>
+<li>Laravel 5.2.12</li>
+<li>Symfony [2.8.2, 2.7.9, 2.6.13, 2.3.37]</li>
+<li>Zend Framework 2.5.3</li>
+</ul>
+
+<h3 id="upcoming-conferences">Upcoming Conferences</h3>
+
+<p><a href="http://2016.sunshinephp.com/">Sunshine PHP</a>
+Feb 4-6: Miami, FL</p>
+
+<p><a href="http://2016.midwestphp.org/">Midwest PHP</a>
+Mar 4-5: Minneapolis, MN</p>
+
+<p><a href="http://lonestarphp.com">Lone Star PHP</a>
+Apr 7-9: Dallas, TX</p>
+
+<p><a href="https://tek.phparch.com">php[tek]</a>
+May 23-27: St Louis, MO</p>
+
+<p><a href="http://kcdc.info">Kansas City Developer Conference</a>
+June 22-24 - Kansas City, MO
+Call for papers deadline: Feb 12</p>
+
+<h3 id="nomadphp">NomadPHP</h3>
+
+<p><a href="http://nomadphp.com">NomadPHP</a> is an online supplement to your in-real-life user group.</p>
+
+<p>Feb 18: 01:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/11/20/2016-02-eu/">The Life of an If Statement</a></li>
+<li>Anthony Ferrara - <a href="https://twitter.com/ircmaxell">@ircmaxell</a></li>
+</ul>
+
+<p>Feb 18: 08:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/11/20/2016-02-us/">From Idea to Prototype in 50 Minutes with Laravel
+</a></li>
+<li>Matt Stauffer - <a href="https://twitter.com/stauffermatt">@stauffermatt</a></li>
+</ul>
+
+<h3 id="next-month%27s-kcpug">Next Month's KCPUG</h3>
+
+<p>We will have a busy session next month!</p>
+
+<ul>
+<li><p><a href="https://twitter.com/johnkary">John Kary</a> will present "Rethinking Loops" &mdash; dealing with functional programming in PHP. This is the same talk that he will give at:</p>
+
+<ul>
+<li><a href="http://lonestarphp.com/sessions/#rethinking-loops">Lone Star PHP</a></li>
+<li><a href="http://2016.midwestphp.org/session/rethinking-loops/">Midwest PHP</a></li>
+</ul></li>
+<li><p>Joseph Maxwell will present a preview of his OAuth2 talks that he will give at:</p>
+
+<ul>
+<li><a href="http://lonestarphp.com/sessions/#demystifying-oauth2-an-understandable-way-to-approach-connecting-to-other-systems">Lone Star PHP</a></li>
+<li><a href="https://tek.phparch.com/speakers/#70639">php[tek]</a></li>
+</ul></li>
+</ul>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/last%20month%20in%20php">last month in php</a>,                         <a href="http://ericpoe.com/blog/tags/kcphpug">kcphpug</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="http://ericpoe.com/blog/2016/01/26/playing-with-docker">Playing with Docker and Linked Containers</a></h2>
             <strong>2016-01-26</strong>
         </header>
@@ -298,7 +453,7 @@ Feb 4-6: Miami, FL</p>
 <p><a href="http://2016.midwestphp.org/">Midwest PHP</a>
 Mar 4-5: Minneapolis, MN</p>
 
-<p><a href="http://lonestarphp.com">Lonestar PHP</a>
+<p><a href="http://lonestarphp.com">Lone Star PHP</a>
 Apr 7-9: Dallas, TX</p>
 
 <p><a href="https://tek.phparch.com">php[tek]</a>
@@ -319,108 +474,7 @@ May 23-27: St Louis, MO</p>
         </div>
                     <p class="tags">
             Tags:
-                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/last%20month%20in%20php">last month in php</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="http://ericpoe.com/blog/2015/11/29/dev-expectation-vs-dev-reality">Expectation vs Reality: my first 1.5 years of professional programming</a></h2>
-            <strong>2015-11-29</strong>
-        </header>
-        <div>
-            <p>I have been a professional developer for over a year and a half now.</p>
-
-<p>About a year ago, my friend and mentor, John Kary, asked me how the job measured up to my expectations. I replied, honestly, that my expectations were met. However, I hadn't given it much thought since I was busy trying to learn so many new things. So, at the time, my expectation was that new developers spend a lot of time learning new things. Expectation: met.</p>
-
-<p>Since that time, I have continued to learn new things, but I have also had time to think about the question more in depth.</p>
-
-<p>I realized that I had many expectations of dev-life while I was studying programming.</p>
-
-<p><strong>Caveat:</strong> Your mileage may vary</p>
-
-<h3 id="expectation-1---programming-is-a-young-man%27s-game">Expectation 1 - Programming is a Young Man's Game</h3>
-
-<p>This was probably my largest fear with changing my career and entering programming as a full-time job. I had read too much about <em>brogramming</em>, sexism, and ageism being rampant in the development world. As a middle-aged dude, I was worried about entering this career that was run by 20-something guys that call each other "bruh."</p>
-
-<h3 id="reality-1---programming-is-open-to-all">Reality 1 - Programming is Open to All</h3>
-
-<p>My first interview for my job was with a female boss and a potential coworker who was older than me and was also female. I have told both of them since that this put my fears to rest and made the rest of the interview-process much easier. My second interview was with the team, which was made up of the female boss, the older-than-me female developer, a younger female developer, a remote guy via robot interface, a younger guy, and my friend, John Kary. Another member of the team was absent due to his grandson being born.</p>
-
-<p>Since that time, we have hired a guy from Pakistan, a slightly younger guy, a slightly older guy, and a much younger guy. I would like to see more women apply for the job openings. Perhaps next time.</p>
-
-<h3 id="expectation-2---programming-requires-uml">Expectation 2 - Programming Requires UML</h3>
-
-<p>My programming classes utilized <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" title="Unified Modeling Language">UML</a>, the various textbooks and other programming books also utilized UML. So, I imagined that dev meetings utilized UML on a dry-erase board.</p>
-
-<h3 id="reality-2---learning-requires-uml">Reality 2 - Learning Requires UML</h3>
-
-<p>In various team meetings, 1-on-1 dev meetings, and informal discussions, I have yet to see UML be utilized.</p>
-
-<h3 id="expectation-3---developers-have-a-computer-science-degree">Expectation 3 - Developers Have a Computer Science Degree</h3>
-
-<p>I imagined developer discussions being in some meta-language that incorporated algorithms, Big-O notation, and obscure design patterns.</p>
-
-<h3 id="reality-3---developers-come-from-all-walks-of-life">Reality 3 - Developers Come From All Walks of Life</h3>
-
-<p>Perhaps half of my team has some kind of Computer Science background and degree. Other members of my team have backgrounds in varied subjects from construction to film-studies.</p>
-
-<p>In listening the various podcasts and attending various conferences and user-group meetings, I think that there is no fairly typical developer background. One can expect someone with a computer-science degree, but there are plenty of good developers out there without a degree, much less a computer-science degree.</p>
-
-<h3 id="expectation-4---developers-are-invested-in-their-community">Expectation 4 - Developers Are Invested In Their Community</h3>
-
-<p>I was a member of a developer community a decade before I became a professional developer. I have gone to developer conferences in Kansas City and Dallas and have met with many developers from those communities. I expected that all developers were interested in meeting with and working with developers from their community outside of their 9-to-5 job.</p>
-
-<h3 id="reality-4---developers-come-from-all-walks-of-life">Reality 4 - Developers Come From All Walks of Life</h3>
-
-<p>I know that this is the same as &#35;3; however, it fits here, too.</p>
-
-<p>I have also met plenty of developers whom I have tried to recruit to join a local user group, yet they gave a non-committal "I'll look into it" when pressed. Most developers whom I have met are interested in programming for the 40-hours a week they are contracted to program. Outside of that time, they are interested in pursuing their own interests: wood-working, beer brewing, robot fighting, knitting, parade-float building, running, &amp; etc.</p>
-
-<p>Even for me, family is my number 1 priority. Yet, I devote time to organizing a PHP User Group, planning and mentoring a <a href="http://coderdojokc.com/">CoderDojo</a>, and studying programming concepts and technologies outside of work.</p>
-
-<h3 id="expectation-5---if-you-don%27t-play-reindeer-games%2C-you-don%27t-belong">Expectation 5 - If You Don't Play Reindeer Games, You Don't Belong</h3>
-
-<p>What I knew of programmers is what I knew from media and my nerd friends. <a href="https://cardsagainsthumanity.com/">Cards Against Humanity</a>, Dungeons and Dragons, comic books, video games, Star Wars/Trek, and pop-culture ephemera rule developer society.</p>
-
-<h3 id="reality-5---developers-come-from-all-walks-of-life">Reality 5 - Developers Come From All Walks of Life</h3>
-
-<p>Guess what? Developer !== Dork. You might know some developers who fall into that stereotype, but you probably know others who have interests outside of developer stereotypes.</p>
-
-<p>I have yet to play Cards Against Humanity at work. Yet, I have played it once after a CoderDojo session. I have had several Star Wars/Trek discussions with coworkers, but not all coworkers.</p>
-
-<p>At lunch, we mostly talk about family and recent events in our lives. I have recently started a dev book club with my team for a once-per-week lunch discussion. Some of us gather once per month for <a href="http://nomadphp.com">NomadPHP</a> with a follow-up discussion.</p>
-
-<h3 id="expectation-6---memes-are-huge">Expectation 6 - Memes Are Huge</h3>
-
-<p>Before I got my job, I started reading <a href="https://reddit.com">reddit</a>. One thing that I learned is that memes are huge. So I ran through a bunch of memes on <a href="http://memegenerator.net/">meme generator</a>.</p>
-
-<h3 id="reality-6---memes-are-huge-for-some">Reality 6 - Memes Are Huge for Some</h3>
-
-<p>Memes are memes because they are memes. That's tautology for you.</p>
-
-<p>Memes are drawn from popular culture. So, when I was a kid, saying "This is not the assignment you're looking for" was utilizing a meme. We just didn't call it that. 15 years ago, saying to a friend, "Wassup!" was utilizing a meme. We just didn't call it that.</p>
-
-<p>So now, with the easy usage of <a href="https://en.wikipedia.org/wiki/Emoji">emoji</a> and the <a href="https://bitbucket.org/atlassianlabs/ac-koa-hipchat-sassy"><code>/meme</code></a> command in HipChat, memes are all too easy to utilize in a textual discussion.</p>
-
-<p>Yet, not all of us know what the heck some of these memes mean. And some don't even bother with using memes in textual discussion. Memes tend to be a shibboleth in a team when a team shouldn't require such watch-words or phrases.</p>
-
-<h3 id="expectation-7---programmers-are-a-monoculture">Expectation 7 - Programmers are a Monoculture</h3>
-
-<p>When attending a conference, it's easy to see that the vast majority of attendees are younger white guys. The lines to the men's room are long whereas the lines to the ladies' room are non-existant. All programmers are heavy into nerd-core and oontz-oontz electronic music.</p>
-
-<h3 id="reality-7-%26-conclusion---developers-come-from-all-walks-of-life">Reality 7 &amp; Conclusion - Developers Come From All Walks of Life</h3>
-
-<p>This, I think, is the ultimate expectation. All of the expectations above reflect this expectation.</p>
-
-<p>When I was a CS student, classmates were from various genders, sexual orientations, ethnic backgrounds, races, and religions. This expectation was already smashed.</p>
-
-<p>When I joined the league of professional programmers, I met programmers from all walks of life: programmers who grew up dirt poor and programmers who grew up with plenty; programmers who grew up steeped in nerd-core and programmers who came about it quite accidentally.</p>
-
-<p>I am a middle-aged white guy. Yet, I've only been in this game professionally for 1.5 years. I have a lifetime of experience behind me in jobs &amp; a career other than programming. You could take a glance at me and think that I am the very model of a modern career programmer. Yet, you could not be more wrong.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/omphaloskepsis">omphaloskepsis</a>,                         <a href="http://ericpoe.com/blog/tags/career">career</a>                        </p>
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/last%20month%20in%20php">last month in php</a>,                         <a href="http://ericpoe.com/blog/tags/kcphpug">kcphpug</a>                        </p>
             </article>
     <nav>
         <br />

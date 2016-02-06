@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tag Archive "last month in php" &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
+        <title>Last Month in PHP: 2016 January &mdash; Eric Poe &mdash; A Gentle Coder, Dad, and Sometime Wit</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="alternate" type="application/atom+xml" href="http://ericpoe.com/blog/tags/last%20month%20in%20php.xml" title="Eric Poe 'last month in php' tag feed" />
-    <meta name="robots" content="noindex, follow">
+            <meta name="robots" content="index, follow">
         <link href="http://ericpoe.com/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="http://ericpoe.com/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
         <link href="http://ericpoe.com/css/style.css" rel="stylesheet" type="text/css" />
@@ -72,18 +71,195 @@
         <div class="mainContent container">
             <div class="row-fluid">
                 <div class="span8">
-                    <h2>"last month in php"</h2>
-        <h3>February 2016</h3>
-<article>
-  <div><a href="http://ericpoe.com/blog/2016/02/06/last-month-in-php">Last Month in PHP: 2016 January</a></div>
-</article>
-    <h3>January 2016</h3>
-<article>
-  <div><a href="http://ericpoe.com/blog/2016/01/06/last-month-in-php">Last Month in PHP: 2015 December</a></div>
-</article>
+                        <article>
+        <header>
+            <h2>Last Month in PHP: 2016 January</h2>
+            <p><strong>2016-02-06</strong></p>
+        </header>
+        <div>
+            <p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-january-2016">03 Feb 2016</a></p>
 
-<div>
-</div>
+<!-- January was a light month in PHP. A major update to PHP was released,
+PHP-FIG approved a new PSR, major CMSes had major releases and/or were patched,
+and frameworks had major, minor, and patch releases. -->
+
+<h3 id="php-updates">PHP Updates</h3>
+
+<p>Security and bugfix updates to PHP were released in January. Upgrade if you have
+a version less than:</p>
+
+<ul>
+<li>7.0.2</li>
+<li>5.6.17</li>
+<li>5.5.31</li>
+</ul>
+
+<h3 id="cmses">CMSes</h3>
+
+<p>Drupal and WordPress both released point-releases.</p>
+
+<ul>
+<li>Drupal 8.0.2
+
+<ul>
+<li>bug fixes</li>
+</ul></li>
+<li>WordPress 4.4.1 (<strong>Upgrade!</strong>)
+
+<ul>
+<li>1 Security fix for XSS vulnerability</li>
+<li>52 bug fixes</li>
+</ul></li>
+</ul>
+
+<h3 id="%EE%BCframeworks">μFrameworks</h3>
+
+<h4 id="zend-expressive-1.0">Zend Expressive 1.0</h4>
+
+<p>Zend Expressive is a <a href="http://www.php-fig.org/psr/psr-7/">PSR-7</a> Middleware. It looks pretty interesting and bears further investigation.</p>
+
+<p><strong>Example:</strong> <a href="http://www.sitepoint.com/build-nasa-photo-gallery-zend-expressive/">sitepoint: How to Build a NASA Photo Gallery with Zend Expressive</a></p>
+
+<p><strong>See:</strong> <a href="https://zendframework.github.io/zend-expressive/">Zend Expressive</a></p>
+
+<h4 id="lumen-5.2.4">Lumen 5.2.4</h4>
+
+<p>5.2 introduces:</p>
+
+<ul>
+<li>stateless APIs</li>
+<li>No Sessions
+
+<ul>
+<li>This changes authentication</li>
+</ul></li>
+</ul>
+
+<p><strong>See:</strong> Lumen 5.2 <a href="https://lumen.laravel.com/docs/5.2/releases">release notes</a></p>
+
+<h4 id="silex-1.3.5">Silex 1.3.5</h4>
+
+<ul>
+<li>Fixed typo</li>
+</ul>
+
+<p><strong>See:</strong> Silex 1.3.5 <a href="https://github.com/silexphp/Silex/blob/1.3/doc/changelog.rst">changelog</a></p>
+
+<h4 id="slim-3.1.0">Slim 3.1.0</h4>
+
+<ul>
+<li>Adds <code>getParsedBodyParam()</code> and <code>getQueryParam()</code> to Slim&#92;Http&#92;Request</li>
+<li>Adds <code>App::process()</code> to allow Slim to run when a Request object and Response object already exist</li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP_451">HTTP status code 451</a></li>
+</ul>
+
+<p><strong>See:</strong> Slim 3.1.0 <a href="http://www.slimframework.com/2016/01/08/slim-3.1.0.html">release notes</a></p>
+
+<h3 id="frameworks">Frameworks</h3>
+
+<p>Various frameworks had point releases. I'm not sure what changed, so I assume that these are bugfixes.</p>
+
+<ul>
+<li>Laravel 5.2.12</li>
+<li>Symfony [2.8.2, 2.7.9, 2.6.13, 2.3.37]</li>
+<li>Zend Framework 2.5.3</li>
+</ul>
+
+<h3 id="upcoming-conferences">Upcoming Conferences</h3>
+
+<p><a href="http://2016.sunshinephp.com/">Sunshine PHP</a>
+Feb 4-6: Miami, FL</p>
+
+<p><a href="http://2016.midwestphp.org/">Midwest PHP</a>
+Mar 4-5: Minneapolis, MN</p>
+
+<p><a href="http://lonestarphp.com">Lone Star PHP</a>
+Apr 7-9: Dallas, TX</p>
+
+<p><a href="https://tek.phparch.com">php[tek]</a>
+May 23-27: St Louis, MO</p>
+
+<p><a href="http://kcdc.info">Kansas City Developer Conference</a>
+June 22-24 - Kansas City, MO
+Call for papers deadline: Feb 12</p>
+
+<h3 id="nomadphp">NomadPHP</h3>
+
+<p><a href="http://nomadphp.com">NomadPHP</a> is an online supplement to your in-real-life user group.</p>
+
+<p>Feb 18: 01:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/11/20/2016-02-eu/">The Life of an If Statement</a></li>
+<li>Anthony Ferrara - <a href="https://twitter.com/ircmaxell">@ircmaxell</a></li>
+</ul>
+
+<p>Feb 18: 08:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/11/20/2016-02-us/">From Idea to Prototype in 50 Minutes with Laravel
+</a></li>
+<li>Matt Stauffer - <a href="https://twitter.com/stauffermatt">@stauffermatt</a></li>
+</ul>
+
+<h3 id="next-month%27s-kcpug">Next Month's KCPUG</h3>
+
+<p>We will have a busy session next month!</p>
+
+<ul>
+<li><p><a href="https://twitter.com/johnkary">John Kary</a> will present "Rethinking Loops" &mdash; dealing with functional programming in PHP. This is the same talk that he will give at:</p>
+
+<ul>
+<li><a href="http://lonestarphp.com/sessions/#rethinking-loops">Lone Star PHP</a></li>
+<li><a href="http://2016.midwestphp.org/session/rethinking-loops/">Midwest PHP</a></li>
+</ul></li>
+<li><p>Joseph Maxwell will present a preview of his OAuth2 talks that he will give at:</p>
+
+<ul>
+<li><a href="http://lonestarphp.com/sessions/#demystifying-oauth2-an-understandable-way-to-approach-connecting-to-other-systems">Lone Star PHP</a></li>
+<li><a href="https://tek.phparch.com/speakers/#70639">php[tek]</a></li>
+</ul></li>
+</ul>
+
+        </div>
+                    <p class="categories">
+            Categories:
+                        <a href="http://ericpoe.com/blog/categories/programming">programming</a>                        </p>
+                            <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/last%20month%20in%20php">last month in php</a>,                         <a href="http://ericpoe.com/blog/tags/kcphpug">kcphpug</a>                        </p>
+        
+                    <nav class="article">
+                <ul>
+                                                                <li>Previous: <a class="previous" href="http://ericpoe.com/blog/2016/01/26/playing-with-docker" title="Playing with Docker and Linked Containers"><span class="title">Playing with Docker and Linked Containers</span></a></li>
+                                    </ul>
+            </nav>
+            </article>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ericpoe'; // required: replace example with your forum shortname
+
+
+    
+    
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered byDisqus.</a>
+</noscript>
+
                 </div>
                 <div class="span4 sidebar">
                     <div class="well">

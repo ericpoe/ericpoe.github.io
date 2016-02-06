@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[Eric Poe]]></title>
-    <link href="http://ericpoe.com/blog/tags/last month in php.xml" rel="self"/>
+    <link href="http://ericpoe.com/blog/tags/kcphpug.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
     <updated>2016-02-06T18:29:35+00:00</updated>
     <id>http://ericpoe.com/</id>
