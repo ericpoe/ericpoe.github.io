@@ -3,7 +3,7 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/php.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2016-02-06T18:29:35+00:00</updated>
+    <updated>2016-02-06T18:36:37+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -13,9 +13,7 @@
             <id>http://ericpoe.com/blog/2016/02/06/last-month-in-php</id>
             <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-january-2016">03 Feb 2016</a></p>
 
-<!-- January was a light month in PHP. A major update to PHP was released,
-PHP-FIG approved a new PSR, major CMSes had major releases and/or were patched,
-and frameworks had major, minor, and patch releases. -->
+<p>January was a relatively light month in PHP. Yet, we saw an exciting new microframework get its first non-beta release.</p>
 
 <h3 id="php-updates">PHP Updates</h3>
 
