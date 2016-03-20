@@ -3,9 +3,185 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/php.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2016-02-06T18:36:37+00:00</updated>
+    <updated>2016-03-20T01:16:05+00:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Last Month in PHP: 2016 February]]></title>
+            <link href="http://ericpoe.com/blog/2016/03/19/last-month-in-php"/>
+            <updated>2016-03-19T00:00:00+00:00</updated>
+            <id>http://ericpoe.com/blog/2016/03/19/last-month-in-php</id>
+            <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-february-2016-59027277">02 Mar 2016</a></p>
+
+<h3 id="php-updates">PHP Updates</h3>
+
+<p>Security and bugfix updates to PHP were released in February. Upgrade if you have
+a version less than:</p>
+
+<ul>
+<li>7.0.3
+
+<ul>
+<li>Added <a href="https://en.wikipedia.org/wiki/HTTP_451">HTTP 451</a></li>
+</ul></li>
+<li>5.6.18
+
+<ul>
+<li>Added HTTP 451</li>
+</ul></li>
+<li>5.5.32</li>
+</ul>
+
+<h3 id="cmses">CMSes</h3>
+
+<p>Drupal released security updates. <strong>Upgrade!</strong><br />
+WordPress released a security update. <strong>Upgrade!</strong></p>
+
+<ul>
+<li>Drupal 8.0.4</li>
+<li>Drupal 7.4.3</li>
+<li>Drupal 6.3.8
+
+<ul>
+<li>Officially the last version of 6.x ever.</li>
+<li><a href="https://www.drupal.org/drupal-6-eol">EOL on Feb 24</a></li>
+</ul></li>
+<li><a href="https://wordpress.org/news/2016/02/wordpress-4-4-2-security-and-maintenance-release/">WordPress 4.4.2</a>
+
+<ul>
+<li>2 Security fixes</li>
+<li>17 bug fixes</li>
+</ul></li>
+</ul>
+
+<h3 id="%EE%BCframeworks">μFrameworks</h3>
+
+<h4 id="slim-3.2">Slim 3.2</h4>
+
+<ul>
+<li>Support the <code>hostOnly</code> cookie flag</li>
+<li>Write to the PHP error log if <code>displayErrorDetails</code> is false to make it easier to find out what’s gone wrong!</li>
+<li>Support PHP 7+ errors in the same way that Exceptions are handled.</li>
+</ul>
+
+<p><strong>See:</strong> Slim Framework 3.2 <a href="http://www.slimframework.com/2016/02/25/slim-3.2.0.html">release notes</a></p>
+
+<h3 id="frameworks">Frameworks</h3>
+
+<p>Various frameworks had point releases. I'm not sure what changed, so I assume that these are bugfixes.</p>
+
+<ul>
+<li>Laravel 5.2.13
+
+<ul>
+<li>fixes a bug that can cause <code>Mail::queue</code> to send stale view data when using daemon queue workers.</li>
+</ul></li>
+<li>Symfony [3.0.3, 2.8.3, 2.7.10, 2.3.38]</li>
+<li>Zend Framework
+
+<ul>
+<li>No updates for ZF 2.5</li>
+<li>Lots of work towards ZF 3 in Q3!</li>
+<li><strong>See:</strong> the <a href="http://framework.zend.com/blog/announcing-the-zend-framework-3-roadmap.html">ZF3 Roadmap</a></li>
+</ul></li>
+</ul>
+
+<h3 id="laravel-homestead">Laravel Homestead</h3>
+
+<ul>
+<li>Homestead 5.2
+
+<ul>
+<li>No version change</li>
+<li>Added <a href="https://laravel.com/docs/5.2/homestead#installing-mariadb">support for MariaDB</a></li>
+</ul></li>
+</ul>
+
+<h3 id="php%3A-the-right-way">PHP: The Right Way</h3>
+
+<ul>
+<li>PHP on Windows:
+
+<ul>
+<li>Added a <a href="http://www.phptherightway.com/#windows_setup">Windows setup resource</a> (OpenServer)</li>
+<li>Chris Tankersley’s blog post about <a href="http://ctankersley.com/2015/07/01/developing-on-windows">which tools he uses in Windows</a></li>
+</ul></li>
+<li>Added an example of a <a href="http://www.phptherightway.com/pages/The-Basics.html#if-statements">boolean cast in an if-statement</a></li>
+<li>Added a good idea to keep in mind when <a href="http://www.phptherightway.com/#configuration_files">committing configuration files</a></li>
+<li>A few grammar and word-choice updates.
+
+<ul>
+<li><strong>Note:</strong> Every open-source project can use your help with documentation. What are you waiting for?</li>
+</ul></li>
+</ul>
+
+<h3 id="upcoming-conferences">Upcoming Conferences</h3>
+
+<p><a href="http://2016.midwestphp.org">Midwest PHP</a><br />
+Mar 4-5: Minneapolis, MN</p>
+
+<ul>
+<li>KCPHP Speaker!</li>
+</ul>
+
+<p><a href="http://lonestarphp.com">Lone Star PHP</a><br />
+Apr 7-9: Dallas, TX</p>
+
+<ul>
+<li>KCPHP Speakers!</li>
+</ul>
+
+<p><a href="https://daycamp4developers.com">Day Camp for Developers</a> - Modern PHP<br />
+Apr 22: Online</p>
+
+<p><a href="https://events.drupal.org/neworleans2016">DrupalCon</a><br />
+May 9-13: New Orleans, LA</p>
+
+<ul>
+<li>KCPHP Speaker!</li>
+</ul>
+
+<p><a href="https://tek.phparch.com">php[tek]</a><br />
+May 23-27: St Louis, MO</p>
+
+<ul>
+<li>KCPHP Speaker!</li>
+</ul>
+
+<p><a href="http://200ok.us">200 OK</a><br />
+June 3: Tulsa, OK</p>
+
+<p><a href="http://kcdc.info">Kansas City Developer Conference</a><br />
+June 22-24 - Kansas City, MO</p>
+
+<ul>
+<li>4 PHP talks</li>
+<li>KCPHP speakers!</li>
+</ul>
+
+<h3 id="nomadphp">NomadPHP</h3>
+
+<p><a href="http://nomadphp.com">NomadPHP</a> is an online supplement to your in-real-life user group.</p>
+
+<p>Mar 24: 01:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/12/18/asynchronous-awesome-task-management-in-php/">Asynchronous Awesome – Task Management in PHP</a></li>
+<li>Eric Mann - <a href="https://twitter.com/ericmann">@ericmann</a></li>
+</ul>
+
+<p>Mar 24: 08:00 PM CST</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2015/12/18/amazon-simpledb/">Amazon SimpleDB</a></li>
+<li>Eli White - <a href="https://twitter.com/EliW">@EliW</a></li>
+</ul>
+
+<h3 id="next-month%27s-kcpug">Next Month's KCPUG</h3>
+
+<p>We're looking for speakers!</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Last Month in PHP: 2016 January]]></title>
             <link href="http://ericpoe.com/blog/2016/02/06/last-month-in-php"/>
@@ -129,8 +305,7 @@ Call for papers deadline: Feb 12</p>
 <p>Feb 18: 08:00 PM CST</p>
 
 <ul>
-<li><a href="https://nomadphp.com/2015/11/20/2016-02-us/">From Idea to Prototype in 50 Minutes with Laravel
-</a></li>
+<li><a href="https://nomadphp.com/2015/11/20/2016-02-us/">From Idea to Prototype in 50 Minutes with Laravel</a></li>
 <li>Matt Stauffer - <a href="https://twitter.com/stauffermatt">@stauffermatt</a></li>
 </ul>
 
@@ -735,58 +910,6 @@ As much as I
 <p>Test it out on <a href="http://3v4l.org/H1YjU">3v4l.org</a>.</p>
 
 <p>Notice that the only difference between the heredoc block and the nowdoc block is that the nowdoc block's name is enclosed within single-quotes. For me, the single-quotes makes it easy to remember which block is literal and which block is rendered, just like the <a href="/blog/2015/03/04/double-vs-single-quote-echo/">difference between echoing single-quotes and double-quotes</a>.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Bite of PHP: Double vs Single Quote Echo]]></title>
-            <link href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo"/>
-            <updated>2015-03-04T00:00:00+00:00</updated>
-            <id>http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo</id>
-            <content type="html"><![CDATA[<p>In PHP, we have two ways of formatting an echo statement: we can choose to
-use single-quotes or double-quotes. The choice is less dependent upon which
-side of the Atlantic we learned to read and more dependent upon what we hope
-to accomplish with echoing that string.</p>
-
-<p>If you want to echo the string without parsing it, use single-quotes. If you
-want to parse the string while echoing it, use double-quotes. Observe:</p>
-
-<p><strong>Single-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo '$greeting, $audience';
-</code></pre>
-
-<p><em>Output:</em> <code>$greeting, $audience</code></p>
-
-<p><br></p>
-
-<p><strong>Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, $audience";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World</code></p>
-
-<p><br></p>
-
-<p>What if you want to add a character to the output of one of those variables?
-Just enclose the variable in a curly bracket!</p>
-
-<p><strong>Special Double-Quote Example</strong></p>
-
-<pre><code class="php">$greeting = "Howdy";
-$audience = "World";
-echo "$greeting, {$audience}!";
-</code></pre>
-
-<p><em>Output:</em> <code>Howdy, World!</code></p>
-
-<p><br></p>
-
-<p>Test it out on <a href="http://3v4l.org/XnKdK">3v4l.org</a>.</p>
 ]]></content>
         </entry>
     </feed>
