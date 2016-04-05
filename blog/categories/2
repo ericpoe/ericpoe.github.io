@@ -73,7 +73,11 @@
             <div class="row-fluid">
                 <div class="span8">
                     <h2>"programming"</h2>
-        <h3>March 2015</h3>
+        <h3>April 2015</h3>
+<article>
+  <div><a href="http://ericpoe.com/blog/2015/04/23/heredoc-vs-nowdoc">Bite of PHP: Heredoc vs. Nowdoc</a></div>
+</article>
+    <h3>March 2015</h3>
 <article>
   <div><a href="http://ericpoe.com/blog/2015/03/04/double-vs-single-quote-echo">Bite of PHP: Double vs Single Quote Echo</a></div>
 </article>
@@ -106,9 +110,6 @@
     <h3>March 2014</h3>
 <article>
   <div><a href="http://ericpoe.com/blog/2014/03/10/Data-Types">Data Types</a></div>
-</article>
-<article>
-  <div><a href="http://ericpoe.com/blog/2014/03/03/Decisions-Decisions">Decisions, Decisions</a></div>
 </article>
 
 <div>

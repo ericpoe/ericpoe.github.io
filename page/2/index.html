@@ -73,6 +73,64 @@
                 <div class="span8">
                         <article>
         <header>
+            <h2><a href="http://ericpoe.com/blog/2016/01/26/playing-with-docker">Playing with Docker and Linked Containers</a></h2>
+            <strong>2016-01-26</strong>
+        </header>
+        <div>
+            <p>In my current job, I am starting the process to upgrade our PHP 5.4 application to a PHP 5.6 application (PHP 7 is not yet support by the majority of the 3rd party libraries we use). I have been tasked with building the staging server for use in testing our legacy application as well as our newer Symfony-based application. We are using an older version of MySQL as well.</p>
+
+<p>At some point, we will want to experiment with PHP 7.x and later versions of MySQL or MariaDB. Yet, will we want to build a brand new server each time?</p>
+
+<p>This seems like a perfect opportunity to play with <a href="http://docker.io">Docker</a>.</p>
+
+<p>I had first looked at Docker a little over a year ago. I had tried to build a dev environment entirely from Docker, but it and I were not yet ready for each other. I could not see Docker as anything other than another way to launch a Vagrant box for development.</p>
+
+<p>This weekend, I looked at Docker again. Now Docker includes a feature called "<a href="https://docs.docker.com/compose/">Docker Compose</a>." This allows one to build a Docker manifest within a YAML file rather than as a complex command-line string.</p>
+
+<p>I played. I looked at building a new Drupal 8 box with a separate MySQL server. As a docker-compose YAML file, this is pretty straight-forward:</p>
+
+<p><code>docker-compose.yml</code></p>
+
+<pre><code class="yaml">drupal8:
+  image: drupal
+  links:
+    - drupal_database:mysql
+  ports:
+    - 8085:80
+drupal_database:
+  container_name: drupal_database
+  image: mariadb:5.5
+  environment:
+    MYSQL_ROOT_PASSWORD: examplepass
+    MYSQL_USER: user
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: drupal_db
+</code></pre>
+
+<p>The above creates two Docker machines: "drupal8" and "drupal_database." The "drupal8" Docker machine is linked to the "drupal_database" which is running MariaDB 5.5. To launch this, I just run <code>docker-compose up</code> from the directory that contains this <code>docker-compose.yml</code> file. This is the equivalent to running:</p>
+
+<pre><code>docker run --name drupal_database \
+  -e MYSQL_ROOT_PASSWORD=examplepass \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=password \
+  -e MYSQL_DATABASE=drupal_db \
+  -d mariadb:5.5
+
+docker run --name drupal8 \
+  -p 8085:80 \
+  --link drupal_database:mysql \
+  -d drupal
+</code></pre>
+
+<p>I was able to come up with a working <code>docker-compose.yml</code> file within 30 minutes. It took me much longer to come up with the right <code>docker run</code> statements to make two Docker containers and have the Drupal container link to the MySQL container. Natch, had I read further down the <a href="https://hub.docker.com/_/drupal/">Docker Hub Drupal page</a>, I would have been given a huge clue as to how to connect the two; I just needed to add the appropriate port. Nonetheless, the YAML is much easier me to configure and update than the two <code>docker run</code> commands are.</p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/docker">docker</a>,                         <a href="http://ericpoe.com/blog/tags/mysql">mysql</a>,                         <a href="http://ericpoe.com/blog/tags/drupal">drupal</a>                        </p>
+            </article>
+    <article>
+        <header>
             <h2><a href="http://ericpoe.com/blog/2016/01/06/last-month-in-php">Last Month in PHP: 2015 December</a></h2>
             <strong>2016-01-06</strong>
         </header>
@@ -363,27 +421,6 @@ May 23-27: St Louis, MO</p>
                     <p class="tags">
             Tags:
                         <a href="http://ericpoe.com/blog/tags/omphaloskepsis">omphaloskepsis</a>,                         <a href="http://ericpoe.com/blog/tags/career">career</a>                        </p>
-            </article>
-    <article>
-        <header>
-            <h2><a href="http://ericpoe.com/blog/2015/11/13/my-year-of-code">My Year of Code</a></h2>
-            <strong>2015-11-13</strong>
-        </header>
-        <div>
-            <p>2015 was my year to really dive into PHP. Up until this year, PHP was  hobby language for me -- much as Python, Haskell, C++, Dart, JavaScript, and Java have been hobby languages. Granted, last year I finally took a job where PHP is where I spend half of my time.</p>
-
-<p>This year, I took up intensive study of PHP. At the beginning of the year, I poured over the <a href="http://www.phparch.com/books/zend-php-5-certification-study-guide-3rd-edition/">Zend PHP 5 Certification Study Guide, Third Edition</a> by Davey Shafik and Ben Ramsey. I even passed the <a href="http://www.zend.com/en/services/certification/php-5-certification">Zend Certified PHP Engineer exam</a> and earned my <a href="http://www.zend.com/en/yellow-pages/ZEND027285">Zend Certification</a>. I also took up more of a leadership role in my local PHP user group, <a href="http://www.meetup.com/kcphpug/">KCPHPUG</a>, gave a few talks, and have been hosting meetups both at work and at a local café. In the late Spring/early Summer, I began work on a PHP library called <a href="https://github.com/ericpoe/ophp">OPHP</a>. In April, I attended the <a href="http://lonestarphp.com/">Lone Star PHP conference</a> and got to meet and hang out with quite a few luminaries of the community.</p>
-
-<p>I think I can safely say that 2015 has been a year of PHP for me.</p>
-
-<p>For next year, my language of intensive study will be JavaScript. No matter who I talk with about programming, JavaScript seems to be the <em>lingua franca</em> of web programming. I have already started to look deeply into Sencha's <a href="https://www.sencha.com/products/extjs">Ext JS</a>, which is the JavaScript framework we use at work. <a href="http://es6-features.org/">EcmaScript 6</a> has piqued my interest since it was ratified in June. I have also been interested in learning more about <a href="https://nodejs.org">node</a> since it has usage in <a href="http://electron.atom.io/">Atom Electron</a> and beyond.</p>
-
-<p>By this time next year, I hope to have a native comfort in JavaScript.</p>
-
-        </div>
-                    <p class="tags">
-            Tags:
-                        <a href="http://ericpoe.com/blog/tags/php">php</a>,                         <a href="http://ericpoe.com/blog/tags/javascript">javascript</a>,                         <a href="http://ericpoe.com/blog/tags/learning">learning</a>,                         <a href="http://ericpoe.com/blog/tags/omphaloskepsis">omphaloskepsis</a>                        </p>
             </article>
     <nav>
         <a href="http://ericpoe.com/">Newer Posts</a><br />

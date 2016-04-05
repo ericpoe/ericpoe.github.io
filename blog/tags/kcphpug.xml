@@ -3,13 +3,234 @@
     <title><![CDATA[Eric Poe]]></title>
     <link href="http://ericpoe.com/blog/tags/kcphpug.xml" rel="self"/>
     <link href="http://ericpoe.com/"/>
-    <updated>2016-03-20T01:16:05+00:00</updated>
+    <updated>2016-04-04T22:18:57-05:00</updated>
     <id>http://ericpoe.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
+            <title type="html"><![CDATA[Last Month in PHP: 2016 March]]></title>
+            <link href="http://ericpoe.com/blog/2016/04/04/last-month-in-php"/>
+            <updated>2016-04-04T00:00:00-05:00</updated>
+            <id>http://ericpoe.com/blog/2016/04/04/last-month-in-php</id>
+            <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk being given on <a href="">06 Apr 2016</a>.</p>
+
+<h3 id="bash-coming-to-windows%21">BASH COMING TO WINDOWS!</h3>
+
+<p>Yes, Microsoft is adding the linux Bash shell to Windows.</p>
+
+<ul>
+<li>Uses Ubuntu user mode binaries</li>
+<li>So, (maybe?) in the Windows Command Line: <code>apt-get install nginx php7-fpm mysql-server php7-mysql</code></li>
+</ul>
+
+<p>PHP development on Windows is about to get much better!</p>
+
+<p><strong>See:</strong> <a href="https://msdn.microsoft.com/en-us/commandline/wsl/about">MSDN: BASH Running in Ubuntu on Windows</a></p>
+
+<h3 id="php-updates">PHP Updates</h3>
+
+<p>Security and bugfix updates to PHP were released TWICE in March. Upgrade!</p>
+
+<ul>
+<li>7.0.5 - <strong>Upgrade!</strong>
+
+<ul>
+<li>Security fixes</li>
+<li>Bug fixes</li>
+</ul></li>
+<li>5.6.20 - <strong>Upgrade!</strong>
+
+<ul>
+<li>Security fixes</li>
+<li>Bug fixes</li>
+</ul></li>
+<li>5.5.34 - <strong>Upgrade!</strong>
+
+<ul>
+<li>Security fixes</li>
+<li>Bug fixes</li>
+</ul></li>
+</ul>
+
+<h3 id="composer">Composer</h3>
+
+<p>Composer <a href="https://github.com/composer/composer/releases/tag/1.0.0-beta1">v1.0.0-beta1</a> &amp; <a href="https://github.com/composer/composer/releases/tag/1.0.0-beta2">v1.0.0-beta2</a> were released</p>
+
+<ul>
+<li>Many new things!</li>
+<li>Including:
+
+<ul>
+<li>Disables non-secure protocols</li>
+<li><code>prohibits</code> / <code>why-not</code> command to show what blocks an upgrade to a given <em>package:version</em> pair</li>
+<li>Added <code>--interactive</code> / <code>-i</code> to the <code>update</code> command, which lets you pick packages to update interactively</li>
+</ul></li>
+</ul>
+
+<h3 id="cmses">CMSes</h3>
+
+<h4 id="drupal-8">Drupal 8</h4>
+
+<p>Drupal 8.0.5</p>
+
+<ul>
+<li>Maintenance release
+
+<ul>
+<li>No changes worthy of updating the <a href="http://cgit.drupalcode.org/drupal/plain/core/CHANGELOG.txt">CHANGELOG.txt</a></li>
+</ul></li>
+</ul>
+
+<h3 id="%CE%BCframeworks">μFrameworks</h3>
+
+<h4 id="slim-3">Slim 3</h4>
+
+<p>Slim 3.2.1 &amp; 3.2.2</p>
+
+<ul>
+<li>Bugfix: Do not use <code>DefferedCallable</code> in route callable.
+
+<ul>
+<li><strong>See:</strong> Slim Framework 3.2.1 <a href="http://www.slimframework.com/2016/03/01/slim-3.2.1.html">release notes</a></li>
+</ul></li>
+<li>Bugfix: Make <code>$file</code> public in <code>UploadedFile</code>
+
+<ul>
+<li><strong>See:</strong> Slim Framework 3.2.2 <a href="http://www.slimframework.com/2016/03/05/slim-3.2.2.html">release notes</a></li>
+</ul></li>
+</ul>
+
+<p>Slim 3.3.0</p>
+
+<ul>
+<li>More closely aligns with <a href="http://www.php-fig.org/psr/psr-7/">PSR-7</a>
+
+<ul>
+<li><strong>See:</strong> Slim Framework 3.3.0 <a href="http://www.slimframework.com/2016/03/10/slim-3.3.0.html">release notes</a></li>
+</ul></li>
+</ul>
+
+<h3 id="frameworks">Frameworks</h3>
+
+<h4 id="laravel">Laravel</h4>
+
+<ul>
+<li>Laravel 5.2.27</li>
+<li>Laravel 5.2.24</li>
+<li>Laravel 5.2.23
+
+<ul>
+<li>Adds <code>in_array</code> validation</li>
+<li>Callback in <code>Arr::first()</code> &amp; <code>Arr::last()</code> is now optional</li>
+<li>Can now specify more than 1 middleware</li>
+<li>Adds some interesting changes to Blades</li>
+<li><strong>See:</strong> <a href="http://themsaid.github.io/laravel-5-2-23-20160305/">Mohamed Said: What's new in laravel 5.2.23</a></li>
+</ul></li>
+</ul>
+
+<h4 id="symfony">Symfony</h4>
+
+<ul>
+<li>Symfony [3.0.4, 2.8.4, 2.7.11, 2.3.39]
+
+<ul>
+<li>Mostly bugfixes</li>
+</ul></li>
+<li><a href="http://symfony.com/blog/virtual-symfony-hack-day-march-12th">Virtual Symfony Hackday</a> was held on 17 March</li>
+<li>Announced in March: <a href="http://symfony.com/blog/new-in-symfony-2-8-polyfill-components">Symfony Polyfill</a></li>
+</ul>
+
+<h4 id="zend">Zend</h4>
+
+<ul>
+<li>No updates for ZF 2.5</li>
+<li>Lots of work for upcoming ZF3!
+
+<ul>
+<li><strong>See:</strong> the <a href="http://framework.zend.com/blog/2016-03-24-zf3-update.html">Zend Framework 3 Update for 2016-03-24</a></li>
+</ul></li>
+</ul>
+
+<h3 id="php%3A-the-right-way">PHP: The Right Way</h3>
+
+<ul>
+<li>Added a Brazilian Portuguese translation</li>
+<li><strong>Note:</strong> Every open-source project can use your help with documentation. What are you waiting for?</li>
+</ul>
+
+<h3 id="upcoming-conferences">Upcoming Conferences</h3>
+
+<p><a href="http://lonestarphp.com">Lone Star PHP</a><br />
+Apr 7-9: Dallas, TX</p>
+
+<ul>
+<li>KCPHP Speakers!</li>
+</ul>
+
+<p><a href="https://daycamp4developers.com">Day Camp for Developers</a> - Modern PHP<br />
+Apr 22: Online</p>
+
+<p><a href="https://events.drupal.org/neworleans2016">DrupalCon</a><br />
+May 9-13: New Orleans, LA</p>
+
+<ul>
+<li>KCPHP Speaker!</li>
+</ul>
+
+<p><a href="https://tek.phparch.com">php[tek]</a><br />
+May 23-27: St Louis, MO</p>
+
+<ul>
+<li>KCPHP Speaker!</li>
+</ul>
+
+<p><a href="http://200ok.us">200 OK</a><br />
+June 3: Tulsa, OK</p>
+
+<p><a href="http://kcdc.info">Kansas City Developer Conference</a><br />
+June 22-24 - Kansas City, MO</p>
+
+<ul>
+<li>4 PHP talks</li>
+<li>KCPHP speakers!</li>
+</ul>
+
+<p><a href="https://cruise.phparch.com">php[cruise]</a><br />
+July 17-24 - Bahamas</p>
+
+<p><a href="http://laracon.us/">Laracon US</a><br />
+July 27-29 - Louisville, KY</p>
+
+<h3 id="nomadphp">NomadPHP</h3>
+
+<p><a href="http://nomadphp.com">NomadPHP</a> is an online supplement to your in-real-life user group.</p>
+
+<p>April 21: 01:00 PM CDT</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2016/01/25/docker-for-php-developers/">Docker for PHP Developers</a></li>
+<li>Chris Tankersley - <a href="https://twitter.com/dragonmantank">@dragonmantank</a></li>
+</ul>
+
+<p>April 21: 08:00 PM CDT</p>
+
+<ul>
+<li><a href="https://nomadphp.com/2016/01/25/expressive-microservice-framework-blastoff/">Expressive Microservice Framework Blastoff</a></li>
+<li>Adam Culp - <a href="https://twitter.com/AdamCulp">@AdamCulp</a></li>
+</ul>
+
+<h3 id="next-month%27s-kcpug">Next Month's KCPUG</h3>
+
+<p>Joseph Maxwell will be presenting an update of his excellent February talk: "Writing Better Code with the New PHP 7"!</p>
+
+<ul>
+<li>To be presented at <a href="https://tek.phparch.com">php[tek]</a> in May!</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
             <title type="html"><![CDATA[Last Month in PHP: 2016 February]]></title>
             <link href="http://ericpoe.com/blog/2016/03/19/last-month-in-php"/>
-            <updated>2016-03-19T00:00:00+00:00</updated>
+            <updated>2016-03-19T00:00:00-05:00</updated>
             <id>http://ericpoe.com/blog/2016/03/19/last-month-in-php</id>
             <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-february-2016-59027277">02 Mar 2016</a></p>
 
@@ -54,7 +275,7 @@ WordPress released a security update. <strong>Upgrade!</strong></p>
 </ul></li>
 </ul>
 
-<h3 id="%EE%BCframeworks">μFrameworks</h3>
+<h3 id="%CE%BCframeworks">μFrameworks</h3>
 
 <h4 id="slim-3.2">Slim 3.2</h4>
 
@@ -185,7 +406,7 @@ June 22-24 - Kansas City, MO</p>
             <entry>
             <title type="html"><![CDATA[Last Month in PHP: 2016 January]]></title>
             <link href="http://ericpoe.com/blog/2016/02/06/last-month-in-php"/>
-            <updated>2016-02-06T00:00:00+00:00</updated>
+            <updated>2016-02-06T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2016/02/06/last-month-in-php</id>
             <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-january-2016">03 Feb 2016</a></p>
 
@@ -220,7 +441,7 @@ a version less than:</p>
 </ul></li>
 </ul>
 
-<h3 id="%EE%BCframeworks">μFrameworks</h3>
+<h3 id="%CE%BCframeworks">μFrameworks</h3>
 
 <h4 id="zend-expressive-1.0">Zend Expressive 1.0</h4>
 
@@ -332,7 +553,7 @@ Call for papers deadline: Feb 12</p>
             <entry>
             <title type="html"><![CDATA[Last Month in PHP: 2015 December]]></title>
             <link href="http://ericpoe.com/blog/2016/01/06/last-month-in-php"/>
-            <updated>2016-01-06T00:00:00+00:00</updated>
+            <updated>2016-01-06T00:00:00-06:00</updated>
             <id>http://ericpoe.com/blog/2016/01/06/last-month-in-php</id>
             <content type="html"><![CDATA[<p>From a <a href="http://kcpug.org/">KCPUG</a> lightning talk given on <a href="http://www.slideshare.net/poeeric/last-month-in-php-december-2015">06 Jan 2016</a></p>
 
